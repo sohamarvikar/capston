@@ -19,11 +19,12 @@ const PrivateRoute = ({ children, roles }) => {
   return children;
 };
 
-const DashboardRouter = () => {
-  const { user } = useAuth();
+const RootRedirect = () => {
+  const { user, loading } = useAuth();
+  if (loading) return <div className="text-center p-10">Loading...</div>;
   if (!user) return <Navigate to="/login" />;
-  if (user.role === 'employee') return <EmployeeDashboard />;
-  return <Dashboard />;
+  if (user.role === 'employee') return <Navigate to="/employee-dashboard" />;
+  return <Navigate to="/dashboard" />;
 };
 
 function App() {
@@ -37,7 +38,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               
-              <Route path="/" element={<DashboardRouter />} />
+              {/* Root route redirects based on role */}
+              <Route path="/" element={<RootRedirect />} />
+              
+              {/* Manager Routes */}
+              <Route path="/dashboard" element={
+                <PrivateRoute roles={['manager']}><Dashboard /></PrivateRoute>
+              } />
               
               <Route path="/employees" element={
                 <PrivateRoute roles={['manager']}><EmployeeList /></PrivateRoute>
@@ -53,6 +60,11 @@ function App() {
               
               <Route path="/antigravity" element={
                 <PrivateRoute roles={['manager']}><AntigravityAgent /></PrivateRoute>
+              } />
+
+              {/* Employee Routes */}
+              <Route path="/employee-dashboard" element={
+                <PrivateRoute roles={['employee']}><EmployeeDashboard /></PrivateRoute>
               } />
             </Routes>
           </main>

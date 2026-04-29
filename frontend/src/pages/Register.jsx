@@ -17,8 +17,13 @@ const Register = () => {
     setError('');
     setIsLoading(true);
     try {
-      await register(formData);
-      navigate('/');
+      const res = await register(formData);
+      
+      if (res.user.role === 'manager') {
+        navigate('/dashboard');
+      } else {
+        navigate('/employee-dashboard');
+      }
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed.');
     } finally {

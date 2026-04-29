@@ -39,9 +39,16 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="flex space-x-2 items-center">
-            <Link to="/" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/')}`}>
-              <LayoutDashboard className="w-4 h-4 mr-1.5" /> Dashboard
-            </Link>
+            {/* Conditional Dashboard Link */}
+            {user.role === 'manager' ? (
+              <Link to="/dashboard" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/dashboard') || isActive('/') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
+                <LayoutDashboard className="w-4 h-4 mr-1.5" /> Dashboard
+              </Link>
+            ) : (
+              <Link to="/employee-dashboard" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/employee-dashboard') || isActive('/') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
+                <LayoutDashboard className="w-4 h-4 mr-1.5" /> My Tasks
+              </Link>
+            )}
             
             {user.role === 'manager' && (
               <>

@@ -16,8 +16,15 @@ const Login = () => {
     setError('');
     setIsLoading(true);
     try {
-      await login({ email, password });
-      navigate('/'); // App.js will redirect based on role
+      const res = await login({ email, password });
+      
+      // Explicitly redirect based on role using React Router's useNavigate
+      if (res.user.role === 'manager') {
+        navigate('/dashboard');
+      } else {
+        navigate('/employee-dashboard');
+      }
+      
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed.');
     } finally {
