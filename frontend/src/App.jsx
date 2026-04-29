@@ -1,26 +1,64 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard';
+import EmployeeDashboard from './pages/EmployeeDashboard';
 import EmployeeList from './pages/EmployeeList';
 import ProjectList from './pages/ProjectList';
 import ProjectDetails from './pages/ProjectDetails';
+import AntigravityAgent from './pages/AntigravityAgent';
+import Login from './pages/Login';
+import Register from './pages/Register';
+
+const PrivateRoute = ({ children, roles }) => {
+  const { user, loading } = useAuth();
+  if (loading) return <div className="text-center p-10">Loading...</div>;
+  if (!user) return <Navigate to="/login" />;
+  if (roles && !roles.includes(user.role)) return <Navigate to="/" />;
+  return children;
+};
+
+const DashboardRouter = () => {
+  const { user } = useAuth();
+  if (!user) return <Navigate to="/login" />;
+  if (user.role === 'employee') return <EmployeeDashboard />;
+  return <Dashboard />;
+};
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50 font-sans">
-        <Navbar />
-        <main className="max-w-7xl mx-auto px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/employees" element={<EmployeeList />} />
-            <Route path="/projects" element={<ProjectList />} />
-            <Route path="/projects/:key" element={<ProjectDetails />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50 font-sans">
+          <Navbar />
+          <main className="max-w-7xl mx-auto px-4 py-8">
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              
+              <Route path="/" element={<DashboardRouter />} />
+              
+              <Route path="/employees" element={
+                <PrivateRoute roles={['manager']}><EmployeeList /></PrivateRoute>
+              } />
+              
+              <Route path="/projects" element={
+                <PrivateRoute roles={['manager']}><ProjectList /></PrivateRoute>
+              } />
+              
+              <Route path="/projects/:key" element={
+                <PrivateRoute roles={['manager']}><ProjectDetails /></PrivateRoute>
+              } />
+              
+              <Route path="/antigravity" element={
+                <PrivateRoute roles={['manager']}><AntigravityAgent /></PrivateRoute>
+              } />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 

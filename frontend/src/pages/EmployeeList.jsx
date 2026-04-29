@@ -1,17 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { getEmployees, deleteEmployee } from '../services/api';
-import { Trash2, Edit } from 'lucide-react';
+import { getEmployees, createEmployee, deleteEmployee } from '../services/api';
+import { Trash2, Plus, X, Search } from 'lucide-react';
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [showForm, setShowForm] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [deptFilter, setDeptFilter] = useState('');
+  const [formData, setFormData] = useState({
+    name: '', age: '', gender: 'Male', department: 'IT',
+    salary: '', experience: '', status: 'Active',
+    location: 'New York', session: 'Morning',
+    skills: '',
+  });
+  const [formError, setFormError] = useState('');
 
   const fetchEmployees = async () => {
+    setLoading(true);
+    setError(null);
     try {
-      const res = await getEmployees({ limit: 50 });
+      const params = { limit: 50 };
+      if (searchTerm) params.search = searchTerm;
+      if (deptFilter) params.department = deptFilter;
+      const res = await getEmployees(params);
       setEmployees(res.data.data);
-    } catch (error) {
-      console.error('Error fetching employees:', error);
+    } catch (err) {
+      console.error('Error fetching employees:', err);
+      setError('Could not load employees. Is the backend running on port 5001?');
     } finally {
       setLoading(false);
     }
@@ -19,33 +36,193 @@ const EmployeeList = () => {
 
   useEffect(() => {
     fetchEmployees();
-  }, []);
+  }, [deptFilter]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    fetchEmployees();
+  };
 
   const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this employee?')) {
-      await deleteEmployee(id);
+    if (window.confirm('Delete this employee?')) {
+      try {
+        await deleteEmployee(id);
+        fetchEmployees();
+      } catch (err) {
+        alert('Failed to delete employee: ' + (err.response?.data?.message || err.message));
+      }
+    }
+  };
+
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleAddEmployee = async (e) => {
+    e.preventDefault();
+    setFormError('');
+
+    if (!formData.name || !formData.age || !formData.salary || !formData.experience) {
+      setFormError('Name, Age, Salary, and Experience are required.');
+      return;
+    }
+
+    try {
+      const payload = {
+        name: formData.name.trim(),
+        age: Number(formData.age),
+        gender: formData.gender,
+        department: formData.department,
+        salary: Number(formData.salary),
+        joiningDate: new Date(),
+        experience: Number(formData.experience),
+        status: formData.status,
+        location: formData.location,
+        session: formData.session,
+        skills: formData.skills ? formData.skills.split(',').map(s => s.trim().toLowerCase()) : [],
+      };
+      await createEmployee(payload);
+      setShowForm(false);
+      setFormData({ name: '', age: '', gender: 'Male', department: 'IT', salary: '', experience: '', status: 'Active', location: 'New York', session: 'Morning', skills: '' });
       fetchEmployees();
+    } catch (err) {
+      setFormError(err.response?.data?.message || 'Failed to add employee.');
     }
   };
 
   return (
     <div className="space-y-6">
+      {/* Header */}
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-900">Employees Directory</h1>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 font-medium">
-          + Add Employee
+        <button onClick={() => setShowForm(true)} className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 font-medium">
+          <Plus className="w-4 h-4 mr-1" /> Add Employee
         </button>
       </div>
 
-      {loading ? (
-        <div className="text-center text-gray-500 py-10">Loading employees...</div>
-      ) : (
-        <div className="bg-white shadow rounded-lg overflow-hidden">
+      {/* Search & Filter Bar */}
+      <div className="flex flex-col sm:flex-row gap-3">
+        <form onSubmit={handleSearch} className="flex flex-1">
+          <input type="text" placeholder="Search by name..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
+            className="flex-1 border border-gray-300 rounded-l-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900" />
+          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700">
+            <Search className="w-4 h-4" />
+          </button>
+        </form>
+        <select value={deptFilter} onChange={(e) => setDeptFilter(e.target.value)}
+          className="border border-gray-300 rounded-md px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">All Departments</option>
+          <option value="IT">IT</option>
+          <option value="HR">HR</option>
+          <option value="Sales">Sales</option>
+        </select>
+      </div>
+
+      {/* Add Employee Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-lg mx-4">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-bold text-gray-900">Add New Employee</h2>
+              <button onClick={() => setShowForm(false)} className="text-gray-400 hover:text-gray-600"><X className="w-5 h-5" /></button>
+            </div>
+            {formError && <div className="bg-red-50 text-red-600 text-sm p-3 rounded mb-4">{formError}</div>}
+            <form onSubmit={handleAddEmployee} className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                  <input name="name" value={formData.name} onChange={handleFormChange} required
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Age *</label>
+                  <input name="age" type="number" min="18" max="70" value={formData.age} onChange={handleFormChange} required
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Department *</label>
+                  <select name="department" value={formData.department} onChange={handleFormChange}
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Salary *</label>
+                  <input name="salary" type="number" min="0" value={formData.salary} onChange={handleFormChange} required
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Experience (yrs) *</label>
+                  <input name="experience" type="number" min="0" value={formData.experience} onChange={handleFormChange} required
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                  <select name="gender" value={formData.gender} onChange={handleFormChange}
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
+                  <select name="location" value={formData.location} onChange={handleFormChange}
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
+                  <select name="status" value={formData.status} onChange={handleFormChange}
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Skills (comma-separated)</label>
+                <input name="skills" value={formData.skills} onChange={handleFormChange} placeholder="e.g. react, node.js, python"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+              </div>
+              <div className="flex justify-end space-x-3 pt-2">
+                <button type="button" onClick={() => setShowForm(false)} className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50">Cancel</button>
+                <button type="submit" className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700">Save Employee</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* Error State */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg text-center">
+          {error}
+        </div>
+      )}
+
+      {/* Loading State */}
+      {loading && <div className="text-center text-gray-500 py-10">Loading employees...</div>}
+
+      {/* Empty State */}
+      {!loading && !error && employees.length === 0 && (
+        <div className="text-center text-gray-500 py-10">No employees found. Try a different filter or add a new employee.</div>
+      )}
+
+      {/* Employee Table */}
+      {!loading && employees.length > 0 && (
+        <div className="bg-white shadow rounded-lg overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name / ID</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Department</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Performance</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status & Workload</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Top Skills</th>
                 <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
@@ -58,27 +235,26 @@ const EmployeeList = () => {
                     <div className="font-medium text-gray-900">{emp.name}</div>
                     <div className="text-sm text-gray-500">ID: {emp.employeeId}</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {emp.department}
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{emp.department}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="text-sm font-semibold text-gray-900">{emp.performanceScore ?? '—'}</span>
+                    <span className="text-sm text-gray-400"> / 5</span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${emp.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                       {emp.status}
                     </span>
-                    <div className="text-xs text-gray-500 mt-1">Load: {emp.currentWorkload}/10</div>
+                    <div className="text-xs text-gray-500 mt-1">Load: {emp.currentWorkload ?? 0}/10</div>
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-500">
                     <div className="flex flex-wrap gap-1 max-w-[200px]">
                       {(emp.skills || []).slice(0, 3).map((skill, idx) => (
-                        <span key={idx} className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded text-xs border border-blue-100">
-                          {skill}
-                        </span>
+                        <span key={idx} className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded text-xs border border-blue-100">{skill}</span>
                       ))}
                       {(emp.skills || []).length > 3 && <span className="text-xs text-gray-400">+{emp.skills.length - 3}</span>}
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <button className="text-indigo-600 hover:text-indigo-900 mr-4"><Edit className="w-4 h-4 inline" /></button>
                     <button onClick={() => handleDelete(emp.employeeId)} className="text-red-600 hover:text-red-900"><Trash2 className="w-4 h-4 inline" /></button>
                   </td>
                 </tr>
