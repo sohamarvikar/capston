@@ -9,6 +9,11 @@ const EmployeeList = () => {
   const [showForm, setShowForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [deptFilter, setDeptFilter] = useState('');
+  
+  // Pagination State
+  const [page, setPage] = useState(1);
+  const [pagination, setPagination] = useState({ currentPage: 1, totalPages: 1, totalRecords: 0 });
+
   const [formData, setFormData] = useState({
     name: '', age: '', gender: 'Male', department: 'IT',
     salary: '', experience: '', status: 'Active',
@@ -21,11 +26,13 @@ const EmployeeList = () => {
     setLoading(true);
     setError(null);
     try {
-      const params = { limit: 50 };
+      const params = { limit: 50, page };
       if (searchTerm) params.search = searchTerm;
       if (deptFilter) params.department = deptFilter;
       const res = await getEmployees(params);
+      
       setEmployees(res.data.data);
+      setPagination(res.data.pagination);
     } catch (err) {
       console.error('Error fetching employees:', err);
       setError('Could not load employees. Is the backend running on port 5001?');
@@ -34,13 +41,21 @@ const EmployeeList = () => {
     }
   };
 
+  // Re-fetch when page or deptFilter changes
   useEffect(() => {
     fetchEmployees();
-  }, [deptFilter]);
+  }, [page, deptFilter]);
 
   const handleSearch = (e) => {
     e.preventDefault();
+    setPage(1); // Reset to first page on new search
     fetchEmployees();
+  };
+
+  // When changing department filter, reset page
+  const handleDeptFilterChange = (e) => {
+    setDeptFilter(e.target.value);
+    setPage(1);
   };
 
   const handleDelete = async (id) => {
@@ -109,7 +124,7 @@ const EmployeeList = () => {
             <Search className="w-4 h-4" />
           </button>
         </form>
-        <select value={deptFilter} onChange={(e) => setDeptFilter(e.target.value)}
+        <select value={deptFilter} onChange={handleDeptFilterChange}
           className="border border-gray-300 rounded-md px-4 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option value="">All Departments</option>
           <option value="IT">IT</option>
@@ -261,6 +276,36 @@ const EmployeeList = () => {
               ))}
             </tbody>
           </table>
+          
+          {/* Pagination Controls */}
+          <div className="bg-white px-4 py-3 border-t border-gray-200 flex items-center justify-between sm:px-6">
+            <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+              <div>
+                <p className="text-sm text-gray-700">
+                  Showing page <span className="font-medium">{pagination.currentPage}</span> of <span className="font-medium">{pagination.totalPages}</span> 
+                  {' '}(Total <span className="font-medium">{pagination.totalRecords}</span> employees)
+                </p>
+              </div>
+              <div>
+                <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                  <button
+                    onClick={() => setPage(Math.max(1, page - 1))}
+                    disabled={page === 1}
+                    className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Previous
+                  </button>
+                  <button
+                    onClick={() => setPage(Math.min(pagination.totalPages, page + 1))}
+                    disabled={page === pagination.totalPages}
+                    className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    Next
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

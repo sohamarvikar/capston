@@ -8,6 +8,7 @@ import EmployeeList from './pages/EmployeeList';
 import ProjectList from './pages/ProjectList';
 import ProjectDetails from './pages/ProjectDetails';
 import AntigravityAgent from './pages/AntigravityAgent';
+import Notices from './pages/Notices';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -60,6 +61,10 @@ function App() {
               
               <Route path="/antigravity" element={
                 <PrivateRoute roles={['manager']}><AntigravityAgent /></PrivateRoute>
+              } />
+
+              <Route path="/notices" element={
+                <PrivateRoute roles={['manager', 'employee']}><Notices /></PrivateRoute>
               } />
 
               {/* Employee Routes */}

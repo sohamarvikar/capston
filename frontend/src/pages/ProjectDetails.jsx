@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProjectDetails, getRecommendationForTask, assignTask } from '../services/api';
-import { AlertCircle, UserCheck, CheckCircle, Clock } from 'lucide-react';
+import { AlertCircle, UserCheck, CheckCircle, Clock, MessageSquare, X, Send } from 'lucide-react';
 
 const ProjectDetails = () => {
   const { key } = useParams();
@@ -10,6 +10,11 @@ const ProjectDetails = () => {
   const [recommendingTask, setRecommendingTask] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
   const [isRecommending, setIsRecommending] = useState(false);
+  
+  // Notice Modal State
+  const [noticeTask, setNoticeTask] = useState(null);
+  const [noticeMessage, setNoticeMessage] = useState('');
+  const [isSendingNotice, setIsSendingNotice] = useState(false);
 
   const fetchProject = async () => {
     try {
@@ -58,6 +63,28 @@ const ProjectDetails = () => {
     }
   };
 
+  const handleSendNotice = async (e) => {
+    e.preventDefault();
+    if (!noticeMessage.trim()) return;
+    
+    setIsSendingNotice(true);
+    try {
+      const { sendNotice } = await import('../services/api');
+      await sendNotice({
+        message: noticeMessage,
+        receiverId: noticeTask.assignedTo._id,
+        taskId: noticeTask.issueKey
+      });
+      alert('Notice sent successfully!');
+      setNoticeTask(null);
+      setNoticeMessage('');
+    } catch (error) {
+      alert(error.response?.data?.message || 'Failed to send notice');
+    } finally {
+      setIsSendingNotice(false);
+    }
+  };
+
   if (loading) return <div className="text-center py-10">Loading Project Board...</div>;
   if (!project) return <div className="text-center py-10 text-red-500">Project not found</div>;
 
@@ -83,18 +110,31 @@ const ProjectDetails = () => {
                 <div>
                   <div className="flex items-center space-x-2 mb-1">
                     <span className="text-xs font-bold text-indigo-600">{task.issueKey}</span>
-                    <span className="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-700">{task.issueType}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded ${task.priority === 'Critical' || task.priority === 'High' ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>{task.priority}</span>
+                    {/* Visual Status Badge */}
+                    {task.status === 'completed' || task.status === 'Closed' || task.status === 'Resolved' ? (
+                      <span className="bg-green-100 text-green-800 border border-green-200 text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Completed</span>
+                    ) : (
+                      <span className="bg-red-100 text-red-800 border border-red-200 text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Pending</span>
+                    )}
+                    <span className={`text-xs px-2 py-0.5 rounded ${task.priority === 'Critical' || task.priority === 'High' ? 'bg-orange-100 text-orange-700' : 'bg-blue-100 text-blue-700'}`}>{task.priority}</span>
                   </div>
-                  <h3 className="text-md font-medium text-gray-900">{task.summary}</h3>
+                  <h3 className={`text-md font-medium mt-1 ${task.status === 'completed' || task.status === 'Closed' ? 'text-gray-500 line-through' : 'text-gray-900'}`}>{task.summary}</h3>
                 </div>
                 
                 {/* Assignment Status / Button */}
                 <div className="flex flex-col items-end">
                   {task.assignedTo ? (
-                    <div className="flex items-center text-sm text-green-700 bg-green-50 px-3 py-1 rounded border border-green-200">
-                      <CheckCircle className="w-4 h-4 mr-1" />
-                      Assigned to: <span className="font-semibold ml-1">{task.assignedTo.name}</span>
+                    <div className="flex flex-col items-end gap-2">
+                      <div className="flex items-center text-sm text-green-700 bg-green-50 px-3 py-1 rounded border border-green-200">
+                        <CheckCircle className="w-4 h-4 mr-1" />
+                        Assigned to: <span className="font-semibold ml-1">{task.assignedTo.name}</span>
+                      </div>
+                      <button 
+                        onClick={() => setNoticeTask(task)}
+                        className="text-xs text-blue-600 hover:text-blue-800 flex items-center font-medium bg-blue-50 px-2 py-1 rounded"
+                      >
+                        <MessageSquare className="w-3 h-3 mr-1" /> Send Notice
+                      </button>
                     </div>
                   ) : (
                     <button 
@@ -176,6 +216,45 @@ const ProjectDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* SEND NOTICE MODAL */}
+      {noticeTask && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-lg mx-4">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-bold text-gray-900 flex items-center">
+                <MessageSquare className="w-5 h-5 mr-2 text-blue-600" />
+                Send Notice to {noticeTask.assignedTo.name}
+              </h2>
+              <button onClick={() => setNoticeTask(null)} className="text-gray-400 hover:text-gray-600">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <p className="text-sm text-gray-600 mb-4 bg-gray-50 p-2 rounded">
+              Task: <span className="font-semibold">{noticeTask.issueKey} - {noticeTask.summary}</span>
+            </p>
+            <form onSubmit={handleSendNotice}>
+              <textarea 
+                rows="4" 
+                required
+                value={noticeMessage}
+                onChange={(e) => setNoticeMessage(e.target.value)}
+                placeholder="E.g., Please provide an update on this task..."
+                className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none mb-4"
+              ></textarea>
+              <div className="flex justify-end space-x-2">
+                <button type="button" onClick={() => setNoticeTask(null)} className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 text-sm hover:bg-gray-50">
+                  Cancel
+                </button>
+                <button type="submit" disabled={isSendingNotice} className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 disabled:opacity-50">
+                  {isSendingNotice ? 'Sending...' : <><Send className="w-4 h-4 mr-1.5" /> Send Notice</>}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

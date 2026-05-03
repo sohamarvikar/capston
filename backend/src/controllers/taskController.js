@@ -74,11 +74,11 @@ exports.completeTask = async (req, res) => {
       }
     }
 
-    task.status = 'Closed';
-    project.openTasks = project.tasks.filter(t => t.status === 'Open' || t.status === 'Needs Triage' || t.status === 'In Progress').length;
+    task.status = 'completed';
+    project.openTasks = project.tasks.filter(t => t.status === 'pending' || t.status === 'Open' || t.status === 'Needs Triage' || t.status === 'In Progress').length;
 
     // Check if all tasks are closed → mark project Completed
-    const allClosed = project.tasks.every(t => t.status === 'Closed' || t.status === 'Resolved');
+    const allClosed = project.tasks.every(t => t.status === 'completed' || t.status === 'Closed' || t.status === 'Resolved');
     if (allClosed && project.tasks.length > 0) {
       project.status = 'Completed';
     }
@@ -150,9 +150,9 @@ exports.getProjectProgress = async (req, res) => {
     if (!project) return res.status(404).json({ success: false, message: 'Project not found.' });
 
     const total = project.tasks.length;
-    const completed = project.tasks.filter(t => t.status === 'Closed' || t.status === 'Resolved').length;
+    const completed = project.tasks.filter(t => t.status === 'completed' || t.status === 'Closed' || t.status === 'Resolved').length;
     const inProgress = project.tasks.filter(t => t.status === 'In Progress').length;
-    const open = project.tasks.filter(t => t.status === 'Open' || t.status === 'Needs Triage').length;
+    const open = project.tasks.filter(t => t.status === 'pending' || t.status === 'Open' || t.status === 'Needs Triage').length;
     const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
     res.json({

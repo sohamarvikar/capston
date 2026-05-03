@@ -59,8 +59,8 @@ const EmployeeDashboard = () => {
 
   if (loading) return <div className="p-8 text-center text-gray-500">Loading your tasks...</div>;
 
-  const openTasks = tasks.filter(t => t.status !== 'Closed' && t.status !== 'Resolved');
-  const closedTasks = tasks.filter(t => t.status === 'Closed' || t.status === 'Resolved');
+  const openTasks = tasks.filter(t => t.status !== 'completed' && t.status !== 'Closed' && t.status !== 'Resolved');
+  const closedTasks = tasks.filter(t => t.status === 'completed' || t.status === 'Closed' || t.status === 'Resolved');
 
   return (
     <div className="space-y-6">
@@ -88,12 +88,15 @@ const EmployeeDashboard = () => {
                       <h3 className="text-lg font-bold text-gray-900">{task.summary}</h3>
                       <p className="text-sm text-gray-500">Project: {task.projectName}</p>
                     </div>
-                    <span className="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full font-medium">{task.status}</span>
+                    {/* Visual Pending Badge */}
+                    <span className="bg-red-100 text-red-800 border border-red-200 text-xs px-2 py-1 rounded-full font-bold uppercase tracking-wider">
+                      {task.status === 'pending' || task.status === 'Open' ? 'Pending' : task.status}
+                    </span>
                   </div>
 
                   <div className="mt-4 flex gap-2">
-                    <button onClick={() => handleComplete(task.projectKey, task.issueKey)} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-lg text-sm flex items-center justify-center transition">
-                      <CheckCircle className="w-4 h-4 mr-1.5" /> Mark Complete
+                    <button onClick={() => handleComplete(task.projectKey, task.issueKey)} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-sm flex items-center justify-center transition shadow-sm">
+                      <CheckCircle className="w-4 h-4 mr-1.5" /> Mark as Done
                     </button>
                     <button onClick={() => setUploadingTask(task)} className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 rounded-lg text-sm flex items-center justify-center transition border border-gray-300">
                       <UploadCloud className="w-4 h-4 mr-1.5" /> Upload Doc
@@ -132,10 +135,13 @@ const EmployeeDashboard = () => {
           ) : (
             <div className="space-y-4">
               {closedTasks.map(task => (
-                <div key={task.issueKey} className="bg-gray-50 p-4 rounded-xl border border-gray-200 opacity-75">
+                <div key={task.issueKey} className="bg-green-50 p-4 rounded-xl border border-green-200 opacity-90 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 bg-green-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-bl uppercase tracking-wider">
+                    Completed
+                  </div>
                   <span className="text-xs font-bold text-gray-500">{task.issueKey}</span>
-                  <h3 className="text-md font-medium text-gray-700 line-through">{task.summary}</h3>
-                  <p className="text-xs text-gray-500">Project: {task.projectName}</p>
+                  <h3 className="text-md font-medium text-gray-700 line-through mt-1">{task.summary}</h3>
+                  <p className="text-xs text-gray-500 mt-1">Project: {task.projectName}</p>
                 </div>
               ))}
             </div>

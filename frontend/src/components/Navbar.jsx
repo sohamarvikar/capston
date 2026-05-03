@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Briefcase, Users, LayoutDashboard, Sparkles, LogOut, Shield } from 'lucide-react';
+import { Briefcase, Users, LayoutDashboard, Sparkles, LogOut, Shield, MessageSquare } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -52,17 +52,22 @@ const Navbar = () => {
             
             {user.role === 'manager' && (
               <>
-                <Link to="/projects" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/projects')}`}>
+                <Link to="/projects" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/projects') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
                   <Briefcase className="w-4 h-4 mr-1.5" /> Projects
                 </Link>
-                <Link to="/employees" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/employees')}`}>
+                <Link to="/employees" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/employees') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
                   <Users className="w-4 h-4 mr-1.5" /> Employees
                 </Link>
-                <Link to="/antigravity" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-md ${location.pathname === '/antigravity' ? 'ring-2 ring-amber-400' : ''}`}>
-                  <Sparkles className="w-4 h-4 mr-1.5 text-amber-300" /> Antigravity
+                <Link to="/antigravity" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/antigravity') ? 'bg-amber-600 text-white' : 'text-amber-200 hover:bg-blue-700'}`}>
+                  <Sparkles className="w-4 h-4 mr-1.5" /> Agent
                 </Link>
               </>
             )}
+
+            {/* Common Notice Link */}
+            <Link to="/notices" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/notices') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
+              <MessageSquare className="w-4 h-4 mr-1.5" /> Notices
+            </Link>
 
             <div className="border-l border-blue-700 mx-2 h-6"></div>
             

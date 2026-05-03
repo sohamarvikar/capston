@@ -11,8 +11,10 @@ const userSchema = new mongoose.Schema(
       enum: ['manager', 'employee'],
       default: 'employee',
     },
-    // Link to Employee record (for employees)
+    // Link to Employee record via ObjectId
     employeeRef: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee', default: null },
+    // Link to Employee record via numeric employeeId (for $lookup)
+    employeeId: { type: Number, default: null },
     department: { type: String, enum: ['HR', 'IT', 'Sales', ''], default: '' },
     isActive: { type: Boolean, default: true },
   },
@@ -20,10 +22,9 @@ const userSchema = new mongoose.Schema(
 );
 
 // Hash password before saving
-userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
+userSchema.pre('save', async function () {
+  if (!this.isModified('password')) return;
   this.password = await bcrypt.hash(this.password, 10);
-  next();
 });
 
 // Compare passwords

@@ -31,6 +31,12 @@ export const uploadDocument = (data) => api.post('/tasks/upload', data, { header
 export const getProjectProgress = (projectKey) => api.get(`/tasks/progress/${projectKey}`);
 export const getTaskSubmissions = (projectKey, issueKey) => api.get(`/tasks/submissions/${projectKey}/${issueKey}`);
 
+// Notices & Communication
+export const getNotices = () => api.get('/notices');
+export const sendNotice = (data) => api.post('/notices', data);
+export const replyToNotice = (id, data) => api.post(`/notices/${id}/reply`, data);
+export const markNoticeAsRead = (id) => api.patch(`/notices/${id}/read`);
+
 // Dashboard & Analytics
 export const getDashboardStats = () => api.get('/analytics/dashboard');
 export const getTopEmployees = () => api.get('/analytics/top-performers?limit=5');

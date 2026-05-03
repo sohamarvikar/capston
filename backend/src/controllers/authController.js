@@ -32,23 +32,39 @@ exports.register = async (req, res) => {
       const emp = await Employee.findOne({ name: { $regex: new RegExp(`^${name}$`, 'i') } });
       if (emp) {
         user.employeeRef = emp._id;
+        user.employeeId = emp.employeeId; // Save numeric ID for $lookup
         await user.save();
       }
     }
 
     const token = jwt.sign({ userId: user._id, role: user.role }, JWT_SECRET, { expiresIn: TOKEN_EXPIRY });
 
+    // Fetch linked employee details using MongoDB $lookup
+    const userWithEmployee = await User.aggregate([
+      { $match: { _id: user._id } },
+      {
+        $lookup: {
+          from: 'employees', // Exact collection name
+          localField: 'employeeId',
+          foreignField: 'employeeId',
+          as: 'employeeData'
+        }
+      },
+      {
+        $unwind: {
+          path: '$employeeData',
+          preserveNullAndEmptyArrays: true
+        }
+      }
+    ]);
+
+    const finalUser = userWithEmployee[0];
+    delete finalUser.password;
+
     res.status(201).json({
       success: true,
       token,
-      user: {
-        _id: user._id,
-        email: user.email,
-        name: user.name,
-        role: user.role,
-        department: user.department,
-        employeeRef: user.employeeRef,
-      },
+      user: finalUser,
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -104,17 +120,32 @@ exports.login = async (req, res) => {
 
     const token = jwt.sign({ userId: user._id, role: user.role }, JWT_SECRET, { expiresIn: TOKEN_EXPIRY });
 
+    // Fetch linked employee details using MongoDB $lookup
+    const userWithEmployee = await User.aggregate([
+      { $match: { _id: user._id } },
+      {
+        $lookup: {
+          from: 'employees', // The exact collection name in MongoDB
+          localField: 'employeeId',
+          foreignField: 'employeeId',
+          as: 'employeeData'
+        }
+      },
+      {
+        $unwind: {
+          path: '$employeeData',
+          preserveNullAndEmptyArrays: true // Keep user even if no employee is found
+        }
+      }
+    ]);
+
+    const finalUser = userWithEmployee[0];
+    delete finalUser.password;
+
     res.json({
       success: true,
       token,
-      user: {
-        _id: user._id,
-        email: user.email,
-        name: user.name,
-        role: user.role,
-        department: user.department,
-        employeeRef: user.employeeRef,
-      },
+      user: finalUser,
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
@@ -124,8 +155,32 @@ exports.login = async (req, res) => {
 // GET /api/auth/me — get current user profile
 exports.getMe = async (req, res) => {
   try {
-    const user = await User.findById(req.user._id).populate('employeeRef', 'employeeId name department skills performanceScore');
-    res.json({ success: true, user });
+    const userWithEmployee = await User.aggregate([
+      { $match: { _id: req.user._id } },
+      {
+        $lookup: {
+          from: 'employees',
+          localField: 'employeeId',
+          foreignField: 'employeeId',
+          as: 'employeeData'
+        }
+      },
+      {
+        $unwind: {
+          path: '$employeeData',
+          preserveNullAndEmptyArrays: true
+        }
+      }
+    ]);
+
+    if (!userWithEmployee.length) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    const finalUser = userWithEmployee[0];
+    delete finalUser.password;
+
+    res.json({ success: true, user: finalUser });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }

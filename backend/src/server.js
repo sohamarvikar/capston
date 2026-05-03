@@ -21,6 +21,7 @@ app.use('/api/projects', require('./routes/projectRoutes'));
 app.use('/api/recommendations', require('./routes/recommendationRoutes'));
 app.use('/api/analytics', require('./routes/analyticsRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
+app.use('/api/notices', require('./routes/noticeRoutes'));
 app.use('/api/antigravity', require('./routes/antigravityRoutes'));
 app.use('/uploads', express.static('uploads')); // serve uploaded files
 
