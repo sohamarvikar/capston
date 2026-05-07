@@ -23,7 +23,8 @@ app.use('/api/analytics', require('./routes/analyticsRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
 app.use('/api/notices', require('./routes/noticeRoutes'));
 app.use('/api/antigravity', require('./routes/antigravityRoutes'));
-app.use('/uploads', express.static('uploads')); // serve uploaded files
+const path = require('path');
+app.use('/uploads', express.static(path.join(__dirname, '../uploads'))); // serve uploaded files
 
 // Health check
 app.get('/api/health', (req, res) => {

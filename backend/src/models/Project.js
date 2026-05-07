@@ -26,7 +26,7 @@ const projectSchema = new mongoose.Schema(
         },
         status: {
           type: String,
-          enum: ['pending', 'completed', 'Open', 'In Progress', 'Closed', 'Resolved', 'Reopened', 'Needs Triage', 'Other'],
+          enum: ['pending', 'ongoing', 'completed', 'Open', 'In Progress', 'Closed', 'Resolved', 'Reopened', 'Needs Triage', 'Other'],
           default: 'pending',
         },
         priority: {
@@ -39,6 +39,12 @@ const projectSchema = new mongoose.Schema(
         requiredExperience: { type: Number, default: 0 },
         requiredDepartment: { type: String, enum: ['HR', 'IT', 'Sales', ''], default: '' },
         estimatedDays: { type: Number, default: 5 },
+        estimatedDaysMin: { type: Number, default: null },
+        estimatedDaysMax: { type: Number, default: null },
+        delayProbability: { type: Number, default: 0 },
+        deadline: { type: Date, default: null },
+        startedAt: { type: Date, default: null },
+        completedAt: { type: Date, default: null },
         createdDate: { type: Date, default: Date.now },
       },
     ],

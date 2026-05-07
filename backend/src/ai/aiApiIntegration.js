@@ -14,11 +14,16 @@
  */
 async function analyzeTaskWithGemini(taskSummary) {
   const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) return null;
+  if (!apiKey) {
+    console.warn('[AI Matchmaker] GEMINI_API_KEY is missing from .env. Skipping Gemini integration.');
+    return null;
+  }
+
+  console.log(`[AI Matchmaker] Gemini request sent for task summary: "${taskSummary}"`);
 
   try {
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -36,23 +41,37 @@ Return ONLY valid JSON with these fields:
   "requiredDepartment": "IT" or "HR" or "Sales" or "",
   "priority": "Critical" or "High" or "Medium" or "Low",
   "estimatedDays": <number>
-}`,
-                },
-              ],
-            },
-          ],
-        }),
+}`
+                }
+              ]
+            }
+          ]
+        })
       }
     );
 
     const data = await response.json();
+    console.log('[AI Matchmaker] Gemini response received (raw data):', JSON.stringify(data, null, 2));
+
+    if (!response.ok) {
+      console.error('[AI Matchmaker] Gemini API returned error status:', response.status, data);
+      return null;
+    }
+
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-    // Extract JSON from response
+    
+    // Extract JSON securely (greedy match to handle nested objects)
     const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) return JSON.parse(jsonMatch[0]);
-    return null;
+    if (jsonMatch) {
+      const parsedJson = JSON.parse(jsonMatch[0]);
+      console.log('[AI Matchmaker] Extracted requirements from Gemini:', parsedJson);
+      return parsedJson;
+    } else {
+      console.error('[AI Matchmaker] Failed to parse JSON from Gemini response. Response text:', text);
+      return null;
+    }
   } catch (error) {
-    console.error('Gemini API error:', error.message);
+    console.error('[AI Matchmaker] Gemini API execution error trace:', error);
     return null;
   }
 }

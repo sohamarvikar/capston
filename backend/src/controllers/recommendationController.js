@@ -5,14 +5,23 @@ const Assignment = require('../models/Assignment');
 
 // POST /api/recommendations/for-task — recommend employees for a task
 exports.recommendForTask = async (req, res) => {
+  console.log('[AI Matchmaker] API request received: POST /api/recommendations/for-task');
+  console.log('[AI Matchmaker] Request Payload:', req.body);
+
   try {
     const { requiredSkills, requiredExperience, requiredDepartment, taskSummary, topN = 5 } = req.body;
 
-    let requirements = { requiredSkills: requiredSkills || [], requiredExperience: requiredExperience || 0, requiredDepartment: requiredDepartment || '' };
+    let requirements = { 
+      requiredSkills: requiredSkills || [], 
+      requiredExperience: requiredExperience || 0, 
+      requiredDepartment: requiredDepartment || '' 
+    };
 
     // If taskSummary is provided, try AI analysis to auto-extract requirements
     if (taskSummary && (!requiredSkills || requiredSkills.length === 0)) {
+      console.log('[AI Matchmaker] Delegating analysis to Gemini AI...');
       const aiAnalysis = await analyzeTask(taskSummary);
+      
       if (aiAnalysis) {
         requirements = {
           requiredSkills: aiAnalysis.requiredSkills || requirements.requiredSkills,
@@ -20,10 +29,17 @@ exports.recommendForTask = async (req, res) => {
           requiredDepartment: aiAnalysis.requiredDepartment || requirements.requiredDepartment,
         };
         res.locals.aiSource = aiAnalysis.source;
+        console.log(`[AI Matchmaker] Successfully merged AI requirements from ${aiAnalysis.source}:`, requirements);
+      } else {
+        console.log('[AI Matchmaker] AI analysis returned null, falling back to local defaults/empty requirements.');
       }
     }
 
+    console.log('[AI Matchmaker] Starting Employee Matching Engine with requirements:', requirements);
     const recommendations = await recommendEmployees(requirements, Number(topN));
+
+    console.log(`[AI Matchmaker] Employee matching complete. Found ${recommendations.length} recommendations.`);
+    console.log('[AI Matchmaker] Final recommendation output:', JSON.stringify(recommendations.map(r => ({ name: r.employee.name, score: r.score })), null, 2));
 
     res.json({
       success: true,
@@ -32,6 +48,7 @@ exports.recommendForTask = async (req, res) => {
       data: recommendations,
     });
   } catch (error) {
+    console.error('[AI Matchmaker] Fatal Error in recommendForTask:', error);
     res.status(500).json({ success: false, message: error.message });
   }
 };

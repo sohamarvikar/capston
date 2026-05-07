@@ -26,6 +26,7 @@ export const getMe = () => api.get('/auth/me');
 
 // Tasks & Progress (Role Based)
 export const getMyTasks = () => api.get('/tasks/my');
+export const startTask = (data) => api.patch('/tasks/start', data);
 export const completeTask = (data) => api.patch('/tasks/complete', data);
 export const uploadDocument = (data) => api.post('/tasks/upload', data, { headers: { 'Content-Type': 'multipart/form-data' } });
 export const getProjectProgress = (projectKey) => api.get(`/tasks/progress/${projectKey}`);
@@ -61,6 +62,7 @@ export const addTaskToProject = (projectKey, taskData) => api.post(`/projects/${
 export const getRecommendationForTask = (taskData) => api.post('/recommendations/for-task', taskData);
 export const getRecommendationForProject = (projectKey) => api.get(`/recommendations/for-project/${projectKey}`);
 export const assignTask = (projectKey, issueKey, data) => api.patch(`/projects/${projectKey}/tasks/${issueKey}/assign`, data);
+export const autoReassignTask = (projectKey, issueKey) => api.patch(`/projects/${projectKey}/tasks/${issueKey}/reassign`);
 export const acceptRecommendation = (data) => api.post('/recommendations/accept', data);
 export const getAssignments = (params) => api.get('/recommendations/assignments', { params });
 

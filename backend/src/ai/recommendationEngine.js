@@ -27,17 +27,36 @@ const WEIGHTS = {
 };
 
 /**
+ * Normalizes employee skills from the database.
+ * Handles arrays, comma-separated strings, and null/undefined values.
+ */
+function normalizeSkills(skills) {
+  if (Array.isArray(skills)) {
+    return skills.map((s) => String(s).toLowerCase().trim());
+  }
+  if (typeof skills === 'string') {
+    return skills.split(',').map((s) => s.toLowerCase().trim());
+  }
+  return [];
+}
+
+/**
  * Calculate the recommendation score for a single employee
  * against a set of project/task requirements.
  */
 function calculateScore(employee, requirements) {
   const scores = {};
 
-  // 1. Skill Match Score (0–100)
+  // 1. Skill Match Score (0–100) using Partial Matching
   if (requirements.requiredSkills && requirements.requiredSkills.length > 0) {
-    const empSkills = (employee.skills || []).map((s) => s.toLowerCase());
-    const reqSkills = requirements.requiredSkills.map((s) => s.toLowerCase());
-    const matched = reqSkills.filter((s) => empSkills.includes(s)).length;
+    const empSkills = normalizeSkills(employee.skills);
+    const reqSkills = requirements.requiredSkills.map((s) => s.toLowerCase().trim());
+    
+    // Partial Match: Check if any employee skill contains the required skill, or vice versa
+    const matched = reqSkills.filter((reqSkill) => {
+      return empSkills.some(empSkill => empSkill.includes(reqSkill) || reqSkill.includes(empSkill));
+    }).length;
+    
     scores.skillMatch = (matched / reqSkills.length) * 100;
   } else {
     scores.skillMatch = 50; // neutral if no skills required
@@ -92,18 +111,25 @@ function calculateScore(employee, requirements) {
  */
 function buildReason(employee, breakdown, requirements) {
   const reasons = [];
-  if (breakdown.skillMatch >= 70) {
-    const matched = (employee.skills || []).filter((s) =>
-      (requirements.requiredSkills || []).map((r) => r.toLowerCase()).includes(s.toLowerCase())
-    );
-    reasons.push(`Strong skill match (${matched.join(', ')})`);
+  const empSkills = normalizeSkills(employee.skills);
+  const reqSkills = (requirements.requiredSkills || []).map(s => s.toLowerCase().trim());
+  
+  const matchedSkills = empSkills.filter(empSkill => 
+    reqSkills.some(reqSkill => empSkill.includes(reqSkill) || reqSkill.includes(empSkill))
+  );
+
+  if (matchedSkills.length > 0) {
+    reasons.push(`Skills matched: ${matchedSkills.join(', ')}`);
   }
   if (breakdown.performance >= 80) reasons.push(`High performer (${employee.performanceScore}/5)`);
   if (breakdown.experience >= 70) reasons.push(`${employee.experience}yrs experience`);
   if (breakdown.availability >= 80) reasons.push('Low workload — available');
   if (breakdown.departmentMatch === 100) reasons.push(`${employee.department} dept match`);
 
-  return reasons.length > 0 ? reasons.join(' • ') : 'General fit based on profile';
+  return {
+    reasonText: reasons.length > 0 ? reasons.join(' • ') : 'General fit based on profile',
+    matchedSkills
+  };
 }
 
 /**
@@ -116,7 +142,7 @@ function buildReason(employee, breakdown, requirements) {
  */
 async function recommendEmployees(requirements, topN = 5) {
   // Only consider active, available employees
-  const filter = { status: 'Active' };
+  const filter = { status: { $ne: 'Inactive' } };
   if (requirements.requiredDepartment && requirements.requiredDepartment !== '') {
     // Include both matching department AND others (they get scored lower)
     // so we still consider cross-department talent
@@ -124,26 +150,38 @@ async function recommendEmployees(requirements, topN = 5) {
 
   const employees = await Employee.find(filter).lean();
 
-  const ranked = employees.map((emp) => {
-    const { finalScore, breakdown } = calculateScore(emp, requirements);
-    const reason = buildReason(emp, breakdown, requirements);
-    return {
-      employee: {
-        _id: emp._id,
-        employeeId: emp.employeeId,
-        name: emp.name,
-        department: emp.department,
-        skills: emp.skills,
-        performanceScore: emp.performanceScore,
-        experience: emp.experience,
-        currentWorkload: emp.currentWorkload,
-        location: emp.location,
-      },
-      score: finalScore,
-      breakdown,
-      reason,
-    };
-  });
+  const ranked = [];
+  
+  for (const emp of employees) {
+    try {
+      const empSkills = normalizeSkills(emp.skills);
+      // Optional defensive logging if needed: console.log("[AI Matchmaker] Normalized Skills:", emp.name, empSkills);
+      
+      const { finalScore, breakdown } = calculateScore(emp, requirements);
+      const { reasonText, matchedSkills } = buildReason(emp, breakdown, requirements);
+      
+      ranked.push({
+        employee: {
+          _id: emp._id,
+          employeeId: emp.employeeId,
+          name: emp.name,
+          department: emp.department,
+          skills: empSkills, // Return normalized skills to frontend
+          performanceScore: emp.performanceScore,
+          experience: emp.experience,
+          currentWorkload: emp.currentWorkload,
+          location: emp.location,
+        },
+        score: finalScore,
+        breakdown,
+        reason: reasonText,
+        matchedSkills,
+      });
+    } catch (err) {
+      console.error(`[AI Matchmaker] Error scoring employee ${emp.employeeId} (${emp.name}):`, err.message);
+      // Continue to next employee instead of crashing the whole recommendation
+    }
+  }
 
   // Sort by score descending
   ranked.sort((a, b) => b.score - a.score);

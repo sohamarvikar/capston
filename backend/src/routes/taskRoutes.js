@@ -5,6 +5,7 @@ const { auth, authorize } = require('../middleware/auth');
 
 // Employee routes
 router.get('/my', auth, authorize('employee', 'manager'), c.getMyTasks);
+router.patch('/start', auth, authorize('employee', 'manager'), c.startTask);
 router.patch('/complete', auth, authorize('employee', 'manager'), c.completeTask);
 router.post('/upload', auth, authorize('employee', 'manager'), c.uploadDocument);
 

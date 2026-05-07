@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getMyTasks, completeTask, uploadDocument } from '../services/api';
+import { getMyTasks, startTask, completeTask, uploadDocument } from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import { CheckCircle, UploadCloud, Clock, AlertCircle } from 'lucide-react';
+import { CheckCircle, UploadCloud, Clock, AlertCircle, Play, Hourglass } from 'lucide-react';
 
 const EmployeeDashboard = () => {
   const { user } = useAuth();
@@ -26,6 +26,15 @@ const EmployeeDashboard = () => {
   useEffect(() => {
     fetchTasks();
   }, []);
+
+  const handleStart = async (projectKey, issueKey) => {
+    try {
+      await startTask({ projectKey, issueKey });
+      fetchTasks();
+    } catch (err) {
+      alert(err.response?.data?.message || 'Failed to start task.');
+    }
+  };
 
   const handleComplete = async (projectKey, issueKey) => {
     try {
@@ -61,12 +70,31 @@ const EmployeeDashboard = () => {
 
   const openTasks = tasks.filter(t => t.status !== 'completed' && t.status !== 'Closed' && t.status !== 'Resolved');
   const closedTasks = tasks.filter(t => t.status === 'completed' || t.status === 'Closed' || t.status === 'Resolved');
+  
+  const totalTasks = tasks.length;
+  const progressPercentage = totalTasks === 0 ? 0 : Math.round((closedTasks.length / totalTasks) * 100);
 
   return (
     <div className="space-y-6">
       <div className="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500">
-        <h1 className="text-2xl font-bold text-gray-900">Welcome, {user.name}</h1>
-        <p className="text-gray-600">Here are your assigned tasks.</p>
+        <div className="flex justify-between items-center mb-4">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Welcome, {user.name}</h1>
+            <p className="text-gray-600">Here are your assigned tasks.</p>
+          </div>
+          <div className="text-right">
+            <span className="text-2xl font-bold text-blue-600">{progressPercentage}%</span>
+            <p className="text-xs text-gray-500 uppercase tracking-wide font-bold">Overall Progress</p>
+          </div>
+        </div>
+        
+        {/* Dynamic Progress Bar */}
+        <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+          <div 
+            className="h-3 rounded-full transition-all duration-1000 ease-out bg-gradient-to-r from-blue-500 to-green-500" 
+            style={{ width: `${progressPercentage}%` }}
+          ></div>
+        </div>
       </div>
 
       {error && <div className="bg-red-50 text-red-700 p-4 rounded-lg text-center">{error}</div>}
@@ -87,17 +115,45 @@ const EmployeeDashboard = () => {
                       <span className="text-xs font-bold text-blue-600">{task.issueKey}</span>
                       <h3 className="text-lg font-bold text-gray-900">{task.summary}</h3>
                       <p className="text-sm text-gray-500">Project: {task.projectName}</p>
+                      {task.estimatedDaysMin && task.estimatedDaysMax && (
+                        <p className="text-xs text-indigo-600 mt-1 font-medium">
+                          AI Est. Time: {task.estimatedDaysMin}-{task.estimatedDaysMax} days
+                        </p>
+                      )}
                     </div>
-                    {/* Visual Pending Badge */}
-                    <span className="bg-red-100 text-red-800 border border-red-200 text-xs px-2 py-1 rounded-full font-bold uppercase tracking-wider">
-                      {task.status === 'pending' || task.status === 'Open' ? 'Pending' : task.status}
-                    </span>
+                    {/* Visual Status Badge & Deadline */}
+                    <div className="flex space-x-2">
+                      {task.deadlineStatus && (
+                        <span className={`border text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider flex items-center ${
+                          task.deadlineStatus === 'On Time' ? 'bg-green-100 text-green-800 border-green-200' :
+                          task.deadlineStatus === 'At Risk' ? 'bg-yellow-100 text-yellow-800 border-yellow-200' :
+                          'bg-red-100 text-red-800 border-red-200'
+                        }`}>
+                          {task.deadlineStatus}
+                        </span>
+                      )}
+                    {task.status === 'ongoing' || task.status === 'In Progress' ? (
+                      <span className="bg-yellow-100 text-yellow-800 border border-yellow-200 text-xs px-2 py-1 rounded-full font-bold uppercase tracking-wider flex items-center">
+                        <Hourglass className="w-3 h-3 mr-1" /> Ongoing
+                      </span>
+                    ) : (
+                      <span className="bg-red-100 text-red-800 border border-red-200 text-xs px-2 py-1 rounded-full font-bold uppercase tracking-wider flex items-center">
+                        <AlertCircle className="w-3 h-3 mr-1" /> Pending
+                      </span>
+                    )}
+                    </div>
                   </div>
 
                   <div className="mt-4 flex gap-2">
-                    <button onClick={() => handleComplete(task.projectKey, task.issueKey)} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-sm flex items-center justify-center transition shadow-sm">
-                      <CheckCircle className="w-4 h-4 mr-1.5" /> Mark as Done
-                    </button>
+                    {task.status === 'ongoing' || task.status === 'In Progress' ? (
+                      <button onClick={() => handleComplete(task.projectKey, task.issueKey)} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-sm flex items-center justify-center transition shadow-sm">
+                        <CheckCircle className="w-4 h-4 mr-1.5" /> Mark as Done
+                      </button>
+                    ) : (
+                      <button onClick={() => handleStart(task.projectKey, task.issueKey)} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-sm flex items-center justify-center transition shadow-sm">
+                        <Play className="w-4 h-4 mr-1.5 fill-current" /> Start Task
+                      </button>
+                    )}
                     <button onClick={() => setUploadingTask(task)} className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 rounded-lg text-sm flex items-center justify-center transition border border-gray-300">
                       <UploadCloud className="w-4 h-4 mr-1.5" /> Upload Doc
                     </button>

@@ -6,5 +6,6 @@ router.route('/').get(c.getProjects).post(c.createProject);
 router.route('/:key').get(c.getProject).put(c.updateProject).delete(c.deleteProject);
 router.post('/:key/tasks', c.addTask);
 router.patch('/:key/tasks/:issueKey/assign', c.assignTask);
+router.patch('/:key/tasks/:issueKey/reassign', c.autoReassignTask);
 
 module.exports = router;

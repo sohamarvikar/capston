@@ -1,0 +1,1001 @@
+ID,Name,Age,Gender,Department,Salary,Joining Date,Performance Score,Experience,Status,Location,Session,Skills,Weekly_Hours,Pending_Tasks,Days_Since_Vacation,Tasks_Completed_Monthly,Burnout_Level
+1,Cory Escobar,48,Female,HR,5641,2015-05-03,2.0,16,Active,New York,Night,UI/UX,42,5,237,14,1
+2,Timothy Sanchez,25,Other,Sales,4249,2020-11-09,2.0,11,Inactive,Los Angeles,Evening,"AWS,Docker",47,6,120,7,0
+3,Chad Nichols,57,Other,Sales,3058,2019-02-12,2.75,1,Inactive,New York,Morning,"Java,Spring",45,19,169,16,2
+4,Christine Williams,58,Female,IT,5895,2017-09-08,2.0,13,Inactive,Los Angeles,Evening,"AWS,Docker",43,22,273,35,2
+5,Amber Harris,35,Other,IT,4317,2020-02-15,5.0,16,Inactive,New York,Evening,"AWS,Docker",35,24,234,33,2
+6,Ashley Howe,29,Female,HR,2591,2016-06-24,1.0,6,Active,Chicago,Evening,"Python,SQL",45,17,226,9,2
+7,David Olson,39,Female,Sales,6826,2023-05-11,2.5483870967741935,4,Active,New York,Night,"Java,Spring",57,10,54,29,0
+8,Amanda Baker,52,Other,HR,6285,2015-04-01,2.8620689655172415,8,Inactive,Chicago,Evening,"Java,Spring",52,18,223,45,2
+9,Jeremy Wright,63,Female,Sales,9862,2024-02-07,2.7777777777777777,3,Inactive,New York,Night,"Java,Spring",54,4,68,35,0
+10,Brian Faulkner,30,Male,IT,8202,2018-05-26,1.0,9,Active,Los Angeles,Morning,"AWS,Docker",37,18,141,25,1
+11,Nicole Bell,42,Female,Sales,5336,2015-01-28,3.0,7,Active,Los Angeles,Evening,UI/UX,34,10,113,24,0
+12,Rodney Richardson,60,Other,HR,6908,2015-03-14,4.0,19,Active,Chicago,Night,"Java,Spring",40,23,204,43,2
+13,Joshua Robinson,61,Male,IT,5688,2020-06-21,2.5483870967741935,4,Inactive,Chicago,Night,"AWS,Docker",42,11,166,26,1
+14,Benjamin Callahan,34,Male,IT,5593,2019-06-23,3.1923076923076925,2,Inactive,Los Angeles,Night,"Python,SQL",50,9,107,8,1
+15,Matthew Collins MD,31,Female,Sales,8568,2020-06-01,3.260869565217391,20,Inactive,Los Angeles,Evening,UI/UX,28,7,235,17,1
+16,Gary Cooley,62,Male,HR,5386,2017-07-25,3.1923076923076925,2,Inactive,Chicago,Morning,"Python,SQL",54,23,214,49,2
+17,Jonathan Perez,59,Male,HR,6586,2019-02-19,3.0,7,Inactive,Los Angeles,Evening,UI/UX,40,8,88,46,0
+18,Jacqueline Randall,31,Female,HR,3519,2018-05-18,4.0,6,Active,New York,Morning,"AWS,Docker",38,3,133,24,0
+19,Nancy Stephens,38,Male,HR,9061,2017-07-16,5.0,16,Inactive,Chicago,Night,"React,Node",33,4,227,17,0
+20,Victoria Fox,57,Female,HR,7251,2023-06-07,2.8333333333333335,10,Active,Los Angeles,Evening,UI/UX,28,20,13,21,0
+21,Heather Jones,35,Male,Sales,4565,2018-02-07,2.6666666666666665,9,Active,Chicago,Night,"Python,SQL",48,7,99,40,0
+22,Stacie Porter,61,Female,HR,4071,2020-05-04,2.0,9,Inactive,Chicago,Night,"AWS,Docker",42,22,113,37,2
+23,Bryce Carter,35,Female,Sales,9598,2015-12-16,4.0,4,Inactive,New York,Night,UI/UX,31,8,128,5,0
+24,Marissa Stewart,31,Female,HR,5386,2021-01-30,2.7777777777777777,3,Active,Los Angeles,Evening,"React,Node",31,14,142,19,1
+25,Tracy Carlson,21,Male,HR,9275,2022-04-09,4.0,12,Active,New York,Morning,"React,Node",39,14,105,17,1
+26,Tara Blackwell,30,Other,HR,6120,2020-02-20,5.0,7,Active,New York,Evening,"Java,Spring",55,15,152,21,2
+27,Austin Long,20,Female,IT,4899,2024-05-01,5.0,8,Inactive,Chicago,Night,"Java,Spring",39,13,297,28,2
+28,Jordan Warren,55,Female,HR,4608,2018-07-07,2.7222222222222223,18,Inactive,Los Angeles,Morning,"Python,SQL",29,7,37,12,0
+29,Vickie Campbell,65,Female,IT,9190,2019-10-28,3.0476190476190474,12,Inactive,Chicago,Morning,UI/UX,40,17,287,31,2
+30,Rachel Ramsey,22,Male,Sales,9661,2016-08-18,2.0,17,Inactive,Chicago,Night,UI/UX,39,9,242,49,1
+31,Brandi Smith,21,Other,IT,4780,2020-01-20,1.0,7,Inactive,New York,Night,"Java,Spring",20,19,26,27,0
+32,Jacqueline Becker,63,Other,Sales,4270,2021-12-16,3.260869565217391,20,Inactive,Los Angeles,Morning,UI/UX,41,5,68,12,0
+33,Trevor Duncan,65,Other,Sales,6547,2024-06-10,2.8333333333333335,10,Active,Chicago,Evening,UI/UX,40,11,99,12,0
+34,Mr. Brian Nelson,42,Female,IT,5207,2017-08-17,1.0,4,Active,Los Angeles,Night,"React,Node",47,1,208,30,0
+35,Lisa Fry,51,Female,IT,9259,2017-09-26,4.0,17,Inactive,Los Angeles,Night,"Java,Spring",56,6,35,17,0
+36,Kevin Watts,35,Male,IT,9078,2019-06-12,1.0,7,Inactive,Los Angeles,Evening,"AWS,Docker",51,15,34,43,1
+37,Jacqueline Moore,39,Male,Sales,2364,2018-02-25,1.0,15,Active,Los Angeles,Evening,"Java,Spring",39,2,276,41,1
+38,Lawrence Rose,18,Female,HR,2904,2021-04-11,1.0,17,Inactive,Chicago,Night,"AWS,Docker",33,12,190,32,1
+39,Jordan Scott,33,Other,Sales,8678,2016-05-15,5.0,9,Active,Los Angeles,Evening,"React,Node",62,2,77,29,0
+40,Lisa Wagner,36,Male,HR,8870,2024-08-12,4.0,17,Active,Los Angeles,Evening,"Python,SQL",42,17,58,20,1
+41,Ricky Keith,20,Female,Sales,6621,2024-01-29,3.260869565217391,20,Inactive,Los Angeles,Evening,UI/UX,42,10,184,6,1
+42,Charles Mccall,58,Other,IT,9512,2024-11-10,2.8620689655172415,8,Inactive,Los Angeles,Morning,"React,Node",41,7,61,22,0
+43,April Ponce,27,Female,Sales,6655,2021-10-22,3.1923076923076925,2,Inactive,Los Angeles,Evening,UI/UX,43,5,111,21,0
+44,Cindy Nichols,64,Female,IT,2427,2014-12-19,2.96875,6,Active,New York,Night,"Python,SQL",40,0,225,34,0
+45,Daniel Aguirre,20,Other,IT,4184,2017-10-03,2.8461538461538463,13,Active,New York,Morning,"Python,SQL",37,0,197,43,0
+46,Dr. Monica Hanna PhD,27,Other,HR,4356,2020-10-31,3.0,11,Inactive,New York,Night,"React,Node",37,22,66,17,1
+47,Alicia Scott,47,Female,HR,7966,2019-09-03,2.8620689655172415,8,Inactive,New York,Morning,"Python,SQL",41,7,56,36,0
+48,Jake Johnson,48,Other,IT,5848,2017-02-03,3.0,2,Active,Los Angeles,Night,"AWS,Docker",37,4,168,33,0
+49,Jamie Wood,46,Male,Sales,2773,2023-02-25,4.0,9,Active,New York,Morning,"Python,SQL",36,15,183,34,1
+50,Valerie Guerrero,23,Male,HR,6253,2023-09-21,4.0,14,Active,Los Angeles,Night,UI/UX,42,10,251,22,2
+51,Jamie Gregory,27,Other,Sales,3253,2015-12-07,3.0476190476190474,12,Active,Chicago,Morning,UI/UX,39,4,291,17,1
+52,Jesse Vincent,62,Male,HR,6149,2023-09-17,3.0,11,Inactive,Chicago,Evening,UI/UX,54,3,250,47,1
+53,Steve Salinas,42,Other,Sales,6567,2022-03-26,2.0,19,Inactive,Los Angeles,Morning,UI/UX,20,5,14,25,0
+54,Taylor Griffin,62,Other,Sales,5721,2019-01-07,5.0,7,Active,Chicago,Night,"AWS,Docker",50,13,93,34,1
+55,Kim Smith,63,Other,HR,4533,2023-10-11,4.0,16,Active,Los Angeles,Night,"Java,Spring",51,21,257,25,2
+56,Jonathon Adams,40,Female,IT,8745,2020-07-29,3.0476190476190474,12,Inactive,Chicago,Night,"React,Node",25,18,63,21,0
+57,Jeremy Conway,38,Other,IT,4954,2024-08-11,3.0476190476190474,12,Active,Los Angeles,Night,UI/UX,39,8,170,44,1
+58,Johnathan Obrien,58,Female,Sales,3635,2021-04-09,3.2285714285714286,7,Active,New York,Night,"Python,SQL",39,11,235,23,1
+59,Erik Moss,57,Male,Sales,4651,2018-02-07,2.7586206896551726,19,Active,Los Angeles,Night,UI/UX,30,10,24,19,0
+60,Melinda Tyler,19,Other,Sales,5937,2021-04-12,5.0,9,Inactive,Los Angeles,Evening,"Python,SQL",35,13,233,13,2
+61,Andrew Shannon,51,Other,Sales,8544,2020-02-08,2.96875,6,Active,New York,Evening,"Python,SQL",33,22,70,14,1
+62,Carmen Taylor,33,Male,Sales,2851,2023-01-30,2.0,11,Active,Chicago,Morning,UI/UX,56,15,131,48,2
+63,Joseph Anderson,57,Female,IT,3933,2023-06-02,2.96875,6,Active,Los Angeles,Night,"AWS,Docker",49,0,286,35,1
+64,Katherine Clark,39,Female,IT,2585,2023-02-17,2.0,1,Active,Los Angeles,Evening,"Python,SQL",52,12,55,27,1
+65,Mary Miller,20,Other,Sales,3718,2019-10-19,2.5483870967741935,4,Active,Los Angeles,Morning,"Python,SQL",47,22,71,34,2
+66,Sarah Harrell,44,Male,IT,2436,2021-01-01,3.6,5,Inactive,Chicago,Night,UI/UX,32,20,95,37,1
+67,Kelli Lopez,25,Female,HR,7637,2021-09-21,2.5483870967741935,4,Active,Los Angeles,Night,"Python,SQL",37,20,219,13,2
+68,Denise Smith,27,Male,HR,6921,2024-10-31,2.0,3,Active,Chicago,Evening,"Python,SQL",45,12,87,5,1
+69,Alyssa Taylor,29,Male,HR,7554,2017-10-19,2.6470588235294117,17,Active,Chicago,Night,UI/UX,32,1,211,48,0
+70,Erica James,64,Female,IT,2442,2020-09-28,2.5454545454545454,14,Inactive,Los Angeles,Morning,UI/UX,47,3,232,39,1
+71,Daniel Hamilton,40,Male,Sales,2466,2018-04-08,2.857142857142857,15,Active,Chicago,Evening,"React,Node",40,5,231,15,1
+72,Tiffany Alexander,45,Female,Sales,3897,2019-05-18,4.0,12,Active,Chicago,Evening,"AWS,Docker",39,22,12,38,1
+73,Jennifer Carter,52,Male,HR,8386,2016-04-06,2.5454545454545454,14,Active,Chicago,Morning,"AWS,Docker",47,4,15,20,0
+74,Amanda Rodgers,60,Male,IT,3767,2018-03-21,3.0,3,Inactive,Los Angeles,Night,"Python,SQL",45,24,102,13,2
+75,Francisco Jones,18,Female,Sales,8622,2023-07-01,1.0,13,Inactive,Chicago,Evening,"AWS,Docker",39,2,17,36,0
+76,Cameron Butler,31,Female,IT,8032,2023-10-20,4.0,11,Inactive,New York,Morning,"Python,SQL",51,0,244,19,1
+77,Victor Nelson,47,Female,Sales,2025,2015-05-14,1.0,5,Active,New York,Night,"React,Node",33,3,117,16,0
+78,Kathy Thompson,19,Other,HR,4698,2016-02-23,3.0,15,Inactive,Chicago,Night,UI/UX,46,24,170,37,2
+79,Michele Schmidt,56,Male,HR,5457,2016-05-22,3.0,11,Inactive,Chicago,Evening,UI/UX,46,19,218,49,2
+80,Mary Singh,39,Other,IT,5562,2019-07-06,3.2285714285714286,7,Inactive,New York,Evening,UI/UX,39,1,249,18,0
+81,Julia Stanley,28,Female,HR,2077,2021-07-28,3.0,11,Inactive,Los Angeles,Morning,"AWS,Docker",44,4,59,12,0
+82,Kevin Price,62,Male,HR,4292,2020-11-12,2.0,7,Active,Los Angeles,Night,"React,Node",31,2,20,12,0
+83,Jamie Wright,49,Other,Sales,3111,2020-11-02,2.7777777777777777,3,Active,Chicago,Evening,"AWS,Docker",49,8,165,31,1
+84,Elaine Payne,18,Female,IT,5470,2017-06-23,3.0,8,Active,Los Angeles,Evening,"AWS,Docker",40,19,79,16,1
+85,Justin Rodriguez,39,Other,Sales,3115,2020-07-01,4.0,4,Active,Chicago,Evening,"React,Node",37,5,178,5,0
+86,Chase Taylor,29,Other,IT,9901,2017-10-04,2.0,7,Active,Los Angeles,Evening,"React,Node",50,17,281,47,2
+87,Dustin Allen,34,Male,IT,8629,2015-01-08,2.6666666666666665,9,Inactive,Chicago,Morning,"React,Node",36,5,77,44,0
+88,Lori Bowen,28,Female,Sales,6839,2023-01-07,2.5483870967741935,4,Active,Los Angeles,Evening,"React,Node",30,18,261,46,2
+89,Jessica Sanders,41,Male,HR,6828,2024-08-02,1.0,10,Inactive,Chicago,Night,UI/UX,29,11,57,15,0
+90,Lauren Lee,60,Female,Sales,8710,2020-07-16,2.0,10,Inactive,Los Angeles,Evening,"Java,Spring",46,24,193,43,2
+91,Kyle Schwartz,31,Male,HR,3488,2023-03-16,1.0,3,Active,New York,Morning,"Java,Spring",31,10,196,47,1
+92,Bruce Campbell,58,Other,IT,5271,2023-12-20,3.2285714285714286,7,Active,Chicago,Night,"React,Node",56,1,99,35,0
+93,Peter Moore,38,Other,Sales,4897,2021-03-13,1.0,4,Inactive,Chicago,Morning,"Java,Spring",25,14,148,21,1
+94,Elizabeth Gallagher,21,Female,IT,2860,2023-02-06,4.0,4,Active,Los Angeles,Night,"Java,Spring",55,11,98,37,1
+95,Michael Garcia,62,Male,Sales,3482,2018-01-29,3.0,20,Active,New York,Night,"React,Node",43,11,283,36,2
+96,Jeff Wilson,45,Other,HR,3427,2024-06-08,2.8620689655172415,8,Active,Chicago,Evening,"Java,Spring",41,8,28,33,0
+97,Holly Gaines,22,Male,Sales,5432,2017-01-14,2.5454545454545454,14,Inactive,Los Angeles,Morning,"AWS,Docker",37,20,163,25,2
+98,Matthew Fields,33,Female,HR,2378,2015-08-07,3.260869565217391,20,Inactive,Los Angeles,Night,"Python,SQL",45,23,269,25,2
+99,Kathleen Thomas,20,Other,IT,6768,2018-09-15,3.1923076923076925,2,Inactive,Los Angeles,Night,"Python,SQL",41,1,117,44,0
+100,Thomas Hamilton,33,Male,Sales,8076,2017-12-24,2.6666666666666665,9,Inactive,Chicago,Morning,"React,Node",50,21,294,27,2
+101,Bryan Navarro,26,Female,IT,9538,2021-01-23,2.7777777777777777,3,Active,New York,Morning,UI/UX,42,2,68,10,0
+102,Jennifer Hansen,27,Other,HR,2912,2020-02-22,2.0,3,Inactive,New York,Night,"React,Node",43,11,134,26,1
+103,James Saunders,34,Other,IT,6742,2019-09-16,2.8620689655172415,8,Active,Los Angeles,Night,UI/UX,39,15,282,42,2
+104,Jose Henson,32,Male,HR,6458,2023-03-25,5.0,7,Active,Chicago,Evening,"Python,SQL",41,20,116,41,2
+105,Isaiah Sanders DDS,31,Female,HR,2752,2021-04-28,5.0,6,Active,Chicago,Night,"React,Node",44,23,254,49,2
+106,Katelyn Chavez,25,Other,HR,7371,2015-10-06,2.8461538461538463,13,Inactive,Chicago,Evening,"AWS,Docker",28,0,256,12,0
+107,Nancy Robinson,21,Other,Sales,5133,2017-12-19,3.0,11,Active,Los Angeles,Evening,"Java,Spring",31,20,17,45,1
+108,Sandra Allen,24,Male,IT,2578,2019-01-05,5.0,16,Active,Chicago,Morning,UI/UX,47,2,150,39,0
+109,Mrs. Robin Mccarthy PhD,51,Male,HR,7457,2019-04-24,2.857142857142857,15,Active,Los Angeles,Night,"Java,Spring",43,19,17,15,1
+110,Catherine Ray,58,Female,Sales,7263,2017-12-10,3.260869565217391,20,Active,New York,Morning,"Java,Spring",40,1,103,28,0
+111,James Johnson,65,Female,HR,2166,2016-08-20,2.0,17,Inactive,New York,Morning,"React,Node",42,8,48,25,0
+112,Sarah Barrera,31,Female,Sales,2303,2021-10-30,3.0,18,Inactive,Los Angeles,Night,"Java,Spring",44,18,90,6,1
+113,Luke Mcpherson,34,Other,IT,9812,2016-01-29,3.0,13,Active,New York,Evening,"AWS,Docker",37,14,196,44,1
+114,Michael Moore,65,Other,Sales,4940,2021-03-26,2.0,11,Active,Los Angeles,Evening,"Java,Spring",35,17,93,23,1
+115,Donna Manning,40,Other,IT,3935,2021-05-10,5.0,19,Inactive,Chicago,Morning,"React,Node",43,10,97,43,0
+116,John Lloyd,19,Male,HR,3233,2017-05-10,5.0,6,Inactive,Chicago,Evening,"AWS,Docker",34,24,251,32,2
+117,Sean Owens,45,Male,HR,4012,2016-07-09,2.8333333333333335,10,Inactive,Los Angeles,Night,"Python,SQL",45,22,102,21,2
+118,Gregory Robinson,32,Other,IT,8619,2021-01-16,2.8620689655172415,8,Inactive,New York,Morning,"Java,Spring",28,15,95,10,0
+119,Tara Hudson,48,Female,IT,2898,2022-01-02,3.0476190476190474,12,Inactive,Los Angeles,Morning,"React,Node",50,21,53,23,2
+120,Heidi Franklin,22,Male,HR,7187,2024-01-26,2.75,1,Active,New York,Morning,"Python,SQL",45,16,146,42,2
+121,David Hampton,39,Female,HR,9941,2024-07-06,3.0,15,Inactive,New York,Morning,"Python,SQL",44,4,83,32,0
+122,Jacob Gonzalez,25,Male,IT,5121,2020-06-12,2.75,1,Active,Chicago,Night,UI/UX,49,11,45,6,0
+123,Kenneth Jensen,46,Other,IT,7991,2017-04-21,2.8461538461538463,13,Inactive,Los Angeles,Morning,"AWS,Docker",55,10,110,42,1
+124,Amber Pittman,24,Female,Sales,5287,2018-03-08,2.0,1,Active,New York,Evening,"Java,Spring",50,14,165,41,2
+125,William Hall,23,Male,Sales,3754,2022-10-16,2.8620689655172415,8,Active,Chicago,Evening,"React,Node",27,2,264,8,0
+126,Michael Wilson,38,Other,IT,2358,2016-12-25,3.0,14,Active,New York,Morning,UI/UX,31,0,180,26,0
+127,Vanessa Gray,65,Other,Sales,8122,2015-11-27,2.857142857142857,15,Active,Los Angeles,Night,"AWS,Docker",37,19,225,30,2
+128,Ashley Williams,65,Female,HR,9973,2020-05-03,2.7586206896551726,19,Inactive,New York,Morning,UI/UX,42,15,179,47,2
+129,Shawn Marshall,28,Other,IT,2488,2019-01-21,2.96875,6,Active,Los Angeles,Morning,"AWS,Docker",46,1,261,40,1
+130,Derrick Woods,64,Female,IT,7378,2019-09-22,2.7222222222222223,18,Inactive,New York,Evening,"AWS,Docker",36,1,64,17,0
+131,Lisa Levy,64,Other,IT,7647,2021-07-07,2.8620689655172415,8,Active,Los Angeles,Evening,"Java,Spring",43,2,100,36,0
+132,Amy Patel,38,Other,HR,2052,2020-08-07,2.6666666666666665,9,Inactive,Chicago,Evening,"AWS,Docker",35,7,287,21,1
+133,Gregory Villegas,64,Female,Sales,5723,2021-06-26,4.0,19,Inactive,New York,Evening,UI/UX,37,23,110,45,2
+134,Arthur Tyler,30,Other,Sales,3856,2022-01-19,2.8461538461538463,13,Inactive,Chicago,Evening,"AWS,Docker",30,14,164,40,1
+135,Jonathan Schneider,33,Male,Sales,3843,2023-08-03,5.0,18,Inactive,Chicago,Morning,"Java,Spring",34,6,150,23,0
+136,Donna Fox,49,Male,Sales,3128,2023-09-29,2.0,6,Inactive,Los Angeles,Morning,"Java,Spring",31,5,182,39,0
+137,Rebecca Pitts,56,Female,Sales,8154,2017-06-29,2.6666666666666665,9,Inactive,Chicago,Morning,UI/UX,34,8,19,44,0
+138,Annette Peterson,34,Female,Sales,4286,2020-05-17,3.2285714285714286,7,Active,Chicago,Morning,"Python,SQL",50,19,237,32,2
+139,Mr. James Moore,46,Other,Sales,3829,2021-08-21,3.0,11,Inactive,Chicago,Morning,"Python,SQL",34,0,274,5,0
+140,William Hernandez,27,Other,IT,8855,2020-11-18,2.7222222222222223,18,Inactive,Chicago,Morning,"AWS,Docker",63,7,257,46,2
+141,Kevin Ruiz,18,Male,IT,8733,2020-08-15,2.7586206896551726,19,Inactive,Chicago,Night,"React,Node",45,22,256,22,2
+142,Matthew Gutierrez,38,Other,Sales,5883,2024-10-22,4.0,14,Inactive,Chicago,Evening,"AWS,Docker",43,22,164,44,2
+143,Kelly Phillips,42,Female,Sales,3591,2020-07-17,5.0,20,Inactive,Los Angeles,Morning,UI/UX,35,2,43,37,0
+144,Dana Potter,46,Male,IT,6368,2024-04-07,3.1923076923076925,2,Inactive,New York,Evening,UI/UX,47,3,138,16,0
+145,Kimberly Murphy,25,Other,HR,3003,2019-05-14,1.0,19,Active,New York,Morning,UI/UX,37,24,169,12,2
+146,Jessica Hernandez,20,Male,IT,4757,2017-07-07,2.8620689655172415,8,Inactive,Chicago,Morning,UI/UX,42,14,98,28,1
+147,Rachel Allen,22,Other,IT,8152,2018-01-30,2.5483870967741935,4,Active,New York,Evening,UI/UX,62,5,102,20,0
+148,Mr. Brandon Gonzales,37,Female,Sales,6429,2023-09-23,2.0,10,Inactive,Chicago,Morning,"Java,Spring",41,14,250,8,2
+149,Matthew Perkins,57,Other,IT,3757,2023-07-12,2.7586206896551726,19,Inactive,New York,Evening,"Python,SQL",51,20,126,42,2
+150,Robert Adkins,28,Female,Sales,8198,2020-10-23,1.0,15,Inactive,New York,Evening,UI/UX,36,2,103,48,0
+151,Anthony Moran,54,Female,Sales,2364,2017-09-28,3.6,5,Inactive,Chicago,Morning,"React,Node",41,24,172,31,2
+152,Julie Wilson,58,Male,Sales,2621,2018-08-26,3.12,16,Active,New York,Evening,"React,Node",56,20,108,13,2
+153,Mark Morris,31,Male,IT,4451,2017-12-31,2.75,1,Inactive,Chicago,Night,"React,Node",36,20,122,20,2
+154,Charles Marsh,29,Male,HR,4056,2023-11-01,2.6470588235294117,17,Inactive,New York,Morning,"React,Node",56,13,100,16,1
+155,Larry Johnson,63,Other,IT,5746,2018-11-20,5.0,5,Inactive,New York,Night,"Java,Spring",47,19,215,35,2
+156,Raymond Johnson,56,Female,IT,5982,2016-12-03,5.0,11,Inactive,New York,Morning,"React,Node",37,13,26,28,0
+157,Pamela Pierce,43,Female,HR,4710,2021-06-26,1.0,16,Active,New York,Night,UI/UX,47,3,283,18,1
+158,Debra Smith,19,Other,HR,4527,2015-04-28,3.0,14,Active,Chicago,Night,"AWS,Docker",49,11,182,49,1
+159,Erin Harrison,34,Male,HR,9719,2019-07-31,2.0,2,Inactive,Chicago,Evening,"React,Node",46,16,125,29,1
+160,Thomas Gordon,26,Male,HR,6157,2018-04-30,2.857142857142857,15,Active,New York,Night,"Java,Spring",29,6,190,38,0
+161,Cindy Torres,31,Male,IT,8428,2024-09-17,4.0,11,Inactive,New York,Evening,"Java,Spring",36,8,100,7,0
+162,Mario Newman,36,Other,IT,3284,2015-04-20,2.857142857142857,15,Inactive,Los Angeles,Night,"React,Node",40,2,91,28,0
+163,Emily Hughes,32,Male,IT,8958,2017-03-15,2.6470588235294117,17,Active,Los Angeles,Morning,"AWS,Docker",41,12,123,46,1
+164,Emily Fisher,25,Male,HR,9021,2016-09-15,3.0,11,Inactive,Chicago,Night,"React,Node",46,14,266,13,2
+165,Sheryl Everett DDS,57,Male,Sales,3479,2017-11-15,2.8461538461538463,13,Inactive,New York,Morning,"Java,Spring",43,17,67,30,1
+166,Caleb Coffey,49,Other,HR,6194,2024-05-12,1.0,19,Inactive,New York,Evening,"Python,SQL",31,18,163,24,1
+167,Brianna Murray,28,Other,IT,3862,2018-10-21,2.7777777777777777,3,Inactive,Chicago,Night,UI/UX,45,0,125,44,0
+168,Amy Bell,56,Male,IT,6006,2023-10-21,2.5483870967741935,4,Active,New York,Morning,"Java,Spring",46,5,275,14,1
+169,Tonya Estrada,22,Other,Sales,2523,2022-08-10,2.0,4,Inactive,Chicago,Evening,"React,Node",46,22,212,23,2
+170,George Bowers,24,Other,Sales,6041,2024-12-07,2.0,4,Active,New York,Night,UI/UX,50,1,50,7,0
+171,Tyler Figueroa,48,Female,Sales,2913,2020-12-04,2.0,6,Active,New York,Evening,"React,Node",48,23,114,28,2
+172,Roger Pugh,64,Other,HR,6767,2023-04-14,3.0,11,Inactive,Los Angeles,Evening,"React,Node",45,13,202,9,2
+173,Paul Ross,19,Other,Sales,6735,2022-01-26,3.0476190476190474,12,Active,Los Angeles,Morning,"Python,SQL",41,5,287,7,1
+174,Steven Green,21,Other,IT,4043,2015-10-10,3.0,20,Inactive,Chicago,Morning,UI/UX,28,13,246,31,1
+175,Amanda Walters,46,Other,Sales,8354,2015-10-26,2.8333333333333335,10,Active,Los Angeles,Night,UI/UX,45,3,230,20,1
+176,Cody Sanchez,32,Female,Sales,5224,2019-01-27,2.857142857142857,15,Active,Los Angeles,Evening,"Python,SQL",43,20,77,19,1
+177,Sherri Hess,37,Female,Sales,6706,2021-05-29,3.0,9,Inactive,Los Angeles,Night,"Java,Spring",44,7,206,39,1
+178,David Buchanan,52,Male,Sales,8899,2016-01-12,2.6470588235294117,17,Active,Chicago,Evening,"React,Node",31,2,265,16,0
+179,Daniel Hoffman,36,Male,IT,7885,2016-06-04,2.0,2,Inactive,New York,Evening,"AWS,Docker",33,18,148,45,1
+180,Kathryn Choi,34,Other,IT,3671,2021-05-08,3.12,16,Active,Los Angeles,Night,"React,Node",50,13,158,48,1
+181,Sharon Patterson,33,Male,HR,6833,2015-02-04,3.12,16,Active,New York,Night,"React,Node",41,19,108,30,1
+182,Brooke Norris,58,Male,IT,5025,2020-10-24,2.8461538461538463,13,Inactive,Los Angeles,Night,"Java,Spring",47,16,85,38,1
+183,Linda Wilson,45,Male,IT,3979,2024-03-07,3.0,12,Active,New York,Evening,"React,Node",42,24,291,27,2
+184,Nathaniel Miller,22,Male,Sales,8840,2023-01-17,2.6470588235294117,17,Active,New York,Evening,"Python,SQL",42,7,118,35,0
+185,Michael Edwards,19,Other,Sales,8470,2016-12-20,4.0,1,Inactive,Los Angeles,Evening,"Python,SQL",49,23,197,24,2
+186,Jane Gardner,51,Other,Sales,7894,2014-12-29,3.0,11,Inactive,Los Angeles,Night,UI/UX,37,13,208,16,1
+187,Anthony Lucas,48,Female,HR,3064,2023-08-26,4.0,11,Active,New York,Evening,"AWS,Docker",42,5,163,27,0
+188,Robert Colon,39,Other,HR,2149,2023-05-10,4.0,17,Active,New York,Night,"React,Node",38,22,49,8,1
+189,Patrick Williams,50,Other,IT,3737,2021-08-07,2.5483870967741935,4,Active,New York,Evening,"React,Node",38,21,142,27,2
+190,Tiffany Hopkins,21,Female,HR,7708,2021-11-10,3.260869565217391,20,Active,Los Angeles,Night,"Java,Spring",39,15,141,5,1
+191,Miguel Finley,25,Female,IT,9374,2019-08-22,2.857142857142857,15,Active,New York,Evening,"Python,SQL",43,24,288,29,2
+192,John Sullivan,29,Other,IT,3049,2018-08-29,4.0,2,Inactive,New York,Night,"AWS,Docker",38,18,93,6,1
+193,Albert Stevens,29,Other,HR,2776,2021-02-24,2.0,1,Active,Chicago,Night,UI/UX,52,13,251,34,2
+194,Dean Barnes,54,Other,IT,4678,2019-01-18,4.0,6,Active,Chicago,Morning,"Python,SQL",34,18,125,7,1
+195,Eric York,34,Male,HR,3397,2022-06-25,4.0,2,Active,Los Angeles,Evening,UI/UX,40,2,118,25,0
+196,Breanna Ballard,20,Other,Sales,3386,2020-08-31,2.75,1,Inactive,New York,Evening,"Java,Spring",38,9,230,29,1
+197,Joshua Booker,22,Male,HR,6539,2022-07-12,3.1923076923076925,2,Active,Los Angeles,Night,"Java,Spring",53,18,50,24,1
+198,Mary King,23,Female,HR,3175,2021-05-21,2.6666666666666665,9,Active,New York,Evening,"React,Node",43,8,156,26,1
+199,Jennifer Brown DVM,51,Male,HR,7908,2023-04-14,1.0,2,Inactive,Chicago,Evening,"AWS,Docker",50,19,121,25,2
+200,Gregory Cohen,23,Other,Sales,8119,2018-01-01,3.6,5,Inactive,Chicago,Morning,UI/UX,30,12,112,37,0
+201,Mr. James Johnson,48,Female,HR,9930,2019-08-04,5.0,19,Active,Chicago,Morning,"Python,SQL",44,6,55,42,0
+202,Elizabeth Jordan,23,Other,HR,3514,2018-10-01,2.75,1,Inactive,Los Angeles,Morning,"Java,Spring",49,13,280,19,2
+203,Robert Carey,59,Female,IT,6267,2021-01-12,5.0,6,Inactive,New York,Morning,"React,Node",42,8,204,19,1
+204,Randy Pace,28,Male,HR,8416,2022-02-21,2.8620689655172415,8,Active,Los Angeles,Morning,"React,Node",50,22,289,29,2
+205,Brian Herrera,29,Other,Sales,5703,2018-12-16,2.0,10,Active,New York,Morning,UI/UX,37,24,292,25,2
+206,Julie Hayden,55,Female,IT,2127,2019-02-09,2.8620689655172415,8,Active,Los Angeles,Evening,"Java,Spring",53,18,49,28,1
+207,Mario Jackson,43,Male,IT,8563,2017-12-28,4.0,11,Active,Los Angeles,Night,"AWS,Docker",60,14,198,9,2
+208,Dawn Flowers,24,Female,IT,7539,2021-02-05,3.6,5,Active,Los Angeles,Night,"Java,Spring",39,19,173,10,2
+209,Darrell Burns,58,Other,Sales,2223,2024-06-29,2.8620689655172415,8,Active,New York,Morning,UI/UX,38,13,33,47,0
+210,Mr. Jason Jones,44,Female,HR,3517,2022-01-11,5.0,10,Inactive,Chicago,Morning,UI/UX,53,23,33,48,2
+211,Joseph Li,42,Male,HR,4603,2016-07-30,2.0,12,Inactive,New York,Night,"Java,Spring",54,5,13,27,0
+212,Christopher Barrera,62,Other,HR,4751,2022-10-27,1.0,3,Inactive,New York,Morning,UI/UX,37,20,299,8,2
+213,Tyler Carroll,54,Female,IT,6942,2021-02-02,3.0,5,Inactive,New York,Morning,"Java,Spring",38,3,190,31,0
+214,Rachel Mcdonald,32,Female,Sales,2489,2015-12-11,5.0,3,Inactive,Chicago,Morning,"Python,SQL",39,7,257,22,1
+215,Dawn Nelson,65,Female,IT,4538,2016-02-01,3.0,8,Active,Chicago,Morning,"Java,Spring",31,16,125,25,1
+216,Sara Jones,50,Female,Sales,9377,2019-10-16,2.7777777777777777,3,Active,Los Angeles,Morning,"Java,Spring",34,8,288,32,1
+217,Alison Anderson,35,Female,Sales,8129,2024-06-29,2.7777777777777777,3,Inactive,New York,Evening,UI/UX,33,0,78,39,0
+218,Jeffery Hurley,25,Male,IT,7335,2017-11-05,1.0,3,Active,Los Angeles,Night,UI/UX,35,23,263,26,2
+219,Melissa Flores,38,Other,Sales,3663,2016-06-14,3.0,3,Inactive,New York,Evening,"React,Node",41,19,190,44,2
+220,Erika Schneider,20,Other,IT,4328,2018-05-01,2.0,12,Active,Los Angeles,Morning,"React,Node",43,24,178,27,2
+221,Steven Salinas,48,Female,HR,7067,2023-11-23,2.8620689655172415,8,Inactive,Los Angeles,Morning,"Python,SQL",54,13,258,7,2
+222,Kenneth Taylor,20,Other,Sales,6389,2017-03-05,2.96875,6,Inactive,New York,Evening,"React,Node",34,10,197,44,1
+223,Jennifer Hartman,62,Female,IT,7732,2020-08-20,2.7222222222222223,18,Active,New York,Morning,"Java,Spring",49,20,63,14,1
+224,Cheryl Potter,59,Male,IT,3379,2018-07-30,2.8620689655172415,8,Inactive,Los Angeles,Morning,UI/UX,40,2,147,29,0
+225,Lori Rodriguez,27,Other,IT,3660,2023-12-15,2.6666666666666665,9,Active,Los Angeles,Night,"React,Node",41,8,177,12,1
+226,Brian White,51,Other,IT,9160,2017-04-27,2.857142857142857,15,Inactive,Los Angeles,Night,"React,Node",47,13,112,15,1
+227,Ashley Robbins,49,Other,HR,8733,2019-02-06,3.1923076923076925,2,Inactive,Los Angeles,Morning,"Python,SQL",33,8,94,9,0
+228,Mary Mcguire,45,Other,IT,8587,2019-01-21,2.0,18,Active,Chicago,Morning,"Python,SQL",45,3,221,49,1
+229,Christie Warren,51,Female,Sales,9139,2020-08-16,5.0,1,Active,Chicago,Night,"Java,Spring",43,3,12,41,0
+230,Monica Henderson,39,Male,IT,7250,2016-07-11,4.0,1,Active,Chicago,Morning,UI/UX,45,7,188,49,1
+231,Connie Lucas,41,Other,HR,4782,2015-12-09,4.0,7,Inactive,Los Angeles,Morning,"Python,SQL",44,1,47,42,0
+232,William Harris,26,Female,Sales,6975,2016-03-26,2.5454545454545454,14,Active,New York,Evening,"React,Node",61,8,248,33,2
+233,Michelle Mendez,50,Male,IT,8718,2024-07-17,1.0,18,Active,Chicago,Morning,UI/UX,36,13,178,9,1
+234,Richard Mendez,40,Male,Sales,7461,2022-04-13,3.0,7,Inactive,Chicago,Night,UI/UX,37,21,39,13,1
+235,Stuart Rodriguez,33,Other,Sales,7974,2017-02-15,3.2285714285714286,7,Active,Los Angeles,Night,"React,Node",37,8,199,6,1
+236,Curtis Diaz,42,Other,IT,4401,2022-11-17,1.0,9,Inactive,New York,Night,"Python,SQL",37,23,34,5,1
+237,Joan Trevino,46,Male,Sales,8607,2019-01-21,5.0,3,Inactive,New York,Night,"React,Node",36,22,121,44,2
+238,Gregory Pollard,49,Other,HR,3659,2023-01-11,2.8333333333333335,10,Inactive,Chicago,Morning,UI/UX,51,15,215,34,2
+239,Lori Petty,65,Other,Sales,6332,2015-05-09,3.0476190476190474,12,Active,Chicago,Evening,"AWS,Docker",53,16,194,15,2
+240,Christina Gutierrez,37,Male,Sales,9356,2018-01-02,3.0,3,Active,Chicago,Morning,"AWS,Docker",37,15,56,32,0
+241,Ashley Kim,33,Male,IT,2996,2023-11-10,3.0,11,Inactive,Chicago,Evening,"Java,Spring",35,11,237,48,1
+242,Jennifer Wilson,54,Male,HR,9516,2021-10-19,1.0,8,Inactive,Chicago,Night,"React,Node",45,2,48,16,0
+243,Scott Russell,35,Other,IT,2847,2020-02-19,3.0,11,Active,Los Angeles,Morning,"React,Node",37,10,25,43,0
+244,Evan Blackburn,26,Other,HR,8181,2016-02-19,2.5454545454545454,14,Inactive,Los Angeles,Night,"Java,Spring",47,13,31,30,0
+245,Justin Hampton,55,Male,IT,7725,2024-11-22,4.0,10,Inactive,New York,Morning,"Java,Spring",43,17,222,17,2
+246,Marie Reese,60,Male,Sales,7911,2019-03-24,3.2285714285714286,7,Active,Chicago,Evening,"Java,Spring",29,20,158,12,2
+247,Sheila Gordon,50,Other,Sales,2550,2021-12-17,2.857142857142857,15,Inactive,New York,Evening,UI/UX,54,20,250,32,2
+248,Jessica Davis,22,Male,IT,2649,2024-09-21,2.8620689655172415,8,Inactive,Chicago,Night,"React,Node",56,4,281,34,1
+249,Tyler Carter,65,Female,IT,8882,2018-11-23,3.1923076923076925,2,Active,New York,Morning,UI/UX,37,15,68,13,1
+250,David Burke,25,Female,HR,2994,2015-09-21,2.5454545454545454,14,Active,Chicago,Morning,"Java,Spring",38,19,296,43,2
+251,Joshua Bullock,38,Male,Sales,9924,2019-01-10,4.0,20,Inactive,Chicago,Night,"React,Node",44,4,211,35,1
+252,Gabriel Peters,50,Other,IT,3091,2015-05-15,1.0,16,Active,Los Angeles,Morning,UI/UX,44,2,41,25,0
+253,Christine Duran,61,Male,IT,3063,2018-03-18,1.0,4,Active,New York,Morning,UI/UX,47,11,171,38,1
+254,Nancy Mendez,44,Other,HR,5443,2018-04-20,1.0,9,Inactive,Chicago,Evening,"Java,Spring",58,0,264,35,1
+255,Susan Fisher,45,Male,HR,9207,2020-01-05,4.0,4,Active,Los Angeles,Morning,"React,Node",40,20,263,29,2
+256,Meghan Burgess,49,Male,HR,3081,2017-08-23,3.6,5,Inactive,New York,Night,"Java,Spring",35,8,18,16,0
+257,Jeffery Jackson,19,Female,IT,4084,2022-08-23,3.0,7,Active,Los Angeles,Night,"React,Node",30,8,148,5,0
+258,David Tran,18,Other,Sales,4520,2021-01-24,2.0,4,Inactive,New York,Evening,"AWS,Docker",36,3,19,26,0
+259,Karina Harris,40,Female,HR,4123,2022-10-09,4.0,6,Inactive,New York,Morning,"Python,SQL",41,2,223,44,0
+260,Bradley Gibbs,35,Other,IT,9624,2019-03-04,1.0,19,Inactive,Los Angeles,Night,"Python,SQL",56,16,282,41,2
+261,Stephen Mitchell,52,Female,IT,4322,2022-07-29,3.0,4,Active,New York,Night,"Python,SQL",37,1,57,5,0
+262,Gabriel Warren,18,Other,IT,7774,2015-12-21,3.0476190476190474,12,Inactive,Los Angeles,Morning,"Java,Spring",43,23,120,5,2
+263,James Hines,58,Male,IT,3439,2022-12-13,3.12,16,Active,Los Angeles,Evening,"AWS,Docker",41,0,162,46,0
+264,Gabriela Wilson,40,Other,Sales,9455,2023-11-19,1.0,14,Active,Los Angeles,Morning,"React,Node",51,7,132,46,1
+265,Kara Wilson,31,Male,IT,7692,2018-09-01,1.0,19,Inactive,Los Angeles,Night,UI/UX,62,12,111,25,1
+266,John Butler,65,Other,Sales,8334,2024-05-28,2.0,15,Active,New York,Evening,"React,Node",37,22,250,19,2
+267,Jared Villanueva,50,Male,IT,5970,2016-06-23,2.0,4,Active,New York,Morning,UI/UX,38,14,200,21,1
+268,Mary Hammond,19,Other,HR,3504,2020-04-04,2.5454545454545454,14,Active,Chicago,Night,"React,Node",50,7,226,26,1
+269,Margaret Mayo,30,Female,HR,4107,2018-12-02,3.0,14,Inactive,Chicago,Night,"AWS,Docker",47,11,60,42,0
+270,Ray Smith,31,Other,Sales,5819,2023-08-20,2.8620689655172415,8,Inactive,Los Angeles,Morning,UI/UX,56,21,90,39,2
+271,Derek Morris,30,Female,IT,5472,2024-01-07,2.96875,6,Inactive,New York,Evening,"Java,Spring",46,11,97,49,1
+272,Carrie Martinez,65,Other,Sales,2417,2021-06-18,2.0,17,Active,Chicago,Morning,"React,Node",39,13,203,20,1
+273,Thomas Spence,25,Female,IT,8613,2016-11-20,2.7777777777777777,3,Inactive,Chicago,Night,"React,Node",46,14,113,12,1
+274,Carrie Sloan,30,Other,HR,4347,2018-01-16,4.0,6,Inactive,New York,Morning,UI/UX,50,14,280,21,2
+275,Mrs. Kimberly Woodard MD,48,Female,Sales,7287,2019-03-06,1.0,9,Active,Los Angeles,Night,"Java,Spring",48,8,105,21,0
+276,Harry Alexander,22,Male,Sales,9749,2019-05-15,3.6,5,Active,Los Angeles,Morning,"Java,Spring",46,18,207,30,2
+277,David Cox,45,Female,IT,4514,2022-06-11,4.0,2,Active,Los Angeles,Morning,"AWS,Docker",50,19,10,17,1
+278,Sheryl Gray,22,Other,Sales,4226,2024-10-01,2.8620689655172415,8,Active,Chicago,Morning,"Java,Spring",51,21,176,21,2
+279,Michael Bishop,49,Male,IT,7561,2016-12-31,2.5454545454545454,14,Active,Chicago,Evening,"Java,Spring",53,7,135,42,1
+280,Dalton Moore,39,Female,IT,5956,2015-04-16,5.0,16,Inactive,Los Angeles,Morning,"Java,Spring",47,20,90,21,2
+281,Caroline Bell,49,Other,IT,2175,2022-05-09,3.12,16,Active,Chicago,Morning,"Python,SQL",40,18,260,18,2
+282,Vanessa Shelton,42,Other,Sales,5756,2019-09-12,2.8461538461538463,13,Active,Chicago,Morning,"AWS,Docker",43,5,178,49,0
+283,Scott White,45,Other,Sales,4104,2017-09-18,3.0,5,Active,Chicago,Evening,"React,Node",51,19,82,10,2
+284,Richard Smith,18,Male,Sales,2364,2016-11-27,2.0,12,Active,Los Angeles,Morning,UI/UX,35,24,150,39,2
+285,Daniel Rodriguez,63,Male,HR,8704,2021-09-28,2.8333333333333335,10,Inactive,Los Angeles,Morning,"React,Node",44,18,79,18,1
+286,Mr. Kevin Bradley,29,Female,Sales,2993,2015-02-14,2.8620689655172415,8,Inactive,Los Angeles,Morning,"AWS,Docker",38,3,271,12,1
+287,Judith Evans,20,Other,IT,4409,2015-10-30,3.260869565217391,20,Inactive,New York,Night,UI/UX,42,22,254,19,2
+288,Michele Roman,60,Other,HR,3162,2017-06-14,3.260869565217391,20,Active,New York,Night,"AWS,Docker",52,6,12,31,0
+289,Barry Mckenzie,54,Other,Sales,5523,2020-02-21,2.6666666666666665,9,Inactive,Chicago,Night,"Java,Spring",43,3,72,17,0
+290,Sara Stokes,30,Female,IT,9921,2018-10-01,3.0,2,Inactive,New York,Morning,UI/UX,42,21,58,35,1
+291,Rebecca Bailey,25,Male,IT,7864,2015-12-12,3.0,19,Inactive,Los Angeles,Morning,"Java,Spring",31,11,85,39,0
+292,Rachel Sosa,47,Other,IT,8158,2022-02-07,2.0,6,Inactive,Chicago,Night,"React,Node",47,12,184,10,1
+293,Amy Hubbard,29,Male,HR,5883,2016-06-26,4.0,18,Inactive,New York,Evening,"React,Node",47,2,118,9,0
+294,Gary Grant,41,Other,IT,3174,2017-09-05,2.0,16,Inactive,New York,Night,UI/UX,59,21,192,26,2
+295,Kimberly Smith,24,Other,Sales,7332,2020-11-28,2.0,10,Active,New York,Night,UI/UX,39,11,201,27,1
+296,Jennifer Nichols,21,Other,HR,4009,2015-02-22,2.0,13,Inactive,Los Angeles,Night,"AWS,Docker",43,1,74,29,0
+297,Rachel Robinson,20,Male,IT,8316,2021-02-09,3.6,5,Inactive,New York,Night,"AWS,Docker",43,23,280,38,2
+298,Brandon Atkinson,55,Female,Sales,2414,2020-11-02,3.0,4,Active,Chicago,Night,"Java,Spring",54,1,109,30,0
+299,Dawn Mclaughlin,45,Male,Sales,2330,2015-07-17,2.6470588235294117,17,Inactive,New York,Evening,UI/UX,41,22,41,9,1
+300,Terry Smith,38,Female,Sales,9375,2022-12-23,3.1923076923076925,2,Inactive,New York,Morning,"React,Node",44,8,137,30,0
+301,Alejandro Bennett,31,Female,HR,7039,2021-01-26,2.7222222222222223,18,Active,Chicago,Evening,"AWS,Docker",46,0,52,24,0
+302,Patricia Williams,26,Female,Sales,8385,2023-10-17,2.857142857142857,15,Active,New York,Evening,"AWS,Docker",43,7,87,10,0
+303,Jose Sharp,31,Other,IT,3002,2018-09-02,1.0,9,Active,Los Angeles,Morning,"React,Node",38,22,298,10,2
+304,Sarah Stark,27,Female,HR,6648,2019-02-04,2.7222222222222223,18,Inactive,Los Angeles,Evening,"AWS,Docker",43,5,279,22,1
+305,Mark Thomas,55,Male,Sales,7545,2017-10-30,3.0,11,Inactive,New York,Night,"Java,Spring",50,5,171,8,1
+306,Alexander Johnson,36,Other,Sales,7992,2024-04-20,2.0,7,Active,New York,Morning,UI/UX,33,21,198,21,2
+307,Henry Harmon,57,Male,HR,9161,2022-08-02,3.6,5,Inactive,Los Angeles,Morning,"React,Node",43,24,256,18,2
+308,Nancy Jackson,63,Male,Sales,4979,2015-09-22,1.0,6,Inactive,Los Angeles,Morning,UI/UX,36,17,225,18,2
+309,Taylor Walters,49,Other,HR,7149,2023-12-30,2.7777777777777777,3,Inactive,Chicago,Night,"AWS,Docker",51,16,177,17,2
+310,Abigail Rodriguez,33,Female,Sales,3636,2017-04-22,4.0,7,Active,Chicago,Morning,"AWS,Docker",29,11,202,11,1
+311,Dr. Susan Cook,51,Female,Sales,4572,2020-07-28,4.0,20,Inactive,Los Angeles,Night,"React,Node",37,5,292,48,1
+312,John Jensen,58,Other,IT,3700,2023-04-17,3.12,16,Active,New York,Night,"Java,Spring",45,7,22,19,0
+313,Sean Barrett,26,Female,Sales,3495,2015-01-03,1.0,18,Active,Los Angeles,Night,"Python,SQL",54,18,249,23,2
+314,Kenneth Brown,33,Male,Sales,4391,2020-05-03,5.0,6,Inactive,Los Angeles,Night,"React,Node",41,9,156,47,1
+315,Samantha Clark DDS,45,Other,IT,3700,2016-02-28,3.0,2,Inactive,New York,Evening,"Python,SQL",37,0,213,48,0
+316,Cynthia Cox,46,Other,IT,8499,2022-12-08,2.5483870967741935,4,Inactive,Los Angeles,Night,"Python,SQL",57,24,89,39,2
+317,Jamie Gonzalez,43,Other,IT,7956,2023-06-14,2.75,1,Active,Chicago,Evening,"Java,Spring",30,12,52,21,0
+318,Joseph Thomas,63,Other,Sales,6741,2021-03-16,4.0,7,Active,Los Angeles,Night,"Python,SQL",24,16,98,39,0
+319,Brent Montes,61,Female,Sales,7087,2024-09-27,2.0,11,Active,Los Angeles,Night,"Python,SQL",45,2,157,23,0
+320,Elizabeth Dudley,58,Other,IT,6233,2024-04-30,1.0,1,Inactive,Los Angeles,Morning,"Java,Spring",37,7,104,24,0
+321,Alexa Romero,22,Other,HR,7299,2019-10-26,2.0,6,Inactive,Chicago,Night,"Python,SQL",33,13,160,40,1
+322,Jerry Smith,39,Male,Sales,7014,2018-04-03,3.2285714285714286,7,Inactive,New York,Morning,"Python,SQL",47,2,11,39,0
+323,James Smith,53,Male,Sales,7727,2021-03-13,3.12,16,Inactive,Los Angeles,Morning,"Python,SQL",43,15,31,36,0
+324,Anthony Lam,46,Male,HR,8306,2024-11-14,5.0,15,Active,New York,Evening,"React,Node",37,12,16,48,0
+325,Tom Diaz,61,Male,HR,3002,2023-12-05,3.6,5,Inactive,Chicago,Morning,"React,Node",31,19,215,44,2
+326,Vanessa Gill,26,Female,IT,2156,2021-12-16,3.12,16,Inactive,Los Angeles,Morning,"React,Node",48,23,123,28,2
+327,Robert Hensley,27,Female,IT,5280,2016-06-24,2.7586206896551726,19,Inactive,New York,Evening,"Java,Spring",47,16,281,21,2
+328,Matthew Guerrero,22,Female,HR,7928,2021-05-11,3.0,1,Active,Los Angeles,Night,"AWS,Docker",41,12,92,11,0
+329,Jennifer Vargas,41,Other,IT,6164,2017-12-13,1.0,11,Inactive,Chicago,Morning,"Python,SQL",56,5,188,47,1
+330,Taylor Lopez,32,Male,IT,5502,2021-04-13,4.0,9,Active,New York,Morning,"Python,SQL",33,16,219,5,2
+331,Juan Dean,39,Male,HR,6830,2015-06-28,4.0,20,Inactive,New York,Evening,"Java,Spring",29,13,133,39,1
+332,Karen Hayden,52,Male,Sales,5380,2020-04-23,2.8620689655172415,8,Active,Chicago,Evening,"Python,SQL",36,16,122,36,1
+333,Heather Anderson,38,Female,Sales,6259,2016-06-13,4.0,5,Active,New York,Night,"React,Node",41,7,21,40,0
+334,Austin Reyes,25,Female,IT,8301,2020-04-16,2.5454545454545454,14,Active,Los Angeles,Morning,"AWS,Docker",43,10,135,17,1
+335,Melissa Fisher,56,Male,HR,6496,2018-10-20,2.0,11,Active,Los Angeles,Night,UI/UX,40,19,62,10,1
+336,Danny Allen,35,Male,HR,3656,2016-10-10,2.0,16,Inactive,New York,Night,"Python,SQL",44,0,292,18,1
+337,Jose Costa,58,Other,IT,4908,2015-09-25,2.7222222222222223,18,Inactive,New York,Night,"React,Node",31,6,149,41,0
+338,Michelle Brennan,60,Other,HR,9385,2024-09-29,2.0,15,Inactive,Chicago,Night,UI/UX,53,20,106,19,2
+339,Amanda Conner,32,Female,IT,4750,2017-04-25,2.8620689655172415,8,Active,Los Angeles,Night,"AWS,Docker",41,20,14,8,1
+340,Christopher Jones,47,Other,IT,4528,2024-06-05,5.0,7,Active,Chicago,Morning,UI/UX,50,16,66,44,1
+341,Tyrone Juarez,25,Other,IT,8628,2018-03-15,3.0476190476190474,12,Active,New York,Night,"React,Node",44,9,78,20,0
+342,Chad Nelson,38,Male,HR,8438,2023-09-16,3.0,7,Inactive,Chicago,Morning,UI/UX,45,10,127,32,1
+343,Zachary Gutierrez,45,Other,HR,3491,2019-06-03,2.857142857142857,15,Inactive,New York,Night,"Java,Spring",46,21,68,20,2
+344,Mark Mcbride,52,Male,IT,8000,2023-03-05,3.2285714285714286,7,Inactive,New York,Evening,UI/UX,45,8,42,8,0
+345,Debra Mcdonald,25,Other,IT,3256,2023-11-25,2.7586206896551726,19,Inactive,Chicago,Morning,"Python,SQL",47,8,59,49,0
+346,Luis Sanchez,56,Female,HR,2254,2017-10-31,5.0,8,Inactive,Chicago,Morning,"Python,SQL",52,23,28,30,2
+347,David Durham,62,Female,HR,7803,2019-12-20,2.8620689655172415,8,Active,Los Angeles,Night,"Java,Spring",43,4,223,32,1
+348,Claire Randall,59,Other,IT,2593,2016-07-29,2.0,14,Inactive,Los Angeles,Evening,"React,Node",47,16,206,36,2
+349,Rebecca Stewart,42,Female,IT,2614,2015-10-13,2.7222222222222223,18,Inactive,Chicago,Evening,"Python,SQL",41,8,56,49,0
+350,Ryan Cox,44,Male,IT,7895,2019-06-17,5.0,13,Active,Chicago,Evening,"AWS,Docker",53,16,176,6,2
+351,Andrew Fletcher,46,Other,HR,8006,2023-07-23,1.0,6,Inactive,Los Angeles,Morning,"Python,SQL",36,23,298,35,2
+352,Nicole Sanchez,19,Female,IT,7335,2019-01-09,5.0,3,Inactive,Los Angeles,Morning,"Python,SQL",56,20,150,7,2
+353,Paul Walters,39,Female,Sales,3353,2017-11-12,2.857142857142857,15,Active,Los Angeles,Night,"React,Node",41,18,93,12,1
+354,Melissa Johnson,30,Male,Sales,7252,2021-11-27,4.0,14,Active,New York,Morning,UI/UX,30,6,191,28,0
+355,Karen Ramos,45,Female,HR,4213,2016-11-12,3.0,12,Inactive,Los Angeles,Night,"Python,SQL",43,22,88,19,2
+356,Laura Castillo,41,Male,IT,2392,2024-03-15,1.0,20,Inactive,Chicago,Morning,"Java,Spring",36,8,224,47,1
+357,James Anderson,55,Other,Sales,8344,2015-10-10,2.0,19,Active,Los Angeles,Evening,UI/UX,48,6,23,35,0
+358,Andre Hall,61,Male,Sales,2928,2018-08-04,2.857142857142857,15,Active,Los Angeles,Evening,"AWS,Docker",36,12,224,13,1
+359,Scott Hernandez,31,Female,IT,3830,2019-12-26,3.6,5,Inactive,Los Angeles,Morning,"React,Node",38,10,137,43,0
+360,Wendy Lee,63,Female,HR,6886,2018-12-30,2.0,18,Inactive,Los Angeles,Morning,"AWS,Docker",26,13,257,49,1
+361,Tony Ellison,20,Other,IT,4275,2022-08-26,2.8620689655172415,8,Active,New York,Evening,UI/UX,38,18,38,6,1
+362,Samuel Irwin,51,Male,Sales,4503,2020-03-15,3.6,5,Active,Chicago,Night,UI/UX,22,10,289,12,1
+363,Mr. Timothy Mitchell DDS,29,Female,IT,7903,2018-01-22,2.75,1,Active,New York,Night,UI/UX,29,12,211,11,1
+364,Linda Wall,49,Other,HR,6590,2023-03-09,2.857142857142857,15,Active,Los Angeles,Night,"AWS,Docker",48,13,66,48,1
+365,Mrs. Jacqueline Woodard MD,41,Female,Sales,5988,2016-02-03,5.0,2,Inactive,Chicago,Morning,UI/UX,48,12,227,43,2
+366,Johnny Cook,52,Other,Sales,3504,2022-02-12,4.0,9,Inactive,Los Angeles,Morning,"AWS,Docker",45,0,71,46,0
+367,Miss Barbara Short,50,Female,Sales,7153,2024-08-07,2.75,1,Inactive,New York,Night,UI/UX,34,7,166,20,0
+368,Adam Lane,20,Other,HR,7485,2015-09-16,1.0,2,Active,Chicago,Morning,"Java,Spring",41,11,211,39,1
+369,Natasha Spencer,23,Male,HR,7559,2022-04-09,3.260869565217391,20,Active,New York,Night,UI/UX,41,18,26,34,1
+370,Dawn Sanchez,49,Other,HR,5850,2020-10-11,2.6470588235294117,17,Inactive,New York,Morning,"AWS,Docker",32,11,15,14,0
+371,Robert Sims,28,Male,HR,4984,2023-12-21,3.0476190476190474,12,Inactive,Chicago,Evening,"Python,SQL",54,7,67,42,0
+372,Allison Carroll,21,Female,IT,9474,2016-05-24,4.0,4,Inactive,Chicago,Evening,UI/UX,49,7,178,22,1
+373,Dominic Gray,61,Other,HR,6231,2015-04-01,2.857142857142857,15,Active,Chicago,Morning,"Python,SQL",40,20,91,9,1
+374,Eric Hill,22,Male,HR,8147,2019-06-16,2.6470588235294117,17,Active,Los Angeles,Evening,"Java,Spring",42,12,228,33,2
+375,Anthony Baldwin,42,Male,IT,9067,2017-03-15,5.0,5,Active,New York,Morning,"React,Node",43,11,186,43,1
+376,Jeffrey Nguyen,58,Other,HR,2489,2018-03-20,2.0,1,Inactive,Chicago,Evening,"Java,Spring",25,15,213,38,1
+377,Jonathon Mclaughlin,64,Female,Sales,5606,2015-08-05,5.0,19,Active,New York,Evening,UI/UX,40,0,80,47,0
+378,John Anderson,63,Male,Sales,6013,2023-09-28,2.8333333333333335,10,Active,Chicago,Night,"Python,SQL",36,12,275,49,2
+379,Amy Harvey,26,Female,Sales,3556,2021-11-06,2.75,1,Active,Chicago,Night,"Python,SQL",33,6,107,27,0
+380,Dustin Le,29,Male,Sales,9726,2015-04-13,1.0,2,Inactive,Chicago,Evening,"AWS,Docker",39,4,217,9,0
+381,Kenneth Davis,28,Male,HR,6610,2020-06-08,3.0476190476190474,12,Inactive,New York,Morning,"Python,SQL",56,7,11,34,0
+382,David Marshall,43,Other,Sales,9269,2018-10-05,2.0,13,Inactive,Los Angeles,Evening,"AWS,Docker",47,24,133,10,2
+383,Kelly Norton,30,Female,IT,7241,2014-12-18,4.0,1,Inactive,New York,Morning,"React,Node",37,13,289,48,2
+384,Wendy Taylor,28,Female,IT,7632,2020-05-16,5.0,12,Inactive,Los Angeles,Evening,UI/UX,46,22,83,8,2
+385,Monica Baldwin,33,Female,Sales,7941,2017-08-24,2.5454545454545454,14,Active,Los Angeles,Night,"AWS,Docker",53,12,175,33,2
+386,Joseph Martin,61,Other,HR,8450,2023-11-17,3.1923076923076925,2,Inactive,New York,Evening,"React,Node",49,14,31,27,0
+387,Omar Martinez,32,Male,IT,7537,2018-05-30,2.8333333333333335,10,Active,New York,Night,"Python,SQL",42,22,163,10,2
+388,Corey Smith,27,Other,Sales,2593,2017-07-27,1.0,20,Active,New York,Evening,"Python,SQL",36,16,228,36,2
+389,Maria Bowman,43,Other,IT,2355,2015-03-29,3.6,5,Active,Chicago,Morning,"React,Node",47,14,166,46,1
+390,Sandra Gill,40,Female,HR,2567,2016-08-24,2.857142857142857,15,Active,Chicago,Evening,"Python,SQL",45,19,239,22,2
+391,Chloe Newman,32,Other,Sales,8745,2019-08-01,5.0,13,Inactive,Los Angeles,Evening,"React,Node",49,17,29,19,1
+392,Heather Jones,32,Female,HR,6309,2023-03-25,5.0,5,Active,Los Angeles,Evening,"AWS,Docker",47,17,50,44,1
+393,Natalie Chavez DDS,20,Other,IT,7431,2022-09-07,5.0,8,Inactive,New York,Night,"AWS,Docker",50,1,157,36,0
+394,Marilyn Baker,34,Female,IT,8079,2024-06-05,2.0,18,Active,Chicago,Morning,"React,Node",37,3,117,13,0
+395,Robert Oliver,22,Male,HR,8844,2019-05-29,1.0,14,Active,New York,Morning,"AWS,Docker",52,0,93,41,0
+396,Mary Mcmillan,64,Male,IT,5850,2015-06-05,2.0,4,Active,New York,Morning,"AWS,Docker",43,3,299,14,1
+397,Carolyn Arnold,37,Male,HR,8104,2020-11-24,3.260869565217391,20,Active,Los Angeles,Morning,"AWS,Docker",58,17,143,24,2
+398,Sarah Ruiz,57,Male,Sales,6316,2022-01-07,1.0,13,Active,New York,Morning,"Java,Spring",36,4,216,10,0
+399,Christina Lewis,22,Female,HR,9294,2020-05-04,3.0,11,Inactive,Chicago,Evening,UI/UX,55,18,292,7,2
+400,Bradley Hernandez,63,Male,Sales,2418,2018-08-21,3.2285714285714286,7,Active,Los Angeles,Night,"Python,SQL",43,14,275,46,2
+401,Allen Miller,35,Female,Sales,6638,2016-12-31,2.8461538461538463,13,Active,Chicago,Morning,"Java,Spring",36,7,82,15,0
+402,Nathan Flores,52,Female,IT,4967,2019-10-25,1.0,3,Inactive,Los Angeles,Night,"AWS,Docker",38,19,57,47,1
+403,Briana Martin,59,Male,Sales,4496,2023-05-22,1.0,20,Inactive,New York,Night,"React,Node",39,16,242,21,2
+404,David Clark,40,Female,IT,9276,2016-09-27,3.0476190476190474,12,Active,Chicago,Morning,"AWS,Docker",45,0,109,36,0
+405,Leroy Jones,20,Other,IT,6520,2021-05-25,3.1923076923076925,2,Active,Chicago,Morning,UI/UX,46,11,68,8,0
+406,Heather Scott,57,Male,Sales,9505,2024-08-18,3.0,6,Inactive,New York,Night,"AWS,Docker",37,18,267,8,2
+407,Vanessa Mendoza,31,Other,IT,9268,2017-07-27,3.6,5,Active,Chicago,Evening,"React,Node",41,14,74,21,1
+408,George Weaver,22,Female,HR,7728,2017-09-24,2.0,17,Active,Los Angeles,Night,UI/UX,59,8,92,45,1
+409,Doris Cooper,56,Female,IT,5092,2015-08-09,5.0,19,Inactive,Chicago,Evening,"AWS,Docker",55,6,163,23,1
+410,Bruce Anderson,51,Male,HR,6689,2023-05-21,3.0,18,Inactive,Los Angeles,Evening,UI/UX,45,1,275,9,1
+411,Kimberly Reed,64,Male,Sales,4303,2015-08-14,2.8620689655172415,8,Inactive,Los Angeles,Morning,"Python,SQL",42,8,88,36,0
+412,Tammy Allison,52,Female,Sales,3739,2016-06-29,5.0,5,Active,Los Angeles,Evening,"Python,SQL",42,9,159,26,1
+413,Dale Mejia,27,Male,Sales,4777,2023-10-25,5.0,12,Active,Chicago,Morning,"AWS,Docker",46,1,57,10,0
+414,Jacob Kelley,41,Other,HR,7380,2023-10-25,2.8461538461538463,13,Active,Los Angeles,Morning,UI/UX,33,18,257,39,2
+415,Matthew Hampton,37,Male,Sales,3524,2016-07-22,3.0476190476190474,12,Inactive,Los Angeles,Night,"React,Node",39,10,287,26,2
+416,Brandon Smith,43,Female,IT,4117,2015-10-20,3.6,5,Active,Los Angeles,Night,"AWS,Docker",28,12,107,5,0
+417,Cynthia Hall,51,Other,Sales,2370,2018-02-26,3.6,5,Inactive,Chicago,Evening,"Python,SQL",45,9,34,24,0
+418,Angel Fuller,39,Male,HR,3677,2015-08-04,2.7777777777777777,3,Active,New York,Evening,"Python,SQL",47,13,293,26,2
+419,Sonia Davis,27,Male,HR,5837,2024-11-16,2.5454545454545454,14,Active,New York,Morning,"AWS,Docker",38,17,77,15,1
+420,Terry Gomez,64,Male,Sales,8406,2024-10-20,3.2285714285714286,7,Active,Chicago,Evening,UI/UX,54,18,16,17,1
+421,Travis Brown,49,Female,HR,5735,2019-04-13,2.5483870967741935,4,Inactive,Chicago,Morning,"Python,SQL",32,21,146,46,2
+422,Dylan Dixon,19,Female,IT,8798,2015-06-07,5.0,15,Active,Los Angeles,Evening,UI/UX,30,8,173,7,0
+423,James Newton,30,Male,IT,5836,2023-03-05,3.0,11,Active,New York,Evening,"Python,SQL",43,24,92,13,2
+424,Antonio Shields,46,Male,HR,7729,2022-04-11,3.0,7,Inactive,Los Angeles,Night,"Python,SQL",50,6,147,16,0
+425,Tricia Coleman,49,Male,Sales,4385,2019-08-14,2.75,1,Inactive,Los Angeles,Morning,"Java,Spring",55,2,82,27,0
+426,Ryan Munoz,45,Male,Sales,5367,2023-04-02,2.8461538461538463,13,Inactive,Los Angeles,Morning,"Python,SQL",38,19,246,18,2
+427,Patricia Scott,52,Male,HR,2041,2022-11-22,1.0,8,Inactive,Chicago,Evening,"React,Node",50,5,55,37,0
+428,Ashley Gonzales,41,Other,Sales,3720,2015-08-16,2.0,15,Inactive,Los Angeles,Morning,"AWS,Docker",41,20,115,22,2
+429,Vicki Carter,29,Other,Sales,7080,2015-09-12,4.0,4,Inactive,New York,Morning,"AWS,Docker",40,1,297,45,1
+430,Matthew Turner,62,Female,IT,4753,2020-06-13,3.260869565217391,20,Active,Los Angeles,Morning,UI/UX,49,5,271,13,1
+431,James Melton,46,Other,Sales,6746,2019-07-31,5.0,16,Inactive,Los Angeles,Night,"Python,SQL",47,2,185,27,0
+432,Kayla Gregory,38,Male,Sales,7860,2023-01-25,3.0,8,Inactive,Los Angeles,Night,"React,Node",29,15,175,14,1
+433,Bryan Medina,41,Other,HR,9516,2021-04-07,3.0,13,Inactive,New York,Evening,UI/UX,53,7,154,23,1
+434,Cameron Harris,26,Female,HR,6763,2017-04-19,1.0,16,Active,Los Angeles,Morning,"Java,Spring",53,1,292,9,1
+435,Richard Rich,27,Female,IT,7375,2023-01-31,2.0,16,Inactive,Los Angeles,Evening,UI/UX,36,16,63,27,1
+436,Jason Robertson,37,Male,HR,5439,2016-06-23,2.0,14,Active,Chicago,Morning,UI/UX,45,8,187,34,1
+437,Philip Huff,51,Male,HR,6877,2018-07-19,2.5483870967741935,4,Inactive,Chicago,Morning,"Python,SQL",45,11,253,29,2
+438,Kristie Nelson,41,Other,IT,8618,2023-12-04,2.96875,6,Inactive,Los Angeles,Night,"Java,Spring",44,2,136,32,0
+439,Mrs. Lisa Suarez,56,Male,IT,8236,2023-11-06,3.1923076923076925,2,Inactive,Los Angeles,Morning,UI/UX,37,10,280,38,2
+440,Nicholas Wilson,60,Other,IT,7865,2015-09-08,2.0,8,Active,New York,Morning,"React,Node",36,0,141,49,0
+441,Catherine Jordan,43,Female,Sales,4246,2019-06-12,3.0,11,Active,Los Angeles,Evening,"React,Node",41,22,102,29,2
+442,Michele Ruiz,53,Other,IT,5333,2023-01-05,2.7586206896551726,19,Active,New York,Evening,"AWS,Docker",51,12,82,14,1
+443,Kimberly Sparks,26,Other,Sales,9146,2024-07-29,3.0,3,Inactive,New York,Evening,"Java,Spring",46,14,257,18,2
+444,Joseph Oconnor,65,Female,IT,6442,2019-01-19,4.0,14,Active,New York,Evening,"Java,Spring",39,4,282,46,1
+445,Joseph Armstrong,48,Female,HR,4183,2020-10-03,4.0,6,Active,Chicago,Evening,"AWS,Docker",48,20,52,34,1
+446,Stephen Little,26,Other,Sales,4741,2021-10-30,3.0476190476190474,12,Inactive,New York,Morning,UI/UX,20,16,50,45,0
+447,Melissa Clark,45,Female,HR,8888,2023-08-11,2.8461538461538463,13,Active,Chicago,Evening,"Java,Spring",51,24,179,29,2
+448,Michelle Robertson,57,Female,HR,8958,2021-06-07,1.0,1,Active,Chicago,Morning,"React,Node",28,22,221,18,2
+449,Nathan Rodriguez,29,Other,HR,8526,2021-12-08,3.1923076923076925,2,Inactive,Los Angeles,Morning,"React,Node",39,23,177,39,2
+450,Marissa Hunt,40,Male,Sales,4566,2021-10-18,3.1923076923076925,2,Inactive,Chicago,Night,"Python,SQL",33,24,48,38,1
+451,Steve Adams,63,Other,Sales,2663,2019-07-31,3.12,16,Active,Los Angeles,Evening,"Java,Spring",31,5,254,14,1
+452,Crystal Reyes,41,Female,Sales,3824,2018-10-20,2.6666666666666665,9,Active,New York,Morning,UI/UX,51,20,160,39,2
+453,Lindsey Hall,23,Other,IT,2978,2022-05-17,2.0,5,Active,Chicago,Evening,"AWS,Docker",38,21,120,15,2
+454,Jay Clark,54,Other,IT,4395,2019-09-21,2.0,18,Inactive,Los Angeles,Evening,"AWS,Docker",44,10,56,15,0
+455,Michael Reeves,21,Female,HR,3294,2019-05-20,2.8461538461538463,13,Inactive,Chicago,Evening,UI/UX,41,17,72,25,1
+456,Nicole Baxter,34,Other,IT,8946,2023-12-04,2.5454545454545454,14,Inactive,Chicago,Night,"Python,SQL",45,3,234,25,1
+457,Cheryl Davila,55,Male,Sales,6737,2024-01-15,1.0,8,Inactive,Chicago,Morning,"AWS,Docker",42,2,78,26,0
+458,Emma Pratt,19,Other,IT,9946,2016-04-08,2.6470588235294117,17,Inactive,Los Angeles,Evening,"Java,Spring",31,12,299,49,2
+459,Jennifer Nelson,44,Male,HR,7571,2017-07-22,3.0,7,Inactive,Chicago,Night,"Python,SQL",49,22,212,11,2
+460,William Garrett,25,Male,Sales,8957,2022-10-15,2.7222222222222223,18,Inactive,New York,Evening,"Java,Spring",38,8,70,21,0
+461,Jose Allen,27,Female,HR,9861,2015-04-05,3.0,10,Active,Chicago,Morning,"React,Node",29,20,170,6,2
+462,Anne Hernandez,24,Male,HR,5998,2017-02-22,2.75,1,Inactive,New York,Night,"Python,SQL",38,5,25,16,0
+463,Christopher Stevens,57,Other,Sales,2495,2024-01-30,2.6666666666666665,9,Active,New York,Night,"AWS,Docker",54,11,103,46,1
+464,Alex Gordon,35,Male,Sales,5070,2022-08-10,3.2285714285714286,7,Inactive,Chicago,Night,"Python,SQL",48,1,147,22,0
+465,Justin Thornton,35,Female,IT,6622,2020-01-09,2.7586206896551726,19,Active,Chicago,Night,"Python,SQL",39,2,47,15,0
+466,Jeremy Perez,21,Male,IT,6980,2018-03-14,2.75,1,Active,Los Angeles,Morning,"Python,SQL",39,2,136,20,0
+467,Janet Carpenter,65,Other,Sales,7570,2024-08-04,5.0,5,Inactive,Los Angeles,Morning,"Python,SQL",39,11,284,22,2
+468,Kimberly Brown,47,Other,HR,4781,2021-12-11,2.0,18,Inactive,Chicago,Night,"Java,Spring",58,14,173,39,2
+469,Luis Shaw,29,Female,IT,4297,2023-12-02,4.0,10,Active,Chicago,Evening,"React,Node",45,8,86,30,0
+470,Amanda Smith,65,Male,IT,5765,2016-12-16,3.0,9,Inactive,Los Angeles,Morning,UI/UX,45,22,183,20,2
+471,Stephanie Jackson,44,Other,IT,6741,2015-06-19,2.8333333333333335,10,Active,Los Angeles,Evening,"Python,SQL",50,7,100,10,0
+472,Matthew Thomas,65,Other,IT,5473,2020-10-22,2.8461538461538463,13,Active,New York,Evening,"AWS,Docker",43,10,247,48,2
+473,Faith Morris,18,Other,IT,4923,2021-05-09,1.0,8,Inactive,Chicago,Morning,"Python,SQL",39,15,273,47,2
+474,David Potter,56,Male,IT,2016,2020-07-13,2.7222222222222223,18,Active,New York,Morning,"AWS,Docker",40,24,188,46,2
+475,Kimberly Lang,65,Female,Sales,3820,2024-02-03,4.0,2,Active,Chicago,Night,"Java,Spring",41,21,218,16,2
+476,Alicia Malone,56,Female,Sales,2646,2018-01-12,3.0476190476190474,12,Inactive,Los Angeles,Evening,"AWS,Docker",41,3,82,17,0
+477,Gregory Sparks,20,Female,IT,3225,2023-08-20,1.0,1,Inactive,Los Angeles,Morning,UI/UX,47,0,116,8,0
+478,Mary Arias,19,Male,Sales,8893,2024-11-14,3.2285714285714286,7,Active,Chicago,Evening,"React,Node",42,23,293,43,2
+479,Jeffrey Robles,28,Male,Sales,8039,2024-07-04,2.8620689655172415,8,Active,Chicago,Evening,"AWS,Docker",47,6,191,6,1
+480,Jay Scott,28,Other,HR,5496,2015-01-21,2.7222222222222223,18,Active,Chicago,Night,"AWS,Docker",41,1,46,30,0
+481,Brandon Flores,41,Female,Sales,4368,2023-11-10,4.0,11,Inactive,Los Angeles,Morning,"React,Node",42,23,146,31,2
+482,Donna King,28,Male,IT,6725,2016-08-02,5.0,16,Active,Chicago,Night,UI/UX,26,4,65,31,0
+483,Curtis Barrett,29,Female,Sales,5215,2021-09-08,2.96875,6,Inactive,Chicago,Evening,"Python,SQL",49,6,196,19,1
+484,Jason Hayden,43,Female,IT,3929,2017-02-26,1.0,17,Active,Chicago,Evening,"AWS,Docker",44,3,267,12,1
+485,Patricia Washington,27,Male,IT,6050,2017-11-05,5.0,15,Active,Chicago,Night,"React,Node",49,4,67,11,0
+486,Chelsea Owens,64,Male,IT,8514,2021-05-21,2.0,8,Active,New York,Morning,"Java,Spring",20,23,132,44,1
+487,Kayla Garcia,44,Female,Sales,6034,2020-05-27,2.6666666666666665,9,Inactive,New York,Night,"React,Node",58,0,197,16,0
+488,Lisa Torres,36,Male,HR,5608,2020-06-21,1.0,9,Inactive,New York,Evening,"Java,Spring",40,0,239,17,0
+489,Madison Smith,26,Male,IT,5993,2024-08-30,2.0,17,Inactive,New York,Morning,UI/UX,50,14,177,47,2
+490,Molly Choi,55,Other,Sales,5001,2016-11-07,4.0,7,Active,Chicago,Evening,"Python,SQL",33,19,123,21,1
+491,Kristy Phillips,22,Other,Sales,5217,2019-05-17,3.0476190476190474,12,Active,Chicago,Evening,"React,Node",46,18,261,21,2
+492,Dr. Jacob Castaneda DVM,53,Other,Sales,9181,2024-02-17,5.0,1,Inactive,Los Angeles,Morning,"AWS,Docker",33,9,116,40,0
+493,Dr. Thomas Brown,42,Other,HR,2106,2017-02-10,2.0,9,Active,Chicago,Night,UI/UX,37,17,46,25,1
+494,Michael Torres,23,Female,HR,6730,2024-05-12,2.7222222222222223,18,Inactive,New York,Night,"React,Node",57,2,101,12,0
+495,Scott Fleming,51,Female,HR,2700,2018-12-04,3.0476190476190474,12,Inactive,Chicago,Morning,"AWS,Docker",40,10,27,9,0
+496,Patrick Martin,50,Other,Sales,8594,2021-10-30,5.0,9,Inactive,Chicago,Night,"React,Node",43,14,72,30,1
+497,Brittany Martinez,30,Other,Sales,3558,2020-10-16,2.7222222222222223,18,Inactive,New York,Night,"Java,Spring",48,10,159,20,1
+498,Lori Thomas,52,Male,IT,7471,2023-03-14,2.6666666666666665,9,Inactive,New York,Evening,"React,Node",45,16,148,40,2
+499,Paul Mccullough,62,Other,IT,6359,2021-01-12,2.0,15,Active,Los Angeles,Evening,"React,Node",43,16,195,32,2
+500,Bruce Rodriguez,62,Male,IT,9773,2019-09-23,2.7586206896551726,19,Inactive,Los Angeles,Night,"React,Node",44,5,194,33,1
+501,Kristi Stevens,22,Male,HR,6558,2021-10-30,1.0,14,Active,Chicago,Night,UI/UX,61,4,214,16,1
+502,Christina Hayes,32,Male,Sales,7401,2020-07-28,2.8620689655172415,8,Active,Los Angeles,Evening,"React,Node",41,7,269,41,1
+503,Dawn Choi,28,Female,IT,8308,2018-10-21,5.0,18,Active,Los Angeles,Night,"AWS,Docker",43,1,223,34,0
+504,Zachary Bowen,25,Male,Sales,2712,2016-05-28,2.8333333333333335,10,Active,Chicago,Morning,"Java,Spring",50,15,265,27,2
+505,Crystal Lee,64,Male,HR,3934,2022-07-09,5.0,20,Inactive,Los Angeles,Night,"Java,Spring",50,19,144,20,2
+506,Dr. Justin Vega,50,Female,HR,3135,2020-03-20,2.6470588235294117,17,Inactive,Los Angeles,Night,"React,Node",51,23,70,18,2
+507,Bradley Riley,62,Other,IT,3980,2024-01-09,2.6666666666666665,9,Active,New York,Morning,UI/UX,47,11,97,14,1
+508,George Mcpherson,35,Male,HR,8602,2018-10-30,2.0,17,Inactive,New York,Morning,UI/UX,32,5,216,11,0
+509,Erica Garcia,32,Female,IT,3726,2021-10-11,2.5483870967741935,4,Active,Chicago,Night,"AWS,Docker",55,0,138,49,0
+510,Christopher Black,62,Female,HR,3278,2021-08-29,5.0,10,Inactive,Los Angeles,Evening,"React,Node",32,3,12,41,0
+511,Charles Smith,24,Female,IT,5716,2019-12-13,5.0,15,Active,Chicago,Night,"Java,Spring",44,16,251,33,2
+512,Ellen Wright,56,Male,HR,7339,2023-01-06,2.75,1,Active,New York,Evening,UI/UX,35,12,130,7,1
+513,Ryan Hess,41,Male,HR,3067,2023-12-06,2.0,19,Active,Los Angeles,Evening,"React,Node",41,17,111,19,1
+514,Miss Alyssa Perez DDS,59,Other,HR,8297,2015-10-13,4.0,1,Inactive,Los Angeles,Morning,UI/UX,44,4,47,40,0
+515,Taylor Williamson,48,Male,HR,9293,2015-03-10,2.6470588235294117,17,Inactive,Chicago,Night,UI/UX,44,23,142,23,2
+516,Megan Sullivan,42,Female,IT,4243,2023-05-24,3.0,2,Active,Los Angeles,Evening,"Java,Spring",45,23,211,17,2
+517,Christina Lowe,35,Female,Sales,9630,2018-07-03,2.75,1,Active,Los Angeles,Night,"Python,SQL",54,2,30,46,0
+518,Anthony Sanchez DVM,37,Other,IT,9844,2020-11-28,2.5483870967741935,4,Active,Los Angeles,Morning,"AWS,Docker",45,10,251,25,2
+519,Kyle Strong,46,Female,HR,6688,2019-05-06,3.12,16,Active,New York,Night,"AWS,Docker",40,12,118,41,1
+520,Omar Thomas,60,Male,Sales,2949,2015-11-12,2.0,18,Inactive,Chicago,Morning,"Java,Spring",49,3,93,31,0
+521,Angela Jimenez,44,Other,HR,2246,2016-05-02,2.0,6,Inactive,New York,Evening,UI/UX,51,13,92,33,1
+522,Rebecca Stone,18,Female,HR,2302,2024-01-08,2.96875,6,Active,New York,Night,"React,Node",32,21,78,24,1
+523,Kyle Smith,37,Male,IT,8961,2020-09-04,1.0,1,Inactive,Chicago,Evening,UI/UX,46,10,138,29,1
+524,Gwendolyn Ray,36,Female,Sales,3619,2021-06-08,3.0,7,Inactive,New York,Evening,"Java,Spring",47,9,205,10,1
+525,Stephen Wilcox,19,Other,HR,8100,2019-02-06,1.0,4,Active,Chicago,Night,"AWS,Docker",39,18,149,40,2
+526,Ashley Barber,55,Male,IT,3072,2022-08-26,3.12,16,Inactive,New York,Night,UI/UX,53,17,292,6,2
+527,Brittany Holt,55,Male,IT,2247,2018-02-18,4.0,19,Inactive,New York,Morning,"AWS,Docker",40,5,243,26,1
+528,Amber Rodriguez,18,Male,Sales,4941,2022-12-11,5.0,19,Active,Los Angeles,Morning,"React,Node",43,14,32,36,0
+529,Anne Roberts,44,Male,Sales,6936,2016-11-20,2.0,2,Active,Chicago,Evening,"AWS,Docker",40,20,162,20,2
+530,Katie Vega,40,Female,HR,7002,2019-08-06,2.0,20,Active,Los Angeles,Night,"AWS,Docker",42,9,286,22,2
+531,Gabriel Weber,32,Male,HR,2759,2016-05-10,5.0,7,Inactive,Los Angeles,Evening,"Python,SQL",33,4,70,9,0
+532,Jeffrey Williamson,54,Other,IT,9988,2015-12-08,3.12,16,Inactive,Chicago,Evening,"Python,SQL",30,4,61,40,0
+533,Jason Juarez,61,Other,Sales,2646,2019-03-25,2.6470588235294117,17,Inactive,Los Angeles,Morning,"Python,SQL",54,9,162,34,1
+534,Toni Hall,53,Other,HR,3093,2016-10-23,3.0,7,Active,New York,Night,"AWS,Docker",35,4,246,49,1
+535,Ryan Ramos,28,Female,Sales,4004,2016-10-22,2.8333333333333335,10,Active,Chicago,Morning,"Java,Spring",34,2,41,23,0
+536,Thomas Stuart,30,Male,HR,4615,2022-01-07,3.0,11,Inactive,Los Angeles,Evening,"AWS,Docker",24,22,64,27,1
+537,Joseph Adams,31,Female,Sales,3299,2018-02-28,2.8333333333333335,10,Inactive,New York,Night,"Java,Spring",36,5,45,38,0
+538,Kimberly Burke,20,Male,IT,2492,2016-09-25,2.7777777777777777,3,Inactive,Los Angeles,Morning,"Java,Spring",31,3,119,17,0
+539,Brandon Church,38,Male,HR,8388,2021-08-02,1.0,20,Inactive,Chicago,Morning,"Python,SQL",55,17,186,47,2
+540,Jonathan Reed,39,Female,IT,9823,2019-04-02,2.75,1,Active,Chicago,Night,UI/UX,50,8,106,33,0
+541,Julie Turner,53,Female,HR,6092,2021-09-01,3.12,16,Active,New York,Evening,"React,Node",36,16,222,40,2
+542,Joseph Vargas,46,Female,Sales,5594,2016-09-05,2.7777777777777777,3,Active,Chicago,Evening,"Python,SQL",60,12,146,26,2
+543,Michael Parker,37,Other,HR,6468,2018-11-17,2.8461538461538463,13,Inactive,Los Angeles,Evening,"Python,SQL",49,14,15,40,0
+544,Erin Cunningham,63,Other,HR,9838,2015-06-10,5.0,20,Active,Los Angeles,Morning,UI/UX,39,19,118,13,1
+545,Elizabeth Watson,47,Female,HR,2766,2018-10-11,3.260869565217391,20,Inactive,Los Angeles,Night,"React,Node",22,16,44,43,0
+546,Tara Mccoy,31,Male,IT,8103,2020-05-23,5.0,4,Active,Chicago,Night,"AWS,Docker",60,12,48,23,1
+547,Louis Larsen,24,Male,Sales,8608,2018-10-30,3.260869565217391,20,Inactive,Los Angeles,Night,"AWS,Docker",30,15,159,42,1
+548,Tara Waller,50,Other,IT,3902,2020-10-21,3.6,5,Inactive,Los Angeles,Evening,"Python,SQL",28,21,127,10,1
+549,Morgan Thompson,32,Other,HR,7206,2018-01-11,2.6666666666666665,9,Inactive,New York,Night,"React,Node",50,3,270,19,1
+550,Jason Greene,26,Male,Sales,5184,2018-12-09,3.0,11,Active,Chicago,Evening,"Python,SQL",61,4,96,24,0
+551,Patricia Terry,50,Male,Sales,3609,2020-01-30,2.7777777777777777,3,Inactive,Los Angeles,Evening,"Java,Spring",53,4,85,13,0
+552,Melissa Erickson,48,Other,IT,2152,2020-07-04,3.0,11,Active,Los Angeles,Morning,"Python,SQL",46,8,223,36,1
+553,Amanda Griffith,26,Male,Sales,9704,2019-05-30,2.6666666666666665,9,Active,New York,Evening,"Python,SQL",46,16,294,8,2
+554,Leslie Walker,20,Other,IT,2061,2024-09-05,3.0,14,Inactive,Chicago,Morning,"AWS,Docker",48,12,248,22,2
+555,Johnny Dalton,28,Other,HR,2673,2023-10-05,2.6470588235294117,17,Inactive,New York,Night,"AWS,Docker",48,1,174,9,0
+556,Crystal Kidd,29,Female,HR,8220,2019-11-20,5.0,11,Active,Los Angeles,Morning,"AWS,Docker",44,12,96,24,1
+557,Kristina Phillips,24,Male,IT,7887,2018-01-22,2.5454545454545454,14,Active,Chicago,Night,"Java,Spring",42,21,150,27,2
+558,Michaela Rivera,28,Male,HR,9163,2018-10-05,2.0,12,Active,Los Angeles,Morning,"AWS,Docker",41,20,169,15,2
+559,Tammy Mcpherson,63,Female,Sales,2640,2020-10-24,2.7777777777777777,3,Active,New York,Morning,"React,Node",35,22,55,41,1
+560,Carrie Thomas,39,Female,Sales,2831,2022-03-22,4.0,8,Active,Los Angeles,Evening,UI/UX,39,18,121,26,1
+561,Kimberly Davis,52,Female,HR,7404,2024-01-06,4.0,15,Inactive,New York,Morning,"React,Node",28,2,54,8,0
+562,Pamela Levine,37,Female,HR,8201,2017-11-13,2.0,16,Inactive,Chicago,Morning,"React,Node",41,9,256,33,1
+563,Beverly Logan,51,Female,HR,9646,2021-08-08,2.7222222222222223,18,Inactive,Chicago,Evening,"AWS,Docker",34,1,113,48,0
+564,Pamela Ellison,23,Female,HR,7551,2018-10-18,2.8461538461538463,13,Inactive,New York,Night,UI/UX,33,12,94,38,0
+565,Kathleen Ross,50,Male,IT,8941,2018-09-12,2.0,11,Active,New York,Morning,UI/UX,43,18,143,17,2
+566,Erica Jones,46,Female,Sales,3768,2022-10-19,1.0,4,Inactive,Chicago,Night,UI/UX,53,16,117,46,2
+567,Adam Thomas,32,Female,HR,9370,2021-05-08,4.0,20,Inactive,New York,Night,"Java,Spring",49,20,27,13,1
+568,Courtney Lucas,20,Other,Sales,7155,2015-11-17,2.75,1,Inactive,Los Angeles,Night,"AWS,Docker",29,13,103,46,0
+569,Kimberly Montgomery,55,Female,Sales,6345,2019-03-06,3.1923076923076925,2,Active,Los Angeles,Evening,UI/UX,34,11,159,35,1
+570,Paul Smith,35,Other,IT,2042,2016-12-22,2.5483870967741935,4,Active,New York,Evening,"Java,Spring",49,20,255,11,2
+571,Tamara Harding,18,Other,HR,2392,2017-03-08,3.260869565217391,20,Active,Los Angeles,Evening,"Python,SQL",34,11,298,8,2
+572,Suzanne Miller,41,Other,Sales,4208,2023-02-26,4.0,5,Inactive,Chicago,Evening,"Python,SQL",40,10,218,23,1
+573,Laura Harvey,22,Male,IT,3141,2024-02-06,2.7586206896551726,19,Inactive,New York,Night,"Java,Spring",46,6,135,46,0
+574,Patrick Rodriguez,38,Male,IT,3532,2018-11-18,2.75,1,Active,New York,Morning,"Java,Spring",34,3,244,34,0
+575,Sabrina Davis,27,Other,HR,3247,2021-09-22,4.0,11,Active,Chicago,Morning,"AWS,Docker",42,18,131,35,2
+576,Eric Smith,34,Male,HR,5168,2023-12-15,1.0,14,Inactive,New York,Evening,"AWS,Docker",31,0,147,39,0
+577,Chad Kennedy,49,Male,Sales,7111,2022-03-15,5.0,18,Active,Chicago,Night,"Python,SQL",37,23,124,25,2
+578,Denise Lindsey,28,Other,IT,4002,2015-03-25,2.0,12,Active,New York,Evening,UI/UX,44,2,171,35,0
+579,Dawn Fuller MD,18,Other,HR,8824,2015-11-03,5.0,11,Inactive,New York,Morning,"Python,SQL",29,12,210,23,1
+580,Mark Santiago,32,Male,HR,3736,2018-09-26,3.0,17,Active,New York,Evening,UI/UX,45,14,243,35,2
+581,Jennifer Stewart,32,Female,HR,9772,2021-05-05,1.0,8,Inactive,Los Angeles,Night,UI/UX,41,1,37,36,0
+582,Sara Harris,35,Other,IT,3433,2024-03-07,3.0,11,Active,New York,Evening,"AWS,Docker",46,10,20,6,0
+583,Nicholas Anderson,60,Male,Sales,3154,2016-02-13,3.0476190476190474,12,Inactive,New York,Night,"React,Node",43,3,215,14,0
+584,Robin Williams,19,Other,HR,6531,2018-11-01,2.0,10,Inactive,Los Angeles,Morning,"React,Node",52,18,176,6,2
+585,Angela Bell,62,Female,Sales,2844,2015-04-11,5.0,10,Active,New York,Evening,"Java,Spring",43,16,256,6,2
+586,Alexander Mitchell,24,Other,HR,2401,2020-01-21,2.0,19,Inactive,New York,Night,"AWS,Docker",38,2,56,28,0
+587,Leslie Harmon,47,Male,IT,5440,2016-09-19,3.0,11,Inactive,New York,Evening,UI/UX,42,17,255,21,2
+588,Krystal Rice,42,Other,HR,9390,2021-08-05,5.0,13,Inactive,New York,Morning,"React,Node",46,7,136,36,0
+589,Mr. Gary Ramos,64,Other,Sales,7293,2022-12-05,2.0,4,Inactive,Los Angeles,Night,UI/UX,42,21,156,20,2
+590,Meghan Beck,18,Female,HR,7088,2020-11-05,3.2285714285714286,7,Active,Los Angeles,Night,"React,Node",42,24,127,20,2
+591,Nancy Vincent,38,Other,HR,7948,2020-09-06,2.7222222222222223,18,Inactive,Los Angeles,Morning,"React,Node",36,23,161,43,2
+592,Jonathan Rangel,49,Other,Sales,9323,2021-01-19,2.7222222222222223,18,Inactive,Chicago,Evening,"React,Node",36,18,81,35,1
+593,Laura Smith,47,Female,Sales,7876,2019-04-30,2.0,1,Active,Los Angeles,Morning,"AWS,Docker",30,4,146,47,0
+594,Amber Mason,28,Other,HR,8165,2020-12-27,2.5483870967741935,4,Active,Chicago,Evening,"Python,SQL",55,6,184,28,1
+595,Michelle Smith,35,Other,Sales,9906,2018-12-18,2.6666666666666665,9,Active,Los Angeles,Evening,UI/UX,32,20,298,5,2
+596,Megan Barry,53,Female,Sales,8742,2019-04-05,3.12,16,Inactive,Los Angeles,Evening,"AWS,Docker",36,7,28,15,0
+597,Kathy Clark,55,Female,IT,4040,2015-05-23,2.0,19,Inactive,New York,Morning,"AWS,Docker",36,4,204,25,0
+598,Brenda Torres,20,Male,HR,2256,2020-04-10,2.6666666666666665,9,Active,New York,Evening,"AWS,Docker",49,16,184,8,2
+599,James Rose,58,Female,HR,2593,2019-08-01,3.0,11,Inactive,Chicago,Night,"AWS,Docker",39,4,150,11,0
+600,Stephen Weber,20,Male,HR,7375,2016-02-15,5.0,2,Active,Chicago,Night,"AWS,Docker",51,3,255,30,1
+601,Jason Hess,30,Female,IT,7847,2024-04-04,3.0,10,Inactive,New York,Morning,"Java,Spring",36,21,102,16,1
+602,Connie Collins,52,Male,Sales,6509,2021-05-07,1.0,1,Active,Chicago,Morning,UI/UX,44,18,248,35,2
+603,Melissa Evans,37,Female,HR,4680,2020-11-22,2.0,13,Inactive,Los Angeles,Evening,"AWS,Docker",35,20,214,21,2
+604,Thomas Martinez,50,Male,HR,7767,2021-03-24,1.0,3,Inactive,New York,Morning,UI/UX,59,1,57,37,0
+605,Erin Phillips,65,Female,Sales,8054,2022-01-04,2.0,9,Active,New York,Night,"Java,Spring",32,10,254,15,1
+606,Stephanie Lopez,36,Female,IT,5765,2023-08-31,1.0,17,Inactive,New York,Night,"Java,Spring",44,21,137,32,2
+607,Christopher Knapp,54,Male,HR,5240,2016-07-13,3.0476190476190474,12,Inactive,New York,Evening,UI/UX,47,12,291,36,2
+608,Shelly Russo,48,Female,Sales,3845,2015-09-14,4.0,13,Active,Chicago,Night,"React,Node",45,14,26,5,0
+609,Kimberly Galvan,55,Male,HR,8646,2018-03-24,2.0,14,Inactive,New York,Night,"Python,SQL",40,11,80,32,0
+610,Renee Burnett,62,Male,Sales,4160,2021-08-25,3.0,12,Active,Chicago,Night,"React,Node",40,21,278,46,2
+611,Kerry Simon,50,Male,Sales,6272,2018-01-19,2.75,1,Active,New York,Night,"React,Node",42,20,291,11,2
+612,Alfred Barr,31,Female,Sales,4654,2020-05-01,3.2285714285714286,7,Inactive,Chicago,Morning,"React,Node",40,21,16,6,1
+613,Kelsey Hines,64,Other,IT,9282,2016-10-06,3.260869565217391,20,Active,New York,Evening,"AWS,Docker",49,10,112,46,1
+614,Elizabeth Dudley,64,Other,HR,5152,2019-05-05,2.857142857142857,15,Active,New York,Night,"Java,Spring",59,6,202,28,1
+615,Kimberly Dunlap,53,Male,HR,4213,2018-06-21,2.75,1,Active,Los Angeles,Morning,"React,Node",37,4,250,8,1
+616,David Pena,59,Male,IT,3105,2017-07-09,3.0,9,Active,Los Angeles,Night,"Java,Spring",31,16,71,48,0
+617,Sarah Castro,19,Other,IT,6934,2019-10-20,4.0,8,Inactive,Los Angeles,Evening,UI/UX,41,23,26,23,1
+618,Tiffany Richardson,36,Other,IT,9775,2018-11-24,4.0,5,Active,Los Angeles,Night,"Python,SQL",62,19,180,30,2
+619,Terry Burch,63,Male,IT,5417,2019-12-05,2.0,11,Active,Los Angeles,Evening,UI/UX,35,8,34,15,0
+620,Jason Davis,31,Female,IT,6675,2017-10-21,2.6666666666666665,9,Active,New York,Night,UI/UX,55,13,260,44,2
+621,Henry Bennett,51,Other,Sales,5740,2023-09-29,2.6470588235294117,17,Active,Los Angeles,Evening,"AWS,Docker",55,11,262,47,2
+622,John Rodriguez,42,Female,IT,4781,2023-01-20,2.5483870967741935,4,Inactive,Los Angeles,Night,"Python,SQL",37,5,216,15,0
+623,Joseph Smith,26,Male,Sales,8377,2022-06-23,2.0,7,Active,Chicago,Morning,UI/UX,46,16,38,49,1
+624,Anthony Miller,64,Other,Sales,8635,2020-06-09,3.260869565217391,20,Inactive,New York,Evening,UI/UX,55,18,126,7,2
+625,Jennifer Clark,64,Male,IT,4232,2023-05-21,2.0,10,Active,New York,Night,"Python,SQL",38,18,291,16,2
+626,Douglas Martin,23,Female,HR,7218,2017-01-17,1.0,19,Inactive,New York,Night,"Python,SQL",40,15,153,7,1
+627,Brenda Carter,36,Male,IT,9295,2020-03-04,3.2285714285714286,7,Inactive,Chicago,Evening,UI/UX,37,11,34,46,0
+628,Terri Foster,20,Male,HR,6165,2017-12-22,2.6666666666666665,9,Active,New York,Morning,"Python,SQL",33,11,165,31,1
+629,Brenda Lang,23,Male,HR,3790,2024-08-01,2.0,13,Active,New York,Morning,UI/UX,36,19,82,6,1
+630,Patricia Scott,52,Other,Sales,9364,2019-11-05,3.6,5,Active,New York,Evening,UI/UX,32,5,129,20,0
+631,Melissa Vega,21,Female,Sales,5970,2016-11-09,2.96875,6,Active,Los Angeles,Evening,"AWS,Docker",42,22,102,6,2
+632,Taylor Thompson,23,Other,HR,7974,2018-07-26,2.5454545454545454,14,Inactive,New York,Morning,"React,Node",35,3,95,34,0
+633,Tina Welch,21,Other,HR,7343,2019-02-01,3.2285714285714286,7,Inactive,Los Angeles,Morning,UI/UX,43,5,127,24,0
+634,Heather Arias,21,Female,Sales,3913,2017-11-23,2.6666666666666665,9,Active,New York,Evening,"Java,Spring",29,10,242,42,1
+635,Ralph Newman,65,Other,IT,4565,2022-04-10,3.0,2,Active,New York,Night,"React,Node",44,0,208,32,0
+636,Stacy Bell,37,Female,Sales,3622,2017-02-10,2.857142857142857,15,Active,Los Angeles,Evening,"React,Node",48,23,215,29,2
+637,Tyler Miller,54,Female,IT,5589,2021-08-18,2.8333333333333335,10,Inactive,Los Angeles,Evening,"React,Node",26,22,156,36,2
+638,Valerie Lee,51,Other,HR,2218,2023-02-10,3.6,5,Inactive,Chicago,Evening,"AWS,Docker",44,14,280,14,2
+639,Jimmy Wade,19,Male,Sales,2277,2019-10-21,1.0,4,Active,Los Angeles,Night,UI/UX,51,10,148,46,1
+640,Carlos Mcmillan,24,Other,IT,8973,2016-03-18,2.5483870967741935,4,Inactive,Los Angeles,Morning,"AWS,Docker",32,24,190,44,2
+641,Laurie Mata,51,Other,HR,3779,2021-11-27,5.0,20,Inactive,Chicago,Night,UI/UX,55,18,39,37,1
+642,Brianna Phelps,37,Male,Sales,6354,2021-12-03,2.6666666666666665,9,Active,Los Angeles,Night,"AWS,Docker",45,17,66,17,1
+643,Heather Henry,45,Female,IT,7756,2018-07-05,3.0,5,Inactive,Los Angeles,Night,"AWS,Docker",36,16,241,45,2
+644,Rebecca Avery,40,Female,HR,6918,2019-02-03,5.0,1,Active,Los Angeles,Night,"Java,Spring",41,18,155,46,2
+645,Anthony Blankenship,33,Other,IT,9323,2017-10-16,2.8333333333333335,10,Active,Chicago,Morning,"AWS,Docker",46,20,57,41,1
+646,Alice Martin,37,Male,HR,2899,2021-02-10,2.0,4,Inactive,Chicago,Night,"Python,SQL",42,13,203,20,1
+647,Phillip Nelson,28,Other,Sales,8643,2019-04-23,1.0,11,Active,Chicago,Morning,"Java,Spring",46,17,233,49,2
+648,Emily Martin,58,Male,Sales,4038,2020-09-06,3.0,13,Active,Los Angeles,Evening,"AWS,Docker",34,18,145,26,1
+649,Monica Blake,19,Other,Sales,8687,2016-11-19,2.6666666666666665,9,Active,New York,Morning,"React,Node",43,14,31,24,0
+650,Rebecca Carter,36,Female,IT,6907,2015-04-28,2.96875,6,Inactive,Chicago,Morning,"Python,SQL",30,14,15,47,0
+651,Jason Warren,57,Female,HR,2850,2019-10-24,2.75,1,Active,Los Angeles,Evening,"Python,SQL",41,3,213,31,0
+652,Julian Maxwell,47,Female,IT,3343,2022-01-26,2.75,1,Inactive,Los Angeles,Night,"Python,SQL",34,6,248,45,1
+653,Mrs. Kimberly Day MD,61,Male,HR,5508,2016-04-06,5.0,5,Active,Los Angeles,Night,"Java,Spring",36,12,194,20,1
+654,Rachel Roman,19,Male,Sales,3896,2023-09-21,3.0,12,Inactive,Los Angeles,Night,"AWS,Docker",51,2,229,38,1
+655,Elizabeth Johnston,59,Other,HR,5042,2018-04-18,2.0,13,Inactive,Chicago,Night,"AWS,Docker",50,15,125,36,1
+656,Sabrina Norris,55,Female,Sales,8505,2022-12-23,2.6666666666666665,9,Inactive,New York,Morning,"React,Node",46,8,58,30,0
+657,Brandi Harvey,40,Other,HR,4393,2020-12-21,3.2285714285714286,7,Active,Chicago,Night,"React,Node",33,7,182,29,0
+658,Hayden Parsons,28,Other,Sales,3453,2017-05-01,2.8461538461538463,13,Inactive,Chicago,Night,"Python,SQL",39,19,91,6,1
+659,Gregory Marshall,20,Male,HR,3500,2020-08-11,3.260869565217391,20,Active,New York,Morning,"React,Node",51,12,54,16,0
+660,Eric Bailey,65,Female,HR,5816,2021-06-24,4.0,9,Active,Chicago,Evening,"Java,Spring",43,16,29,44,1
+661,Dawn Coleman,48,Female,HR,8150,2017-03-30,2.7777777777777777,3,Active,New York,Night,"AWS,Docker",60,16,230,13,2
+662,Alex Jones,47,Male,Sales,7270,2022-12-11,1.0,3,Inactive,Chicago,Night,"Python,SQL",45,16,132,16,1
+663,Bobby Tanner,28,Other,HR,6861,2023-02-10,1.0,12,Inactive,Chicago,Night,"React,Node",43,0,243,30,0
+664,Jeffrey Stephens,51,Other,IT,6903,2020-06-10,2.6666666666666665,9,Active,Chicago,Night,"Java,Spring",39,7,230,13,1
+665,Brenda Mendoza,43,Female,Sales,9053,2024-02-20,1.0,9,Active,New York,Evening,"Java,Spring",43,18,12,14,1
+666,John Adkins,43,Other,Sales,6853,2017-08-28,2.8333333333333335,10,Inactive,New York,Night,"React,Node",40,5,191,36,0
+667,James Diaz,23,Female,IT,4156,2015-11-05,2.6470588235294117,17,Inactive,New York,Evening,"AWS,Docker",47,2,215,38,0
+668,Leslie Velez,29,Male,IT,8335,2020-01-02,2.6470588235294117,17,Inactive,Chicago,Morning,"React,Node",49,4,49,24,0
+669,Michael Lee,23,Male,Sales,8898,2020-04-09,1.0,15,Active,New York,Night,"Python,SQL",35,12,68,43,0
+670,Lindsey Davis,31,Female,Sales,6174,2015-07-05,2.7777777777777777,3,Inactive,New York,Evening,"React,Node",31,14,71,6,0
+671,Sara Brewer,62,Other,HR,7445,2017-05-04,2.0,19,Inactive,Chicago,Morning,"Java,Spring",27,13,141,5,1
+672,Seth Brown,28,Other,IT,3478,2020-05-03,3.0,16,Inactive,Los Angeles,Night,"React,Node",46,22,69,40,2
+673,Stanley White,35,Female,IT,4196,2022-11-05,5.0,6,Inactive,New York,Morning,"AWS,Docker",33,15,131,28,1
+674,Mrs. Theresa Wilson,20,Female,Sales,2372,2018-10-13,4.0,8,Active,Chicago,Morning,UI/UX,24,17,116,31,1
+675,John Freeman,60,Male,HR,3436,2021-10-22,1.0,10,Active,Los Angeles,Night,"React,Node",45,21,105,6,2
+676,Charles Nichols,59,Other,Sales,8057,2020-08-27,2.96875,6,Active,New York,Evening,"AWS,Docker",61,21,244,35,2
+677,Cory Roth,40,Other,IT,5765,2016-09-16,2.7222222222222223,18,Inactive,New York,Evening,"AWS,Docker",41,10,71,18,0
+678,Michelle Durham,35,Male,HR,5900,2015-04-25,3.0476190476190474,12,Active,Chicago,Evening,"Java,Spring",48,2,265,6,1
+679,Manuel Lewis,42,Female,IT,8696,2023-12-09,3.0,11,Inactive,New York,Morning,"AWS,Docker",42,21,58,33,1
+680,Jeremy Garcia,58,Female,HR,2477,2024-10-08,2.5483870967741935,4,Active,New York,Morning,"AWS,Docker",41,9,168,19,1
+681,Christy Jordan,19,Female,IT,6725,2022-10-25,3.0,6,Active,Chicago,Morning,"AWS,Docker",49,9,133,16,1
+682,Colleen Jones,29,Other,Sales,7514,2022-07-26,1.0,8,Inactive,New York,Night,"AWS,Docker",39,20,216,41,2
+683,Zachary Brown,21,Other,Sales,4750,2020-03-10,2.0,8,Inactive,New York,Morning,"Python,SQL",44,15,57,32,1
+684,Jill Stanton,48,Male,HR,5309,2023-03-29,1.0,5,Active,New York,Morning,"Python,SQL",44,11,145,24,1
+685,Kristen Jackson,50,Female,IT,9782,2015-04-20,2.6666666666666665,9,Inactive,Chicago,Night,"Java,Spring",36,1,210,43,0
+686,Jillian Ramos,27,Other,HR,6589,2016-10-16,2.7777777777777777,3,Inactive,New York,Evening,"React,Node",49,8,259,28,2
+687,Angel Henry,20,Male,Sales,4483,2016-07-29,2.0,19,Active,New York,Night,"AWS,Docker",40,23,218,25,2
+688,Brandon Martin,20,Female,IT,9044,2021-10-08,3.2285714285714286,7,Active,Los Angeles,Morning,"React,Node",35,2,220,14,0
+689,Natalie Byrd,29,Male,HR,3504,2016-07-05,2.8333333333333335,10,Active,Chicago,Evening,"React,Node",46,23,201,18,2
+690,Samuel Rivera,35,Female,HR,5531,2017-01-13,3.2285714285714286,7,Active,Chicago,Morning,"Java,Spring",34,24,53,41,1
+691,Dr. Danny Mccann,60,Other,IT,4255,2021-09-12,2.6470588235294117,17,Active,New York,Evening,"AWS,Docker",42,14,38,22,0
+692,Jim Scott,47,Male,Sales,2145,2021-08-23,2.8333333333333335,10,Active,Chicago,Night,"AWS,Docker",41,2,68,28,0
+693,Molly Harris,63,Male,IT,7897,2024-08-20,3.260869565217391,20,Active,New York,Evening,UI/UX,50,18,80,18,1
+694,Edward Smith,61,Other,IT,3742,2017-08-17,3.12,16,Active,New York,Evening,"React,Node",45,17,101,38,1
+695,Jessica Lopez,50,Female,HR,4721,2024-11-08,5.0,16,Active,Los Angeles,Evening,"React,Node",41,7,274,16,1
+696,Cynthia Melton,62,Other,HR,2873,2019-09-18,3.0,1,Inactive,Chicago,Morning,"Python,SQL",48,16,229,26,2
+697,John Smith,61,Female,IT,3398,2019-10-15,2.5483870967741935,4,Inactive,Chicago,Night,UI/UX,53,7,224,10,1
+698,Carl Armstrong,22,Male,IT,4927,2016-05-13,5.0,20,Active,Los Angeles,Evening,"Python,SQL",46,6,286,40,1
+699,Ashley Garcia,48,Other,Sales,2106,2020-02-28,2.0,3,Active,Chicago,Night,"Python,SQL",42,6,73,49,0
+700,David Pierce,39,Female,IT,7614,2021-03-22,2.8333333333333335,10,Active,New York,Evening,"Python,SQL",31,2,254,40,0
+701,Jerry Thompson,44,Female,IT,8634,2021-02-28,2.7777777777777777,3,Inactive,New York,Evening,"Java,Spring",33,0,71,26,0
+702,Lisa Ramirez,43,Female,IT,4925,2016-05-25,2.7777777777777777,3,Active,New York,Evening,"Java,Spring",39,3,179,18,0
+703,Rhonda Salinas,53,Male,HR,5273,2021-07-27,1.0,4,Inactive,New York,Night,"Python,SQL",37,24,278,20,2
+704,Cheryl Chambers,42,Other,IT,9621,2018-11-18,2.0,16,Active,Los Angeles,Night,UI/UX,40,4,276,40,1
+705,Mr. Micheal Henry,39,Male,IT,7371,2017-02-02,1.0,4,Inactive,Chicago,Night,"React,Node",42,0,63,29,0
+706,Raymond Nelson,28,Female,Sales,7873,2022-09-10,3.0,2,Active,Chicago,Night,UI/UX,46,14,25,36,0
+707,Angela Roberts,42,Male,IT,9871,2018-07-09,3.6,5,Inactive,Los Angeles,Morning,"AWS,Docker",41,4,17,37,0
+708,Megan Lamb,51,Female,Sales,4164,2020-09-11,3.0,8,Inactive,New York,Morning,"Java,Spring",45,12,113,49,1
+709,Brian Owens,23,Male,HR,5648,2020-07-05,2.7586206896551726,19,Active,New York,Morning,"React,Node",42,7,68,40,0
+710,Jacob Woods,54,Female,IT,9592,2020-06-03,2.75,1,Active,New York,Night,"React,Node",26,7,49,24,0
+711,Ellen Barker,57,Female,IT,2096,2016-10-02,5.0,1,Inactive,New York,Night,"AWS,Docker",34,4,246,22,1
+712,Dana Garcia,40,Female,IT,4386,2024-04-22,1.0,19,Inactive,Chicago,Night,"AWS,Docker",40,8,103,42,0
+713,Howard Key,47,Male,HR,7123,2019-04-04,3.0,11,Active,New York,Night,"Python,SQL",32,0,231,7,0
+714,Melissa Wallace,41,Female,IT,3591,2015-09-22,2.0,18,Inactive,Los Angeles,Morning,"Java,Spring",46,3,213,27,1
+715,Monique Davis,22,Female,IT,5449,2016-03-10,3.0,2,Inactive,Los Angeles,Evening,"Java,Spring",54,2,147,36,0
+716,Mary Martinez,26,Other,Sales,4664,2023-12-15,3.12,16,Inactive,Chicago,Evening,UI/UX,51,1,216,49,0
+717,Jeff Johnson,20,Other,IT,7345,2014-12-11,3.0,11,Inactive,New York,Morning,"Python,SQL",40,7,90,20,0
+718,Douglas Ramirez,45,Male,Sales,7615,2021-04-27,3.2285714285714286,7,Inactive,Chicago,Evening,"Python,SQL",53,22,227,9,2
+719,Amy Miller,27,Other,HR,6899,2017-09-04,5.0,3,Inactive,New York,Morning,"Python,SQL",43,8,11,8,0
+720,Patrick Evans,60,Other,IT,5107,2017-11-27,5.0,4,Active,Chicago,Night,"Python,SQL",39,1,187,25,0
+721,Shannon Jackson,49,Female,IT,5126,2015-07-24,4.0,13,Inactive,Los Angeles,Morning,"Java,Spring",37,13,288,44,2
+722,Kelly Rios,60,Other,IT,2131,2015-06-17,4.0,19,Active,New York,Evening,"Java,Spring",39,13,155,18,1
+723,Jill Buchanan,57,Male,HR,6974,2024-08-13,4.0,6,Active,Los Angeles,Evening,"Python,SQL",38,3,233,43,0
+724,Keith Johnson,49,Male,IT,7298,2020-09-21,2.7222222222222223,18,Inactive,Los Angeles,Evening,UI/UX,43,5,71,35,0
+725,Gregory Smith,36,Female,IT,4936,2022-04-13,3.0476190476190474,12,Active,Chicago,Evening,"React,Node",43,10,248,18,2
+726,Joseph Klein,64,Other,Sales,2962,2019-04-16,2.6470588235294117,17,Inactive,Los Angeles,Night,"React,Node",42,2,204,10,0
+727,David Gregory,36,Male,Sales,2321,2023-12-11,2.75,1,Active,Chicago,Evening,UI/UX,45,7,175,16,1
+728,Tammy Dixon,60,Male,HR,5312,2021-09-29,2.8620689655172415,8,Active,Los Angeles,Night,"Python,SQL",51,2,231,20,1
+729,Linda Hawkins,60,Other,HR,4524,2015-06-05,3.0,3,Inactive,New York,Morning,"Java,Spring",49,13,70,21,1
+730,Deborah Sanchez,65,Female,IT,9136,2020-07-05,2.7777777777777777,3,Inactive,Chicago,Morning,"React,Node",30,12,138,49,0
+731,Melissa Carey,40,Female,IT,6352,2020-06-03,2.0,4,Active,Los Angeles,Morning,"AWS,Docker",21,12,182,27,1
+732,Corey Johnson,36,Male,HR,7378,2016-10-26,3.1923076923076925,2,Active,Chicago,Morning,"AWS,Docker",49,1,165,18,0
+733,Jay Evans,21,Male,HR,8147,2022-03-29,5.0,2,Inactive,Chicago,Morning,UI/UX,31,12,119,11,0
+734,Kevin Green,44,Male,HR,5551,2021-09-13,3.0,17,Active,Chicago,Night,"Python,SQL",40,18,278,36,2
+735,Rebecca Padilla,44,Female,Sales,2683,2018-09-30,3.0,3,Active,Los Angeles,Morning,"React,Node",32,5,287,19,1
+736,Dave Romero,25,Male,IT,9392,2024-04-20,2.6470588235294117,17,Inactive,New York,Morning,"Python,SQL",27,15,83,48,0
+737,David Mills,24,Female,HR,2727,2020-12-07,2.75,1,Inactive,Chicago,Night,"React,Node",46,1,216,21,0
+738,William Alexander,25,Female,Sales,2797,2021-03-26,2.0,17,Inactive,New York,Night,UI/UX,48,7,288,45,2
+739,Mr. John Hill II,36,Female,Sales,2709,2021-09-07,2.6666666666666665,9,Inactive,Los Angeles,Night,UI/UX,37,16,213,48,2
+740,John Foster,44,Other,IT,3062,2021-01-28,1.0,3,Active,New York,Night,"AWS,Docker",21,22,170,38,2
+741,Christy Berry,41,Female,Sales,8189,2016-10-12,2.7777777777777777,3,Active,Chicago,Morning,"Python,SQL",37,1,37,9,0
+742,Jason Ortiz,25,Female,IT,3647,2020-10-18,2.0,19,Inactive,New York,Evening,"AWS,Docker",45,9,266,49,2
+743,Timothy Guzman,41,Female,Sales,9409,2023-09-17,3.12,16,Inactive,New York,Morning,"Python,SQL",30,15,174,31,1
+744,Manuel Ramirez,34,Female,Sales,2786,2017-07-27,1.0,6,Active,Los Angeles,Evening,"AWS,Docker",43,5,72,27,0
+745,Erik Rodriguez,51,Other,HR,2892,2016-10-06,2.8620689655172415,8,Active,Los Angeles,Night,"Java,Spring",41,1,31,44,0
+746,Jo Richards,51,Male,Sales,8009,2020-12-14,2.857142857142857,15,Inactive,Chicago,Night,"Java,Spring",46,1,79,18,0
+747,Veronica Bennett,51,Other,IT,5497,2021-12-26,5.0,13,Inactive,Los Angeles,Morning,"Java,Spring",42,12,105,19,1
+748,Zoe Camacho,58,Male,Sales,2451,2020-11-22,4.0,2,Active,New York,Night,"Java,Spring",34,23,172,47,2
+749,Jennifer Cruz,54,Other,HR,9098,2022-09-05,2.5483870967741935,4,Inactive,Chicago,Morning,"React,Node",51,14,88,37,1
+750,William Garza,36,Male,IT,2162,2019-05-22,3.2285714285714286,7,Active,New York,Morning,"Java,Spring",40,1,14,35,0
+751,Matthew Anderson,45,Male,IT,2532,2021-05-25,3.0,7,Active,New York,Night,UI/UX,41,6,129,39,0
+752,David Powell IV,40,Other,IT,8831,2021-01-27,5.0,8,Active,New York,Morning,UI/UX,34,2,187,21,0
+753,Lynn Franco,53,Other,IT,8632,2020-12-27,2.857142857142857,15,Inactive,Chicago,Morning,"React,Node",38,7,185,32,1
+754,Kelly Sutton,28,Female,IT,9146,2022-10-16,5.0,13,Active,Chicago,Evening,"Java,Spring",34,22,226,23,2
+755,Sheri Cortez,39,Male,HR,8348,2023-06-11,2.7586206896551726,19,Active,Chicago,Morning,"Java,Spring",40,13,65,27,0
+756,Stanley Baker,28,Other,Sales,5009,2017-08-14,2.0,1,Active,Chicago,Evening,"Java,Spring",55,23,196,36,2
+757,James James,38,Male,Sales,9666,2016-04-14,2.857142857142857,15,Active,Los Angeles,Morning,"AWS,Docker",31,22,241,44,2
+758,Mr. Harry Allen,34,Other,Sales,3395,2015-05-31,3.0,4,Active,Los Angeles,Morning,"Python,SQL",29,21,264,17,2
+759,Matthew Roberts,53,Male,Sales,9917,2017-07-07,1.0,16,Active,Los Angeles,Evening,"AWS,Docker",53,6,113,24,0
+760,Gary Lee,32,Other,IT,9626,2020-04-25,3.12,16,Active,Los Angeles,Night,"Python,SQL",40,20,86,39,1
+761,Taylor Dean,34,Female,Sales,4424,2021-08-22,5.0,19,Inactive,New York,Night,"Java,Spring",36,6,239,9,1
+762,Madeline Contreras,19,Other,HR,9825,2018-11-16,4.0,5,Inactive,Los Angeles,Morning,"Java,Spring",50,0,267,13,1
+763,Terri Ross,51,Female,IT,9654,2022-04-15,1.0,11,Active,Los Angeles,Night,"AWS,Docker",37,16,273,33,2
+764,Darrell Wall,30,Male,IT,6212,2021-05-05,4.0,15,Inactive,Chicago,Night,"AWS,Docker",56,8,191,10,1
+765,Roberta Haas,48,Male,HR,3927,2019-07-13,5.0,20,Inactive,Chicago,Evening,"Python,SQL",47,20,265,29,2
+766,Steve Smith,42,Female,Sales,3414,2023-02-13,2.0,20,Inactive,Chicago,Evening,UI/UX,38,12,47,35,0
+767,William Davis,62,Other,IT,4483,2021-06-01,2.8620689655172415,8,Active,Los Angeles,Morning,"Python,SQL",59,20,185,26,2
+768,Paige Hayes,27,Female,Sales,6086,2016-06-05,2.0,1,Active,Chicago,Night,"AWS,Docker",37,18,36,6,1
+769,Julie Baird,26,Other,HR,6745,2024-10-10,3.12,16,Active,Los Angeles,Evening,"AWS,Docker",47,20,285,49,2
+770,Isaac Shannon,19,Other,HR,6166,2020-10-12,2.8333333333333335,10,Active,New York,Night,"React,Node",44,18,149,9,2
+771,Daniel Lee,64,Female,Sales,7841,2017-08-29,3.0,14,Active,Chicago,Night,"AWS,Docker",52,24,296,31,2
+772,Willie Miller,39,Female,Sales,4949,2022-08-27,5.0,7,Inactive,New York,Evening,"React,Node",54,24,100,29,2
+773,Bryan Brown,45,Other,IT,8462,2019-03-12,3.0,2,Active,Los Angeles,Evening,UI/UX,42,21,70,12,1
+774,Penny Jennings,30,Other,IT,9314,2016-11-08,2.5483870967741935,4,Active,Los Angeles,Morning,"Python,SQL",35,16,172,5,1
+775,Christopher Swanson,62,Female,Sales,5349,2020-12-12,2.0,8,Inactive,Los Angeles,Evening,"Python,SQL",45,22,152,24,2
+776,Emily Price,53,Male,HR,7659,2020-09-02,3.0,16,Active,Los Angeles,Evening,"React,Node",36,22,262,48,2
+777,Rebecca Gonzalez,61,Male,Sales,7765,2018-03-22,2.0,16,Inactive,Los Angeles,Night,"Python,SQL",58,9,278,27,2
+778,Danielle Garza,58,Other,IT,3703,2016-04-11,2.0,6,Inactive,Chicago,Night,"AWS,Docker",43,9,196,36,1
+779,David Nelson,39,Other,Sales,9653,2021-08-08,2.7586206896551726,19,Inactive,New York,Morning,"Java,Spring",39,3,95,15,0
+780,Brian Phillips,37,Other,HR,2511,2022-07-02,3.6,5,Inactive,Chicago,Morning,"React,Node",43,7,175,43,1
+781,Anita Jones,44,Male,IT,6141,2017-05-15,3.0,1,Active,Los Angeles,Evening,"Python,SQL",31,21,123,28,1
+782,Sheila Moore,18,Male,HR,2973,2019-05-29,2.5483870967741935,4,Active,Chicago,Morning,"React,Node",34,19,192,15,2
+783,Alex Thompson,54,Female,HR,6145,2019-02-03,3.0,7,Inactive,New York,Evening,"React,Node",51,19,216,33,2
+784,Danielle Gomez,46,Male,IT,5031,2018-06-16,3.2285714285714286,7,Active,New York,Morning,"Java,Spring",36,17,265,30,2
+785,Alyssa Harris,49,Male,HR,4679,2022-11-27,2.857142857142857,15,Active,Chicago,Morning,"AWS,Docker",33,13,244,20,2
+786,Steve Morton,20,Other,Sales,3265,2022-12-16,5.0,7,Active,Los Angeles,Evening,"React,Node",46,17,12,39,1
+787,John Smith,19,Female,HR,4666,2016-06-01,3.12,16,Inactive,Chicago,Evening,"Python,SQL",51,13,217,24,2
+788,David Williams,33,Female,Sales,2078,2021-09-22,3.0,15,Inactive,New York,Night,UI/UX,47,19,206,7,2
+789,Lauren Williams,27,Other,Sales,3153,2020-12-04,2.0,5,Active,New York,Morning,"React,Node",49,20,134,5,2
+790,Carrie Butler,65,Male,Sales,3369,2016-03-09,3.0476190476190474,12,Inactive,Chicago,Evening,"React,Node",35,23,147,5,2
+791,Matthew Hernandez,59,Other,IT,9265,2021-04-17,1.0,3,Active,Los Angeles,Evening,"Java,Spring",30,14,34,21,0
+792,Lauren Richardson,35,Other,Sales,3717,2016-07-16,4.0,4,Inactive,Chicago,Evening,"AWS,Docker",54,21,77,6,2
+793,Olivia Butler,28,Female,IT,9518,2024-10-05,2.6666666666666665,9,Active,Los Angeles,Night,UI/UX,39,3,70,33,0
+794,Carrie Clark,30,Female,HR,2912,2018-12-21,3.0,11,Active,New York,Morning,"Python,SQL",39,12,38,24,0
+795,Elizabeth Wolf,63,Female,Sales,5419,2016-08-17,3.2285714285714286,7,Inactive,New York,Night,UI/UX,52,22,28,10,1
+796,Joanne Griffin,37,Male,IT,5423,2015-09-27,2.7222222222222223,18,Inactive,Chicago,Morning,"Python,SQL",46,7,180,12,1
+797,Jacob Shannon,35,Other,Sales,9926,2016-09-04,3.2285714285714286,7,Active,Chicago,Night,"AWS,Docker",45,17,83,33,1
+798,Melanie Casey,44,Other,HR,4713,2017-10-09,5.0,2,Active,New York,Morning,"Python,SQL",59,11,70,37,1
+799,Lori Gray,49,Female,IT,5690,2016-02-09,3.260869565217391,20,Active,New York,Morning,"Java,Spring",36,22,162,7,2
+800,Ann Mcdonald,52,Female,HR,7496,2019-05-27,3.0,6,Active,Los Angeles,Night,"Java,Spring",49,13,285,39,2
+801,Jesse Wilson,22,Female,HR,8220,2023-02-24,3.0476190476190474,12,Inactive,New York,Evening,"Java,Spring",42,1,57,9,0
+802,Cynthia Vasquez,52,Male,Sales,4721,2024-01-08,3.0,7,Active,Chicago,Night,"Java,Spring",44,17,220,31,2
+803,Lawrence Smith,27,Male,HR,6247,2024-03-20,2.0,9,Active,Los Angeles,Morning,UI/UX,54,23,148,48,2
+804,Jacob Aguilar,23,Male,IT,2372,2020-06-01,2.75,1,Inactive,Chicago,Morning,"AWS,Docker",46,1,119,16,0
+805,Gerald Sharp,53,Other,HR,8136,2016-02-25,2.96875,6,Inactive,Chicago,Morning,"Python,SQL",46,10,192,24,1
+806,Terri Richards,35,Female,Sales,5940,2023-12-17,3.6,5,Inactive,Chicago,Evening,"Python,SQL",50,8,37,49,0
+807,Elizabeth Vega,61,Female,HR,8381,2021-12-17,1.0,8,Inactive,New York,Night,"Java,Spring",39,11,206,24,1
+808,Jeremy Cooper,58,Female,HR,3241,2023-09-16,2.0,6,Active,Chicago,Evening,"Java,Spring",35,16,200,13,2
+809,Matthew Bonilla,44,Male,IT,9092,2018-06-11,2.0,20,Active,Chicago,Morning,"React,Node",33,14,60,43,0
+810,Eric Montgomery,60,Female,HR,3710,2023-07-12,2.7586206896551726,19,Active,Los Angeles,Evening,"AWS,Docker",26,24,158,8,2
+811,Susan Gonzalez,62,Male,IT,7862,2018-10-20,2.7777777777777777,3,Inactive,New York,Evening,UI/UX,58,16,277,23,2
+812,Jesse Miller,52,Male,HR,9993,2020-11-27,3.0476190476190474,12,Active,Chicago,Evening,"Python,SQL",33,17,59,42,1
+813,Mr. Dustin Cross,65,Female,HR,4716,2017-02-23,5.0,17,Active,Los Angeles,Evening,"React,Node",40,21,255,31,2
+814,Dr. Pamela Key,27,Female,Sales,7359,2018-09-06,3.2285714285714286,7,Active,New York,Night,"React,Node",39,5,122,49,0
+815,Jennifer Ward,31,Female,IT,3565,2021-11-30,5.0,4,Active,New York,Night,"Python,SQL",44,16,179,47,2
+816,Philip Henderson,31,Other,HR,6825,2023-06-04,2.0,12,Active,New York,Morning,UI/UX,48,22,175,17,2
+817,Rachael Benson,64,Female,HR,5547,2023-03-28,3.2285714285714286,7,Inactive,New York,Night,"React,Node",48,23,23,17,1
+818,Donald Warner,18,Female,HR,5520,2015-10-09,3.0,12,Inactive,Chicago,Night,"React,Node",37,17,212,26,2
+819,Wayne Schneider,43,Other,Sales,5163,2022-11-30,3.2285714285714286,7,Inactive,Chicago,Morning,"AWS,Docker",40,7,297,32,1
+820,Amber Ward,54,Female,Sales,7880,2024-09-19,3.0,6,Active,New York,Night,UI/UX,44,8,198,49,1
+821,Karen Washington,31,Male,Sales,8949,2018-10-21,3.6,5,Inactive,New York,Morning,"React,Node",40,5,164,26,0
+822,Shawn Wells,26,Other,HR,6872,2017-08-30,2.857142857142857,15,Active,Chicago,Night,UI/UX,54,4,64,47,0
+823,Michelle Jackson,52,Female,IT,5262,2017-09-16,2.6666666666666665,9,Inactive,Chicago,Morning,"Python,SQL",45,11,191,23,1
+824,Jesse Mendoza,52,Other,IT,7966,2022-11-01,1.0,13,Inactive,New York,Night,"Java,Spring",47,24,219,12,2
+825,Tracy Powers,65,Female,IT,3535,2020-05-08,2.7586206896551726,19,Active,New York,Morning,"React,Node",47,10,84,12,0
+826,Sarah Sanders,54,Other,IT,9279,2021-03-24,2.7222222222222223,18,Inactive,New York,Morning,"AWS,Docker",51,24,286,46,2
+827,Maria Franklin,60,Male,IT,4635,2023-10-16,5.0,9,Inactive,New York,Night,"Python,SQL",43,0,142,30,0
+828,Melanie Andersen,20,Other,IT,3716,2023-01-07,3.0,11,Inactive,Chicago,Night,UI/UX,31,10,68,30,0
+829,Michael Snyder,55,Other,Sales,7497,2024-02-03,1.0,20,Inactive,New York,Morning,"Python,SQL",45,18,191,27,2
+830,Kimberly Morris,50,Female,Sales,7236,2024-02-17,3.0476190476190474,12,Inactive,New York,Morning,"React,Node",36,8,73,47,0
+831,Daniel Williamson,25,Male,IT,3612,2021-10-19,2.857142857142857,15,Inactive,New York,Evening,UI/UX,37,1,269,17,0
+832,Jared Webb,18,Male,IT,7530,2016-06-22,2.0,1,Inactive,New York,Morning,"Java,Spring",46,11,202,32,1
+833,Susan Davis,54,Female,Sales,4232,2015-07-03,5.0,3,Active,Chicago,Morning,"Python,SQL",51,3,152,13,0
+834,Michelle Wolfe,63,Male,Sales,6576,2016-01-08,3.0,11,Active,Los Angeles,Evening,"React,Node",42,3,113,24,0
+835,Keith Smith,53,Other,HR,4215,2022-11-19,1.0,9,Active,Los Angeles,Morning,"AWS,Docker",44,17,223,23,2
+836,Jonathan Rivera,47,Female,HR,4906,2019-06-08,2.0,8,Inactive,Chicago,Night,UI/UX,55,14,251,43,2
+837,Bryan Walsh,42,Female,IT,7551,2018-04-11,5.0,10,Inactive,Chicago,Night,"Python,SQL",43,18,218,16,2
+838,William Best,36,Other,HR,7188,2023-04-06,2.7222222222222223,18,Inactive,Chicago,Evening,"Python,SQL",62,12,102,19,1
+839,Anne Estes,59,Female,Sales,2801,2015-04-07,2.0,9,Inactive,Los Angeles,Evening,"Java,Spring",46,18,151,35,2
+840,Jeffrey Morton,22,Female,HR,7904,2024-01-30,2.0,10,Inactive,Chicago,Night,"Java,Spring",27,16,121,18,1
+841,Jacqueline Evans,60,Other,HR,8240,2017-11-27,4.0,13,Inactive,New York,Night,"AWS,Docker",48,5,68,15,0
+842,Tammy Smith,30,Female,Sales,2087,2015-01-09,5.0,6,Inactive,Los Angeles,Morning,"AWS,Docker",45,15,52,30,1
+843,Sara King,36,Female,Sales,8775,2021-05-31,2.7777777777777777,3,Inactive,Los Angeles,Evening,"React,Node",52,23,216,46,2
+844,Robert Goodman,21,Other,IT,9051,2021-03-26,5.0,20,Inactive,New York,Evening,"React,Node",47,11,277,31,2
+845,Gerald Cooke,33,Other,Sales,9693,2017-08-29,2.6470588235294117,17,Inactive,New York,Morning,"AWS,Docker",40,18,127,15,1
+846,Natasha Harris,36,Male,HR,4316,2021-02-16,2.6470588235294117,17,Active,Chicago,Evening,"AWS,Docker",32,4,29,42,0
+847,Darryl Nolan,35,Male,HR,7435,2018-12-20,2.7586206896551726,19,Inactive,Chicago,Morning,UI/UX,40,16,231,38,2
+848,Edward Wilkerson,55,Other,Sales,4560,2023-01-14,3.260869565217391,20,Inactive,Chicago,Morning,"Java,Spring",35,22,175,47,2
+849,Frank Gomez,55,Female,Sales,6659,2021-06-07,2.0,18,Inactive,Chicago,Night,"React,Node",37,0,140,23,0
+850,Dr. Shawn Miranda,26,Male,HR,8255,2017-08-20,3.1923076923076925,2,Active,New York,Evening,"Java,Spring",46,24,165,10,2
+851,Geoffrey Roberts,59,Other,IT,5937,2023-10-15,4.0,11,Inactive,Chicago,Night,"Java,Spring",55,23,193,42,2
+852,Elizabeth Kramer,61,Other,Sales,7347,2017-10-23,5.0,8,Active,New York,Night,"AWS,Docker",45,22,99,46,2
+853,Robert Williams,60,Male,IT,6762,2017-07-22,3.0,2,Inactive,New York,Evening,UI/UX,32,9,103,32,0
+854,Mr. Ryan Beck,61,Male,IT,5369,2024-03-21,1.0,7,Active,Los Angeles,Night,"Python,SQL",45,14,22,5,0
+855,Amy Heath,54,Male,Sales,6897,2021-01-02,2.0,20,Active,Los Angeles,Evening,UI/UX,51,22,239,39,2
+856,Zachary Cox,24,Other,IT,2499,2018-08-19,2.8620689655172415,8,Active,New York,Night,UI/UX,37,20,35,44,1
+857,Nicholas Guerra,23,Male,HR,7314,2016-01-04,2.6470588235294117,17,Active,Los Angeles,Morning,"Java,Spring",40,20,84,12,1
+858,Sarah Fletcher,41,Male,HR,9285,2023-04-11,3.0,19,Active,New York,Evening,UI/UX,42,10,159,11,1
+859,Katelyn Jacobson,41,Other,Sales,7503,2018-08-30,2.96875,6,Active,New York,Morning,"React,Node",35,12,157,15,1
+860,Jenna Marquez,28,Female,IT,8971,2016-03-21,2.6470588235294117,17,Inactive,New York,Night,"Java,Spring",47,4,17,43,0
+861,Jennifer Smith,23,Other,HR,7176,2015-03-13,4.0,6,Active,Los Angeles,Evening,"React,Node",41,0,38,8,0
+862,Daniel Duke,45,Male,HR,4808,2019-12-13,2.0,10,Active,Los Angeles,Evening,"Python,SQL",45,23,218,29,2
+863,Dana Payne,28,Male,HR,8191,2022-02-10,3.1923076923076925,2,Active,New York,Morning,"Java,Spring",34,11,137,16,0
+864,Miss Jessica Jones,39,Male,HR,2947,2021-10-04,2.8333333333333335,10,Inactive,Los Angeles,Evening,"Python,SQL",38,10,125,30,0
+865,Jessica Garcia,47,Male,Sales,8619,2024-08-23,2.0,13,Active,Los Angeles,Night,"Java,Spring",47,16,153,42,2
+866,Rachel Jones,19,Female,HR,5015,2021-07-26,5.0,8,Inactive,Los Angeles,Evening,"AWS,Docker",39,3,244,16,1
+867,Brent Mendoza,22,Male,Sales,5700,2021-09-15,5.0,16,Active,Chicago,Night,UI/UX,55,14,16,47,1
+868,Daniel Malone,55,Female,Sales,3695,2016-06-08,1.0,6,Active,Chicago,Night,"AWS,Docker",38,24,54,41,2
+869,Nicholas Rodriguez,50,Other,Sales,4694,2021-05-25,5.0,10,Inactive,Chicago,Evening,"Python,SQL",43,8,248,28,1
+870,Jerry Lopez,26,Male,Sales,2387,2019-05-20,3.0,11,Inactive,Chicago,Morning,UI/UX,49,20,164,20,2
+871,Nicole Cook,41,Female,HR,8495,2022-09-06,1.0,19,Inactive,Los Angeles,Night,"Java,Spring",30,19,190,17,2
+872,Anthony Ferguson,41,Male,Sales,7556,2023-02-03,3.12,16,Active,New York,Evening,UI/UX,27,18,224,29,2
+873,Kimberly Miller,52,Male,Sales,5282,2022-10-22,4.0,5,Inactive,Los Angeles,Morning,"React,Node",29,18,97,8,1
+874,Jennifer Clark,25,Female,HR,7713,2017-05-18,3.260869565217391,20,Inactive,Chicago,Evening,UI/UX,52,11,265,15,2
+875,Katherine Wong,34,Other,HR,6706,2018-10-15,2.8461538461538463,13,Active,Los Angeles,Evening,"React,Node",37,4,82,36,0
+876,John Becker,29,Female,IT,3452,2022-11-29,2.7586206896551726,19,Inactive,Chicago,Night,UI/UX,62,9,188,11,2
+877,Nicole Smith,50,Other,HR,8274,2023-11-06,2.7777777777777777,3,Active,New York,Evening,"React,Node",37,16,221,15,2
+878,Megan Castillo,18,Other,Sales,5086,2022-06-05,2.5483870967741935,4,Inactive,Chicago,Morning,"Python,SQL",43,4,243,32,1
+879,Ashley Alvarado,54,Other,IT,2937,2018-10-03,2.8461538461538463,13,Inactive,Los Angeles,Night,"AWS,Docker",54,21,248,45,2
+880,Sarah Thomas,54,Male,IT,6185,2016-10-29,2.75,1,Active,New York,Evening,"Java,Spring",58,15,232,27,2
+881,Mckenzie Moore,53,Male,HR,8758,2023-07-14,3.6,5,Active,Chicago,Morning,UI/UX,58,6,128,49,1
+882,Ryan James,41,Male,Sales,7686,2015-02-16,2.8461538461538463,13,Inactive,Los Angeles,Evening,"AWS,Docker",51,8,273,27,2
+883,Jaclyn Collins,47,Male,IT,2029,2019-12-05,2.6470588235294117,17,Active,Los Angeles,Morning,"Java,Spring",50,2,216,32,1
+884,Jay Atkinson,51,Male,HR,7315,2024-10-02,2.8620689655172415,8,Active,Chicago,Evening,"Java,Spring",46,14,104,47,1
+885,Whitney Chambers,65,Male,Sales,8456,2016-03-26,3.0,14,Active,New York,Evening,"React,Node",48,15,231,30,2
+886,Dawn Gonzales,21,Male,HR,8766,2020-06-21,2.8333333333333335,10,Inactive,Los Angeles,Night,"Python,SQL",37,17,285,29,2
+887,Christine Hooper,43,Female,IT,8772,2021-10-13,2.96875,6,Active,New York,Morning,"Python,SQL",35,13,240,33,2
+888,Joel Anthony,52,Female,Sales,7588,2017-05-26,1.0,9,Inactive,Chicago,Night,"AWS,Docker",41,2,128,23,0
+889,Jodi Graves,32,Other,IT,9511,2022-05-23,2.7777777777777777,3,Inactive,Los Angeles,Evening,"Python,SQL",40,11,277,37,2
+890,Vicki Taylor,48,Female,IT,6114,2021-08-04,1.0,1,Active,Chicago,Night,UI/UX,38,8,282,40,1
+891,Johnathan Donaldson,37,Female,IT,7496,2020-02-18,5.0,7,Inactive,Chicago,Evening,"Python,SQL",47,6,73,18,0
+892,Monica Parker,60,Male,Sales,8117,2020-04-13,1.0,7,Inactive,New York,Morning,"AWS,Docker",49,8,20,18,0
+893,Chelsea Hill,31,Male,HR,4345,2024-05-03,5.0,12,Active,Los Angeles,Night,"Python,SQL",42,12,107,39,1
+894,Lance Davis,34,Other,Sales,7651,2019-01-27,3.0,2,Inactive,Chicago,Night,UI/UX,53,17,80,34,1
+895,Ruth Randall,19,Male,IT,8059,2017-07-24,4.0,3,Active,Los Angeles,Night,"React,Node",32,4,67,32,0
+896,Patricia Lee,56,Female,HR,3168,2016-04-02,1.0,6,Active,New York,Morning,"AWS,Docker",40,12,299,21,2
+897,Tyrone Elliott,36,Male,HR,6289,2016-03-27,1.0,12,Inactive,Chicago,Evening,"React,Node",36,3,260,7,1
+898,Laura Montgomery,56,Female,Sales,4269,2020-06-15,2.8461538461538463,13,Active,Los Angeles,Morning,"React,Node",27,1,285,20,0
+899,Tiffany Jordan,44,Male,Sales,9819,2022-07-15,2.8461538461538463,13,Active,New York,Morning,"React,Node",41,15,59,34,1
+900,Richard Pearson,52,Other,IT,7473,2023-04-24,2.0,10,Active,Chicago,Morning,"Java,Spring",41,8,225,33,1
+901,John Rogers,29,Male,HR,7568,2024-01-13,5.0,17,Active,Los Angeles,Evening,"Java,Spring",54,8,61,49,0
+902,Andrea Bond,50,Other,HR,3312,2023-06-08,2.5483870967741935,4,Inactive,Los Angeles,Evening,"React,Node",47,5,280,19,1
+903,Christina Henry,39,Female,HR,6644,2018-01-03,3.2285714285714286,7,Active,Chicago,Evening,"AWS,Docker",33,10,93,29,0
+904,Leslie Mason,42,Other,Sales,9658,2019-10-31,1.0,14,Inactive,New York,Evening,UI/UX,56,21,135,42,2
+905,Daniel Stanley,22,Other,HR,7388,2016-09-07,4.0,13,Inactive,Chicago,Morning,UI/UX,51,23,81,46,2
+906,Bradley Parker,36,Other,Sales,2371,2023-03-16,3.6,5,Active,Los Angeles,Evening,"Python,SQL",46,21,245,42,2
+907,Christina Carlson,42,Female,Sales,2015,2020-05-08,1.0,14,Inactive,Chicago,Evening,"AWS,Docker",40,0,65,27,0
+908,Kimberly Burke,59,Female,Sales,5628,2016-10-08,2.5483870967741935,4,Inactive,Chicago,Evening,"Java,Spring",34,3,119,29,0
+909,Sara Martinez,34,Other,HR,9951,2024-02-18,2.96875,6,Inactive,New York,Night,"React,Node",39,12,201,46,1
+910,Peter Hardy,38,Other,IT,5134,2022-12-04,5.0,14,Active,Chicago,Night,"Python,SQL",50,22,102,11,2
+911,Kimberly Moses,49,Female,IT,6502,2022-05-28,3.0,1,Active,Los Angeles,Evening,UI/UX,57,12,65,26,1
+912,Larry Fritz,29,Female,Sales,4999,2021-02-25,3.12,16,Inactive,Los Angeles,Morning,"Java,Spring",54,12,69,21,1
+913,Courtney Lopez,59,Female,Sales,4875,2015-01-18,2.96875,6,Active,Los Angeles,Evening,"Java,Spring",38,1,147,22,0
+914,Megan Woods,56,Other,IT,5322,2022-10-10,2.96875,6,Active,Los Angeles,Evening,"React,Node",33,8,48,45,0
+915,Benjamin Brown,31,Female,HR,3340,2016-12-19,2.5483870967741935,4,Inactive,Los Angeles,Morning,UI/UX,43,23,37,14,1
+916,Matthew Cole,21,Female,HR,6900,2016-09-21,2.8333333333333335,10,Active,Chicago,Morning,"AWS,Docker",27,7,58,14,0
+917,Jose Powell,50,Male,IT,6907,2024-01-09,1.0,4,Active,Los Angeles,Night,"Java,Spring",44,6,134,11,0
+918,Erin Walker,45,Female,HR,6585,2016-02-18,2.6666666666666665,9,Inactive,Los Angeles,Evening,"React,Node",40,3,22,42,0
+919,Tammy Schneider,22,Other,IT,3625,2016-10-24,4.0,14,Active,Chicago,Morning,"AWS,Docker",38,17,45,31,1
+920,Cheryl Singh,56,Other,HR,9761,2020-05-14,2.96875,6,Inactive,Los Angeles,Evening,UI/UX,29,2,110,37,0
+921,Vicki Hicks,29,Male,HR,4077,2015-10-25,1.0,3,Inactive,Chicago,Evening,"Java,Spring",46,5,291,5,1
+922,Rachel Spencer,52,Other,IT,5090,2015-12-26,2.6666666666666665,9,Active,Los Angeles,Evening,"AWS,Docker",37,11,95,48,0
+923,Joseph Murillo,39,Male,HR,9553,2018-05-30,2.857142857142857,15,Active,Los Angeles,Morning,"AWS,Docker",32,11,13,38,0
+924,Eric Collins,34,Other,Sales,6162,2018-04-30,3.0,10,Inactive,Chicago,Night,"AWS,Docker",20,20,232,8,2
+925,Richard Martin,38,Male,Sales,6578,2023-09-13,2.75,1,Active,Chicago,Morning,"Java,Spring",41,7,175,21,1
+926,John Thompson,48,Male,HR,7192,2016-12-05,2.5483870967741935,4,Inactive,Chicago,Night,"Java,Spring",56,21,287,8,2
+927,Laura Stewart,55,Female,HR,6341,2023-07-31,2.8461538461538463,13,Inactive,New York,Morning,"Python,SQL",55,21,139,47,2
+928,Jason Reed,23,Male,IT,3405,2016-01-11,3.260869565217391,20,Inactive,Chicago,Night,UI/UX,38,0,40,30,0
+929,Christopher Taylor,62,Female,IT,4876,2019-12-11,2.7222222222222223,18,Active,Chicago,Night,"React,Node",37,3,20,8,0
+930,Nathaniel Castillo DDS,45,Other,HR,5730,2016-01-10,2.7586206896551726,19,Inactive,Los Angeles,Night,"AWS,Docker",45,20,105,5,2
+931,Stephanie Rodriguez,22,Other,HR,3681,2020-04-23,3.0,16,Active,New York,Night,"Python,SQL",34,10,199,11,1
+932,Ronald Miller,20,Male,Sales,2850,2017-10-24,2.0,18,Active,New York,Night,"React,Node",44,2,201,34,0
+933,Kristin Cole,50,Male,Sales,9616,2017-02-03,2.0,13,Inactive,Los Angeles,Night,"Python,SQL",48,12,275,13,2
+934,Jeanette Mcbride,37,Male,IT,3364,2015-12-10,2.0,8,Active,Los Angeles,Evening,"Java,Spring",51,24,137,39,2
+935,Christopher Krause,30,Male,IT,2735,2015-11-11,3.12,16,Active,New York,Evening,"AWS,Docker",41,16,247,12,2
+936,Ryan Vazquez,62,Female,Sales,4369,2024-12-04,2.6470588235294117,17,Active,Chicago,Morning,"React,Node",40,21,121,28,2
+937,Justin Turner,65,Other,HR,8129,2016-02-29,2.8333333333333335,10,Active,New York,Night,"React,Node",34,21,154,23,2
+938,Gary Mitchell,52,Female,Sales,9963,2016-09-22,5.0,20,Inactive,Los Angeles,Morning,"React,Node",35,9,74,40,0
+939,Andrea Odom,60,Female,Sales,8067,2023-12-03,2.8620689655172415,8,Inactive,New York,Evening,"React,Node",40,20,256,47,2
+940,Joshua Murphy,57,Female,HR,8927,2024-07-22,2.6470588235294117,17,Active,Chicago,Night,"React,Node",44,11,232,31,2
+941,Raymond Smith,49,Male,IT,7068,2019-05-22,3.0,11,Active,Chicago,Morning,"Python,SQL",49,14,115,36,1
+942,Elizabeth Middleton,38,Other,HR,8277,2020-09-05,4.0,9,Inactive,Los Angeles,Evening,"AWS,Docker",35,20,190,18,2
+943,Logan Peterson,60,Other,IT,2300,2017-02-17,2.8461538461538463,13,Active,New York,Morning,"Java,Spring",53,9,193,22,1
+944,Tina Ramos,35,Male,IT,7251,2020-12-15,3.0,19,Active,Los Angeles,Evening,"Java,Spring",39,13,235,32,2
+945,Mary Armstrong,29,Female,HR,9402,2017-12-13,2.75,1,Active,New York,Night,"Java,Spring",41,12,274,33,2
+946,Joel Tyler,49,Male,Sales,2940,2020-05-05,5.0,8,Inactive,New York,Night,"Java,Spring",36,4,287,20,1
+947,Alex Walker,23,Male,IT,6916,2016-10-11,2.8333333333333335,10,Inactive,Los Angeles,Morning,"Python,SQL",22,5,98,39,0
+948,Laura White,60,Other,IT,4595,2016-07-17,2.96875,6,Inactive,New York,Night,UI/UX,49,23,185,35,2
+949,Kevin Bates,62,Other,HR,7389,2021-01-03,3.0,10,Active,Los Angeles,Evening,"AWS,Docker",47,1,27,8,0
+950,Dustin Carrillo,52,Other,Sales,5770,2016-06-20,1.0,10,Inactive,Los Angeles,Morning,"React,Node",39,21,115,41,2
+951,Glenn Alexander,44,Male,IT,2389,2015-04-10,2.857142857142857,15,Inactive,Chicago,Evening,UI/UX,42,16,280,21,2
+952,Kevin Pearson,43,Female,IT,5833,2021-06-28,4.0,15,Active,Chicago,Night,"Java,Spring",46,3,176,43,0
+953,Carmen Hurley,20,Male,HR,2786,2024-10-14,1.0,15,Active,Los Angeles,Morning,UI/UX,29,13,22,30,0
+954,Ruth Osborne,53,Male,HR,5616,2022-07-31,4.0,16,Active,Los Angeles,Night,"AWS,Docker",37,9,41,43,0
+955,Gregory James,42,Other,Sales,4887,2020-08-28,3.0,13,Inactive,Chicago,Night,"React,Node",48,2,49,45,0
+956,Erin Kelley,49,Other,Sales,3437,2019-08-19,2.7222222222222223,18,Inactive,Los Angeles,Night,"React,Node",31,24,157,8,2
+957,Debra Knox,54,Other,Sales,6091,2018-01-22,2.0,12,Active,New York,Evening,"AWS,Docker",44,2,227,34,0
+958,Stacy Rogers,34,Other,Sales,6501,2023-10-25,2.8461538461538463,13,Active,Chicago,Night,"AWS,Docker",31,14,228,34,1
+959,Morgan Coleman,51,Female,HR,6415,2022-03-20,1.0,8,Inactive,New York,Evening,"Java,Spring",45,5,91,26,0
+960,Alex Stuart,63,Other,HR,7490,2023-03-11,3.12,16,Active,New York,Night,"React,Node",41,16,217,15,2
+961,Charlene Nelson,63,Other,Sales,4954,2021-11-22,1.0,15,Inactive,New York,Night,UI/UX,29,11,210,6,1
+962,Paula Moreno,21,Female,Sales,3896,2021-03-14,3.2285714285714286,7,Active,Chicago,Night,"Python,SQL",51,21,47,48,2
+963,Matthew Rowe,65,Female,Sales,6788,2024-01-22,4.0,6,Active,New York,Evening,"Python,SQL",36,19,220,16,2
+964,John Jordan,35,Male,HR,3433,2020-09-06,4.0,3,Active,Chicago,Night,"AWS,Docker",35,23,258,34,2
+965,April Parsons,46,Other,IT,3132,2015-07-04,2.0,10,Inactive,Chicago,Evening,"Java,Spring",43,10,236,40,1
+966,Edgar Herrera MD,65,Female,HR,2959,2019-06-26,3.1923076923076925,2,Active,Los Angeles,Evening,"Python,SQL",51,24,57,22,2
+967,Andres Barnett,50,Female,HR,2736,2024-08-25,1.0,13,Active,Chicago,Evening,"React,Node",33,3,27,30,0
+968,Elizabeth Miles,25,Other,IT,4977,2024-07-05,2.0,19,Inactive,Los Angeles,Evening,"AWS,Docker",42,5,205,11,1
+969,Nicholas Edwards,65,Other,Sales,8928,2020-04-05,1.0,6,Active,Chicago,Evening,UI/UX,45,0,196,5,0
+970,Michael Mejia,53,Male,Sales,8260,2020-08-30,2.857142857142857,15,Inactive,New York,Night,"AWS,Docker",47,19,233,30,2
+971,Michael Reed,50,Male,IT,5639,2015-09-07,3.0,1,Inactive,New York,Morning,UI/UX,43,22,238,27,2
+972,Kelsey Fischer,22,Male,IT,9049,2016-06-21,2.7586206896551726,19,Inactive,Chicago,Night,"AWS,Docker",39,15,86,30,1
+973,James Mendoza,23,Other,Sales,6871,2016-04-11,4.0,15,Inactive,New York,Morning,"AWS,Docker",35,14,197,49,1
+974,Catherine Kelley,18,Other,IT,3388,2024-08-26,2.7586206896551726,19,Inactive,Chicago,Evening,"AWS,Docker",42,16,279,10,2
+975,Brett Myers,37,Male,IT,3288,2018-05-16,2.0,15,Inactive,Los Angeles,Night,UI/UX,33,7,104,10,0
+976,Bryce Anderson,52,Female,IT,2093,2020-09-22,2.5454545454545454,14,Active,New York,Night,UI/UX,20,11,141,48,0
+977,Kimberly Ross,19,Male,Sales,9331,2018-07-03,5.0,12,Active,New York,Morning,"AWS,Docker",45,21,48,12,1
+978,Larry Johnson,24,Other,Sales,5081,2020-10-30,3.0,7,Inactive,New York,Morning,"Python,SQL",49,20,81,28,2
+979,Michael Lee,18,Female,IT,6086,2019-05-30,4.0,7,Inactive,Los Angeles,Evening,"Java,Spring",23,9,290,26,1
+980,Crystal Espinoza,55,Female,IT,4952,2023-09-04,2.0,5,Active,Chicago,Night,"Java,Spring",33,14,169,23,1
+981,Jeffrey Johnson,28,Male,HR,2244,2021-07-06,4.0,2,Inactive,Chicago,Night,"Java,Spring",46,8,196,41,1
+982,Emily Anderson,31,Female,Sales,4921,2016-08-29,2.7586206896551726,19,Active,New York,Evening,UI/UX,58,1,200,22,1
+983,Stephen Ponce,46,Other,Sales,8696,2022-10-14,4.0,1,Active,New York,Evening,UI/UX,42,4,129,35,0
+984,David Moody,43,Male,HR,8830,2021-09-10,2.7586206896551726,19,Inactive,Chicago,Evening,"Python,SQL",36,5,229,41,1
+985,Jeffrey Hall,41,Other,IT,8768,2018-08-27,3.0,16,Inactive,Los Angeles,Night,"Java,Spring",40,6,62,34,0
+986,Regina Ferguson,62,Other,HR,8555,2017-04-21,1.0,14,Inactive,Los Angeles,Morning,"Java,Spring",52,20,231,46,2
+987,Melissa Bradley,39,Female,IT,9618,2015-07-05,1.0,13,Active,New York,Morning,"AWS,Docker",36,24,140,37,2
+988,Danielle Brown,31,Female,IT,5605,2024-06-28,2.75,1,Active,Chicago,Morning,UI/UX,35,0,246,14,0
+989,Hannah Hickman,36,Female,IT,9118,2022-07-02,5.0,5,Active,New York,Night,"Java,Spring",38,22,255,41,2
+990,Shannon Meyer,18,Other,HR,9985,2022-11-05,4.0,18,Active,Chicago,Night,"Python,SQL",34,6,235,16,1
+991,Amy Johnston,53,Female,HR,3991,2024-09-03,4.0,8,Active,Chicago,Morning,"Python,SQL",42,19,217,34,2
+992,William Schultz,23,Other,Sales,4311,2019-08-17,2.8333333333333335,10,Inactive,Los Angeles,Evening,"Java,Spring",54,24,105,31,2
+993,Ashley Daniels,25,Other,Sales,5524,2022-11-24,2.8620689655172415,8,Inactive,New York,Morning,UI/UX,44,11,209,43,1
+994,Brandon Bruce,31,Female,HR,3371,2018-09-25,5.0,12,Inactive,Chicago,Night,"Python,SQL",39,15,256,13,2
+995,Rachel Phillips,22,Male,IT,3096,2018-10-27,2.0,7,Inactive,Chicago,Evening,"AWS,Docker",39,15,81,25,1
+996,Pamela Reeves,49,Female,Sales,7652,2024-06-23,4.0,3,Active,Los Angeles,Evening,"Python,SQL",29,10,194,16,1
+997,Todd Johnson,29,Female,Sales,6754,2018-07-20,3.0476190476190474,12,Inactive,New York,Morning,"React,Node",49,20,15,33,1
+998,Michael Sanchez,18,Male,Sales,5278,2023-07-05,5.0,3,Active,New York,Morning,"React,Node",41,3,215,37,0
+999,Ashley Taylor,51,Female,IT,5437,2022-02-18,4.0,9,Inactive,Los Angeles,Evening,UI/UX,40,12,41,47,0
+1000,Shawn Scott,45,Male,IT,7364,2022-07-31,2.0,4,Active,New York,Morning,"Java,Spring",67,6,108,19,1

@@ -213,6 +213,15 @@ const ProjectList = () => {
                       </div>
                       <div className={`text-lg font-bold ${rec.score >= 70 ? 'text-green-600' : 'text-orange-500'}`}>{rec.score}%</div>
                     </div>
+                    {rec.matchedSkills && rec.matchedSkills.length > 0 && (
+                      <div className="mt-2 mb-1">
+                        <div className="flex flex-wrap gap-1">
+                          {rec.matchedSkills.map(skill => (
+                            <span key={skill} className="text-[10px] bg-green-50 text-green-700 px-1.5 py-0.5 rounded border border-green-200">✓ {skill}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <p className="text-xs text-gray-500 italic bg-gray-50 p-2 rounded mt-2">"{rec.reason}"</p>
                   </div>
                 ))}

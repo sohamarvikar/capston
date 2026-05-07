@@ -20,7 +20,7 @@ const DIMENSION_COLORS = {
   deadlineFit: 'bg-cyan-500',
 };
 
-const AntigravityAgent = () => {
+const AIAgent = () => {
   const [dimensions, setDimensions] = useState([]);
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -95,7 +95,7 @@ const AntigravityAgent = () => {
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-white shadow-xl">
         <div className="flex items-center mb-2">
           <Sparkles className="w-8 h-8 text-amber-400 mr-3" />
-          <h1 className="text-3xl font-extrabold tracking-tight">Antigravity Agent</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight">AI Agent</h1>
         </div>
         <p className="text-indigo-200 text-lg">Lifting project performance through intelligent employee matching</p>
         <p className="text-indigo-300 text-sm mt-2">
@@ -188,7 +188,7 @@ const AntigravityAgent = () => {
               {isAnalyzing ? (
                 <><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" /> Analyzing...</>
               ) : (
-                <><Sparkles className="w-5 h-5 mr-2" /> Run Antigravity Agent</>
+                <><Sparkles className="w-5 h-5 mr-2" /> Run AI Agent</>
               )}
             </button>
           </div>
@@ -206,7 +206,7 @@ const AntigravityAgent = () => {
             <div className="bg-white rounded-xl shadow p-12 text-center border border-gray-100">
               <Sparkles className="w-16 h-16 mx-auto text-indigo-200 mb-4" />
               <h3 className="text-xl font-bold text-gray-800 mb-2">Ready to Analyze</h3>
-              <p className="text-gray-500">Configure your project requirements on the left and click "Run Antigravity Agent" to find the best employee matches.</p>
+              <p className="text-gray-500">Configure your project requirements on the left and click "Run AI Agent" to find the best employee matches.</p>
             </div>
           )}
 
@@ -214,7 +214,7 @@ const AntigravityAgent = () => {
           {isAnalyzing && (
             <div className="bg-white rounded-xl shadow p-12 text-center border border-gray-100">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4" />
-              <h3 className="text-lg font-bold text-indigo-700 animate-pulse">Antigravity Agent is analyzing...</h3>
+              <h3 className="text-lg font-bold text-indigo-700 animate-pulse">AI Agent is analyzing...</h3>
               <p className="text-gray-500 text-sm mt-2">Evaluating {selectedProject ? selectedProject.projectKey : 'your'} requirements across the entire workforce</p>
             </div>
           )}
@@ -293,7 +293,7 @@ const AntigravityAgent = () => {
                       {rec.bonuses.map((b, i) => (
                         <span key={i} className="text-xs px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">{b}</span>
                       ))}
-                      {(rec.employee.skills || []).slice(0, 4).map(s => (
+                      {(Array.isArray(rec.employee.skills) ? rec.employee.skills : typeof rec.employee.skills === 'string' ? rec.employee.skills.split(',').map(s => s.trim()) : []).slice(0, 4).map(s => (
                         <span key={s} className="text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-100">{s}</span>
                       ))}
                     </div>
@@ -343,4 +343,4 @@ const AntigravityAgent = () => {
   );
 };
 
-export default AntigravityAgent;
+export default AIAgent;

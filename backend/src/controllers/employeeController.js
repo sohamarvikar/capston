@@ -44,8 +44,37 @@ exports.getEmployees = async (req, res) => {
 // GET /api/employees/:id
 exports.getEmployee = async (req, res) => {
   try {
-    const emp = await Employee.findOne({ employeeId: Number(req.params.id) });
+    const emp = await Employee.findOne({ employeeId: Number(req.params.id) }).lean();
     if (!emp) return res.status(404).json({ success: false, message: 'Employee not found' });
+    
+    // Add Burnout & Performance ML Prediction
+    try {
+      const axios = require('axios');
+      const PYTHON_AI_URL = process.env.PYTHON_AI_URL || 'http://localhost:8000';
+      
+      const burnoutRes = await axios.post(`${PYTHON_AI_URL}/predict/burnout`, {
+        weekly_hours: 40 + ((emp.currentWorkload || 0) * 3), 
+        pending_tasks: emp.currentWorkload || 0,
+        attendance_rate: 0.95,
+        days_since_vacation: 90
+      }, { timeout: 1000 });
+      
+      const perfRes = await axios.post(`${PYTHON_AI_URL}/predict/performance`, {
+        tasks_completed: emp.completedProjects || 5,
+        on_time_rate: 0.9,
+        communication_score: 4.0
+      }, { timeout: 1000 });
+      
+      emp.mlPredictions = {
+        burnoutRisk: burnoutRes.data.burnout_risk_level,
+        burnoutScore: burnoutRes.data.burnout_score,
+        projectedPerformance: perfRes.data.employee_performance_score
+      };
+    } catch (err) {
+      // Python AI service not running, fail gracefully
+      emp.mlPredictions = null;
+    }
+
     res.json({ success: true, data: emp });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Briefcase, Users, LayoutDashboard, Sparkles, LogOut, Shield, MessageSquare } from 'lucide-react';
@@ -7,6 +7,26 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { user, logout } = useAuth();
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  useEffect(() => {
+    if (user) {
+      const fetchUnread = async () => {
+        try {
+          const { getNotices } = await import('../services/api');
+          const res = await getNotices();
+          const unread = res.data.data.filter(n => !n.isRead && n.receiverId._id === user._id).length;
+          setUnreadCount(unread);
+        } catch (err) {
+          console.error('Failed to fetch unread notices:', err);
+        }
+      };
+      fetchUnread();
+      const interval = setInterval(fetchUnread, 30000); // Poll every 30s
+      return () => clearInterval(interval);
+    }
+  }, [user, location.pathname]); // Also refresh on navigation
+
 
   const isActive = (path) => {
     return location.pathname === path ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700';
@@ -58,15 +78,18 @@ const Navbar = () => {
                 <Link to="/employees" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/employees') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
                   <Users className="w-4 h-4 mr-1.5" /> Employees
                 </Link>
-                <Link to="/antigravity" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/antigravity') ? 'bg-amber-600 text-white' : 'text-amber-200 hover:bg-blue-700'}`}>
-                  <Sparkles className="w-4 h-4 mr-1.5" /> Agent
+                <Link to="/ai" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/ai') ? 'bg-amber-600 text-white' : 'text-amber-200 hover:bg-blue-700'}`}>
+                  <Sparkles className="w-4 h-4 mr-1.5" /> AI Agent
                 </Link>
               </>
             )}
 
             {/* Common Notice Link */}
-            <Link to="/notices" className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/notices') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
+            <Link to="/notices" className={`relative flex items-center px-3 py-2 rounded-md text-sm font-medium ${isActive('/notices') ? 'bg-blue-800 text-white' : 'text-blue-100 hover:bg-blue-700'}`}>
               <MessageSquare className="w-4 h-4 mr-1.5" /> Notices
+              {unreadCount > 0 && (
+                <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 border-2 border-blue-900 rounded-full animate-pulse"></span>
+              )}
             </Link>
 
             <div className="border-l border-blue-700 mx-2 h-6"></div>

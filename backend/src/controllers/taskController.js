@@ -41,6 +41,21 @@ exports.getMyTasks = async (req, res) => {
             priority: task.priority,
             requiredSkills: task.requiredSkills,
             estimatedDays: task.estimatedDays,
+            estimatedDaysMin: task.estimatedDaysMin,
+            estimatedDaysMax: task.estimatedDaysMax,
+            deadline: task.deadline,
+            startedAt: task.startedAt,
+            completedAt: task.completedAt,
+            deadlineStatus: (() => {
+              if (!task.deadline) return null;
+              if (task.status === 'completed' || task.status === 'Closed' || task.status === 'Resolved') {
+                return (task.completedAt && task.completedAt > task.deadline) ? 'Late' : 'On Time';
+              }
+              const daysLeft = (task.deadline - new Date()) / (1000 * 60 * 60 * 24);
+              if (daysLeft < 0) return 'Late';
+              if (daysLeft <= 2) return 'At Risk';
+              return 'On Time';
+            })(),
             createdDate: task.createdDate,
           });
         }
@@ -75,7 +90,9 @@ exports.completeTask = async (req, res) => {
     }
 
     task.status = 'completed';
-    project.openTasks = project.tasks.filter(t => t.status === 'pending' || t.status === 'Open' || t.status === 'Needs Triage' || t.status === 'In Progress').length;
+    task.completedAt = new Date(); // Time Tracking System
+    
+    project.openTasks = project.tasks.filter(t => t.status === 'pending' || t.status === 'ongoing' || t.status === 'Open' || t.status === 'Needs Triage' || t.status === 'In Progress').length;
 
     // Check if all tasks are closed → mark project Completed
     const allClosed = project.tasks.every(t => t.status === 'completed' || t.status === 'Closed' || t.status === 'Resolved');
@@ -91,6 +108,42 @@ exports.completeTask = async (req, res) => {
     await project.save();
 
     res.json({ success: true, message: 'Task marked as completed.', data: task });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+// PATCH /api/tasks/start — mark a task as ongoing
+exports.startTask = async (req, res) => {
+  try {
+    const { projectKey, issueKey } = req.body;
+    if (!projectKey || !issueKey) {
+      return res.status(400).json({ success: false, message: 'projectKey and issueKey are required.' });
+    }
+
+    const project = await Project.findOne({ projectKey: projectKey.toUpperCase() });
+    if (!project) return res.status(404).json({ success: false, message: 'Project not found.' });
+
+    const task = project.tasks.find(t => t.issueKey === issueKey);
+    if (!task) return res.status(404).json({ success: false, message: 'Task not found.' });
+
+    // Verify ownership (if employee)
+    if (req.user.role === 'employee' && req.user.employeeRef) {
+      if (!task.assignedTo || task.assignedTo.toString() !== req.user.employeeRef.toString()) {
+        return res.status(403).json({ success: false, message: 'This task is not assigned to you.' });
+      }
+    }
+
+    task.status = 'ongoing';
+    if (!task.startedAt) {
+      task.startedAt = new Date(); // Time Tracking System
+    }
+    
+    project.openTasks = project.tasks.filter(t => t.status === 'pending' || t.status === 'ongoing' || t.status === 'Open' || t.status === 'Needs Triage' || t.status === 'In Progress').length;
+
+    await project.save();
+
+    res.json({ success: true, message: 'Task marked as ongoing.', data: task });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
@@ -114,6 +167,7 @@ exports.uploadDocument = [
         employee: req.user.employeeRef || null,
         fileName: req.file.originalname,
         filePath: req.file.path,
+        fileUrl: `/uploads/${req.file.filename}`,
         fileSize: req.file.size,
         mimeType: req.file.mimetype,
         notes: notes || '',
@@ -151,7 +205,7 @@ exports.getProjectProgress = async (req, res) => {
 
     const total = project.tasks.length;
     const completed = project.tasks.filter(t => t.status === 'completed' || t.status === 'Closed' || t.status === 'Resolved').length;
-    const inProgress = project.tasks.filter(t => t.status === 'In Progress').length;
+    const inProgress = project.tasks.filter(t => t.status === 'ongoing' || t.status === 'In Progress').length;
     const open = project.tasks.filter(t => t.status === 'pending' || t.status === 'Open' || t.status === 'Needs Triage').length;
     const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 

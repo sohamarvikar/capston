@@ -10,6 +10,7 @@ const submissionSchema = new mongoose.Schema(
     employee: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee', default: null },
     fileName: { type: String, required: true },
     filePath: { type: String, required: true },
+    fileUrl: { type: String, default: '' },
     fileSize: { type: Number, default: 0 },
     mimeType: { type: String, default: '' },
     notes: { type: String, default: '' },

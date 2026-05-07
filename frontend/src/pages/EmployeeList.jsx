@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getEmployees, createEmployee, deleteEmployee } from '../services/api';
-import { Trash2, Plus, X, Search } from 'lucide-react';
+import { getEmployees, createEmployee, deleteEmployee, getEmployee } from '../services/api';
+import { Trash2, Plus, X, Search, BrainCircuit, Activity } from 'lucide-react';
 
 const EmployeeList = () => {
   const [employees, setEmployees] = useState([]);
@@ -21,6 +21,11 @@ const EmployeeList = () => {
     skills: '',
   });
   const [formError, setFormError] = useState('');
+  
+  // AI Insights State
+  const [showAIModal, setShowAIModal] = useState(false);
+  const [selectedAIEmployee, setSelectedAIEmployee] = useState(null);
+  const [loadingAI, setLoadingAI] = useState(false);
 
   const fetchEmployees = async () => {
     setLoading(true);
@@ -71,6 +76,21 @@ const EmployeeList = () => {
 
   const handleFormChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleOpenAIInsights = async (employeeId) => {
+    setShowAIModal(true);
+    setLoadingAI(true);
+    setSelectedAIEmployee(null);
+    try {
+      const res = await getEmployee(employeeId);
+      setSelectedAIEmployee(res.data.data);
+    } catch (error) {
+      alert('Error fetching AI insights');
+      setShowAIModal(false);
+    } finally {
+      setLoadingAI(false);
+    }
   };
 
   const handleAddEmployee = async (e) => {
@@ -214,6 +234,89 @@ const EmployeeList = () => {
         </div>
       )}
 
+      {/* AI INSIGHTS MODAL */}
+      {showAIModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-md mx-4 border border-indigo-100">
+            <div className="flex justify-between items-center mb-4 border-b border-gray-100 pb-3">
+              <h2 className="text-lg font-bold text-gray-900 flex items-center">
+                <BrainCircuit className="w-5 h-5 mr-2 text-indigo-600" />
+                AI Employee Profile
+              </h2>
+              <button onClick={() => setShowAIModal(false)} className="text-gray-400 hover:text-gray-600">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            {loadingAI ? (
+              <div className="text-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+                <p className="text-sm font-medium text-indigo-600 animate-pulse">Running ML predictions...</p>
+              </div>
+            ) : selectedAIEmployee ? (
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">{selectedAIEmployee.name}</h3>
+                    <p className="text-xs text-gray-500">{selectedAIEmployee.department} • {selectedAIEmployee.experience} yrs exp</p>
+                  </div>
+                  <span className={`px-2 py-1 rounded text-xs font-bold ${selectedAIEmployee.status === 'Active' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                    {selectedAIEmployee.status}
+                  </span>
+                </div>
+                
+                {selectedAIEmployee.mlPredictions ? (
+                  <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-4 border border-indigo-100">
+                    <h4 className="text-xs font-bold text-indigo-800 uppercase tracking-wide mb-3 flex items-center">
+                      <Activity className="w-4 h-4 mr-1" /> Predictive Analytics
+                    </h4>
+                    
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-gray-600 font-medium">Burnout Risk</span>
+                          <span className={`font-bold ${
+                            selectedAIEmployee.mlPredictions.burnoutRisk === 'High Risk' ? 'text-red-600' :
+                            selectedAIEmployee.mlPredictions.burnoutRisk === 'Medium Risk' ? 'text-yellow-600' : 'text-green-600'
+                          }`}>{selectedAIEmployee.mlPredictions.burnoutRisk}</span>
+                        </div>
+                        <div className="w-full bg-white rounded-full h-2 overflow-hidden border border-gray-200">
+                          <div 
+                            className={`h-2 transition-all duration-1000 ${
+                              selectedAIEmployee.mlPredictions.burnoutRisk === 'High Risk' ? 'bg-red-500 w-[90%]' :
+                              selectedAIEmployee.mlPredictions.burnoutRisk === 'Medium Risk' ? 'bg-yellow-500 w-[50%]' : 'bg-green-500 w-[15%]'
+                            }`}
+                          ></div>
+                        </div>
+                        <p className="text-[10px] text-gray-500 mt-1">Based on workload ({selectedAIEmployee.currentWorkload}/10) and performance patterns.</p>
+                      </div>
+                      
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-gray-600 font-medium">Projected Trajectory</span>
+                          <span className="text-blue-600 font-bold">{selectedAIEmployee.mlPredictions.projectedPerformance} / 5.0</span>
+                        </div>
+                        <div className="w-full bg-white rounded-full h-2 overflow-hidden border border-gray-200">
+                          <div 
+                            className="h-2 bg-blue-500 transition-all duration-1000"
+                            style={{ width: `${(selectedAIEmployee.mlPredictions.projectedPerformance / 5.0) * 100}%` }}
+                          ></div>
+                        </div>
+                        <p className="text-[10px] text-gray-500 mt-1">Expected performance on next assignment.</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-yellow-50 p-3 rounded border border-yellow-200 text-sm text-yellow-800">
+                    Python AI microservice is currently offline or unreachable. Displaying standard data.
+                  </div>
+                )}
+              </div>
+            ) : null}
+          </div>
+        </div>
+      )}
+
       {/* Error State */}
       {error && (
         <div className="bg-red-50 border border-red-200 text-red-700 p-4 rounded-lg text-center">
@@ -263,14 +366,15 @@ const EmployeeList = () => {
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-500">
                     <div className="flex flex-wrap gap-1 max-w-[200px]">
-                      {(emp.skills || []).slice(0, 3).map((skill, idx) => (
+                      {(Array.isArray(emp.skills) ? emp.skills : typeof emp.skills === 'string' ? emp.skills.split(',').map(s => s.trim()) : []).slice(0, 3).map((skill, idx) => (
                         <span key={idx} className="bg-blue-50 text-blue-700 px-2 py-0.5 rounded text-xs border border-blue-100">{skill}</span>
                       ))}
-                      {(emp.skills || []).length > 3 && <span className="text-xs text-gray-400">+{emp.skills.length - 3}</span>}
+                      {(Array.isArray(emp.skills) ? emp.skills : typeof emp.skills === 'string' ? emp.skills.split(',') : []).length > 3 && <span className="text-xs text-gray-400">+{(Array.isArray(emp.skills) ? emp.skills : typeof emp.skills === 'string' ? emp.skills.split(',') : []).length - 3}</span>}
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <button onClick={() => handleDelete(emp.employeeId)} className="text-red-600 hover:text-red-900"><Trash2 className="w-4 h-4 inline" /></button>
+                    <button onClick={() => handleOpenAIInsights(emp.employeeId)} className="text-indigo-600 hover:text-indigo-900 mr-3" title="AI Insights"><BrainCircuit className="w-4 h-4 inline" /></button>
+                    <button onClick={() => handleDelete(emp.employeeId)} className="text-red-600 hover:text-red-900" title="Delete"><Trash2 className="w-4 h-4 inline" /></button>
                   </td>
                 </tr>
               ))}
