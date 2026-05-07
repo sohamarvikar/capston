@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { runAntigravityAgent, getAgentDimensions, getProjects } from '../services/api';
+import { runAIAgent, getAgentDimensions, getProjects } from '../services/api';
 import { Rocket, Zap, Target, Gauge, Building2, Clock, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 
 const DIMENSION_ICONS = {
@@ -80,7 +80,7 @@ const AIAgent = () => {
         estimatedDays: Number(estimatedDays),
         topN: Number(topN),
       };
-      const res = await runAntigravityAgent(payload);
+      const res = await runAIAgent(payload);
       setResult(res.data);
     } catch (err) {
       setError(err.response?.data?.message || 'Agent analysis failed. Is the backend running?');

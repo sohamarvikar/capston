@@ -66,9 +66,9 @@ export const autoReassignTask = (projectKey, issueKey) => api.patch(`/projects/$
 export const acceptRecommendation = (data) => api.post('/recommendations/accept', data);
 export const getAssignments = (params) => api.get('/recommendations/assignments', { params });
 
-// Antigravity Agent
-export const runAntigravityAgent = (data) => api.post('/antigravity/analyze', data);
-export const analyzeProjectWithAgent = (projectKey) => api.get(`/antigravity/project/${projectKey}`);
-export const getAgentDimensions = () => api.get('/antigravity/dimensions');
+// AI Agent
+export const runAIAgent = (data) => api.post('/ai/analyze', data);
+export const analyzeProjectWithAgent = (projectKey) => api.get(`/ai/project/${projectKey}`);
+export const getAgentDimensions = () => api.get('/ai/dimensions');
 
 export default api;

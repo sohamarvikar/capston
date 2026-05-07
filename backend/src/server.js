@@ -22,7 +22,7 @@ app.use('/api/recommendations', require('./routes/recommendationRoutes'));
 app.use('/api/analytics', require('./routes/analyticsRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
 app.use('/api/notices', require('./routes/noticeRoutes'));
-app.use('/api/antigravity', require('./routes/antigravityRoutes'));
+app.use('/api/ai', require('./routes/aiRoutes'));
 const path = require('path');
 app.use('/uploads', express.static(path.join(__dirname, '../uploads'))); // serve uploaded files
 
@@ -34,7 +34,7 @@ app.get('/api/health', (req, res) => {
     version: '2.0.0',
     timestamp: new Date(),
     aiKeys: {
-      gemini: !!process.env.GEMINI_API_KEY,
+      aiAgent: !!process.env.GEMINI_API_KEY,
       openai: !!process.env.OPENAI_API_KEY,
     },
   });

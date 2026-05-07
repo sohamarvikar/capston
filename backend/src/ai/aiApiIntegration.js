@@ -12,14 +12,14 @@
  * Analyze a task description using Gemini API and extract
  * required skills, experience level, and department.
  */
-async function analyzeTaskWithGemini(taskSummary) {
+async function analyzeTaskWithAIAgent(taskSummary) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    console.warn('[AI Matchmaker] GEMINI_API_KEY is missing from .env. Skipping Gemini integration.');
+    console.warn('[AI Matchmaker] GEMINI_API_KEY is missing from .env. Skipping AI Agent integration.');
     return null;
   }
 
-  console.log(`[AI Matchmaker] Gemini request sent for task summary: "${taskSummary}"`);
+  console.log(`[AI Matchmaker] AI Agent request sent for task summary: "${taskSummary}"`);
 
   try {
     const response = await fetch(
@@ -51,10 +51,10 @@ Return ONLY valid JSON with these fields:
     );
 
     const data = await response.json();
-    console.log('[AI Matchmaker] Gemini response received (raw data):', JSON.stringify(data, null, 2));
+    console.log('[AI Matchmaker] AI Agent response received (raw data):', JSON.stringify(data, null, 2));
 
     if (!response.ok) {
-      console.error('[AI Matchmaker] Gemini API returned error status:', response.status, data);
+      console.error('[AI Matchmaker] AI Agent API returned error status:', response.status, data);
       return null;
     }
 
@@ -67,11 +67,11 @@ Return ONLY valid JSON with these fields:
       console.log('[AI Matchmaker] Extracted requirements from Gemini:', parsedJson);
       return parsedJson;
     } else {
-      console.error('[AI Matchmaker] Failed to parse JSON from Gemini response. Response text:', text);
+      console.error('[AI Matchmaker] Failed to parse JSON from AI Agent response. Response text:', text);
       return null;
     }
   } catch (error) {
-    console.error('[AI Matchmaker] Gemini API execution error trace:', error);
+    console.error('[AI Matchmaker] AI Agent API execution error trace:', error);
     return null;
   }
 }
@@ -122,8 +122,8 @@ async function analyzeTaskWithOpenAI(taskSummary) {
  */
 async function analyzeTask(taskSummary) {
   // Try Gemini first, then OpenAI, then return null (use local logic)
-  let result = await analyzeTaskWithGemini(taskSummary);
-  if (result) return { ...result, source: 'gemini' };
+  let result = await analyzeTaskWithAIAgent(taskSummary);
+  if (result) return { ...result, source: 'aiAgent' };
 
   result = await analyzeTaskWithOpenAI(taskSummary);
   if (result) return { ...result, source: 'openai' };
@@ -131,4 +131,4 @@ async function analyzeTask(taskSummary) {
   return null; // no API configured — local scoring will be used
 }
 
-module.exports = { analyzeTask, analyzeTaskWithGemini, analyzeTaskWithOpenAI };
+module.exports = { analyzeTask, analyzeTaskWithAIAgent, analyzeTaskWithOpenAI };

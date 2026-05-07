@@ -1,12 +1,12 @@
-const { runAntigravityAgent, DIMENSIONS } = require('../ai/antigravityAgent');
+const { runAIAgent, DIMENSIONS } = require('../ai/aiAgentCore');
 const Project = require('../models/Project');
 
 /**
- * Antigravity Agent Controller
+ * AI Agent Controller
  * Dedicated endpoints for the AI agent module.
  */
 
-// POST /api/antigravity/analyze — Run agent for a custom task/project
+// POST /api/ai/analyze — Run agent for a custom task/project
 exports.analyzeTask = async (req, res) => {
   try {
     const {
@@ -28,7 +28,7 @@ exports.analyzeTask = async (req, res) => {
       taskSummary,
     };
 
-    const result = await runAntigravityAgent(requirements, Number(topN));
+    const result = await runAIAgent(requirements, Number(topN));
 
     res.json({ success: true, ...result });
   } catch (error) {
@@ -36,7 +36,7 @@ exports.analyzeTask = async (req, res) => {
   }
 };
 
-// GET /api/antigravity/project/:key — Run agent for all open tasks in a project
+// GET /api/ai/project/:key — Run agent for all open tasks in a project
 exports.analyzeProject = async (req, res) => {
   try {
     const project = await Project.findOne({ projectKey: req.params.key.toUpperCase() });
@@ -57,7 +57,7 @@ exports.analyzeProject = async (req, res) => {
         estimatedDays: task.estimatedDays || 5,
       };
 
-      const result = await runAntigravityAgent(requirements, topN);
+      const result = await runAIAgent(requirements, topN);
 
       taskResults.push({
         task: {
@@ -74,7 +74,7 @@ exports.analyzeProject = async (req, res) => {
 
     res.json({
       success: true,
-      agentName: 'Antigravity Agent',
+      agentName: 'AI Agent',
       project: { key: project.projectKey, name: project.projectName },
       totalOpenTasks: openTasks.length,
       data: taskResults,
@@ -84,7 +84,7 @@ exports.analyzeProject = async (req, res) => {
   }
 };
 
-// GET /api/antigravity/dimensions — Show scoring dimensions (for UI display)
+// GET /api/ai/dimensions — Show scoring dimensions (for UI display)
 exports.getDimensions = (req, res) => {
   const dims = Object.entries(DIMENSIONS).map(([key, val]) => ({
     key,
@@ -92,5 +92,5 @@ exports.getDimensions = (req, res) => {
     weight: val.weight,
     percentage: Math.round(val.weight * 100),
   }));
-  res.json({ success: true, agentName: 'Antigravity Agent', dimensions: dims });
+  res.json({ success: true, agentName: 'AI Agent', dimensions: dims });
 };

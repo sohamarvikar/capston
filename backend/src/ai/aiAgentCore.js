@@ -2,17 +2,17 @@ const Employee = require('../models/Employee');
 
 /**
  * ╔═══════════════════════════════════════════════════════════════╗
- * ║                   ANTIGRAVITY AGENT                          ║
+ * ║                      AI AGENT                                 ║
  * ║  "Lifting project performance through intelligent matching"  ║
  * ╚═══════════════════════════════════════════════════════════════╝
  *
- * The Antigravity Agent is an advanced AI module that uses a
+ * The AI Agent is an advanced AI module that uses a
  * multi-dimensional scoring system inspired by gravitational
  * physics to "lift" project outcomes by finding the optimal
  * employee-to-project assignment.
  *
  * CONCEPT:
- *   In physics, gravity pulls things down. The Antigravity Agent
+ *   In physics, gravity pulls things down. The AI Agent
  *   calculates an "Uplift Score" — a composite force that measures
  *   how strongly an employee can "lift" a project upward.
  *
@@ -137,7 +137,7 @@ function calcDeadlineFit(avgDays, estimatedDays, experience) {
 }
 
 // ═══════════════════════════════════════════════════════════════════
-//  MAIN: Calculate Antigravity Uplift Score
+//  MAIN: Calculate AI Uplift Score
 // ═══════════════════════════════════════════════════════════════════
 function calculateUplift(employee, requirements) {
   const skillResult   = calcSkillGravity(employee.skills, requirements.requiredSkills);
@@ -247,18 +247,18 @@ function buildAgentReason(employee, upliftResult, requirements) {
 }
 
 // ═══════════════════════════════════════════════════════════════════
-//  PUBLIC API: Run the Antigravity Agent
+//  PUBLIC API: Run the AI Agent
 // ═══════════════════════════════════════════════════════════════════
 
 /**
  * Analyze a project/task and return the top N recommended employees,
- * ranked by their Antigravity Uplift Score.
+ * ranked by their AI Uplift Score.
  *
  * @param {Object} requirements - { requiredSkills[], requiredExperience, requiredDepartment, estimatedDays, difficulty }
  * @param {Number} topN - how many results to return (default 5)
  * @returns {Object} { agentName, requirements, recommendations[] }
  */
-async function runAntigravityAgent(requirements, topN = 5) {
+async function runAIAgent(requirements, topN = 5) {
   // Query only active employees from MongoDB
   const employees = await Employee.find({ status: 'Active' }).lean();
 
@@ -293,7 +293,7 @@ async function runAntigravityAgent(requirements, topN = 5) {
   candidates.sort((a, b) => b.upliftScore - a.upliftScore);
 
   return {
-    agentName: 'Antigravity Agent',
+    agentName: 'AI Agent',
     agentVersion: '1.0.0',
     evaluatedCandidates: candidates.length,
     requirements,
@@ -302,4 +302,4 @@ async function runAntigravityAgent(requirements, topN = 5) {
   };
 }
 
-module.exports = { runAntigravityAgent, calculateUplift, DIMENSIONS };
+module.exports = { runAIAgent, calculateUplift, DIMENSIONS };
