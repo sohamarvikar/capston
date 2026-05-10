@@ -131,4 +131,54 @@ async function analyzeTask(taskSummary) {
   return null; // no API configured — local scoring will be used
 }
 
-module.exports = { analyzeTask, analyzeTaskWithAIAgent, analyzeTaskWithOpenAI };
+async function callGeminiAPI(projectName, description, skills) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error('GEMINI_API_KEY is missing from .env');
+  }
+
+  const prompt = `Generate a list of tasks for this project:
+Project Name: ${projectName}
+Description: ${description}
+Required Skills: ${skills}
+
+Return ONLY a valid JSON array of strings, where each string is a single task (5-8 tasks). Do not include any markdown formatting or extra text. Example: ["Task 1", "Task 2"]`;
+
+  try {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }]
+        })
+      }
+    );
+
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error?.message || 'Gemini API Error');
+
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    
+    // Strip markdown formatting like ```json ... ```
+    let cleanText = text.replace(/```json/g, '').replace(/```/g, '').trim();
+    
+    // Extract JSON securely
+    const jsonMatch = cleanText.match(/\[[\s\S]*\]/);
+    if (jsonMatch) {
+      const parsed = JSON.parse(jsonMatch[0]);
+      if (Array.isArray(parsed) && typeof parsed[0] === 'string') {
+        return parsed;
+      } else {
+        throw new Error('Response is not an array of strings');
+      }
+    } else {
+      throw new Error('Failed to parse JSON array from response');
+    }
+  } catch (error) {
+    throw error;
+  }
+}
+
+module.exports = { analyzeTask, analyzeTaskWithAIAgent, analyzeTaskWithOpenAI, callGeminiAPI };

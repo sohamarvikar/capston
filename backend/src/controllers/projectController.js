@@ -1,6 +1,7 @@
 const Project = require('../models/Project');
 const axios = require('axios');
 
+const MAX_WORKLOAD = 3;
 const PYTHON_AI_URL = process.env.PYTHON_AI_URL || 'http://localhost:8000';
 
 // GET /api/projects — list with filters & pagination
@@ -74,8 +75,9 @@ exports.getProject = async (req, res) => {
             // Fallback JS Logic if Python API is unavailable
             let prob = 10;
             const workload = emp.currentWorkload || 0;
-            if (workload >= 8) prob += 40;
-            else if (workload >= 5) prob += 20;
+            if (workload >= MAX_WORKLOAD) prob += 50;
+            else if (workload >= 2) prob += 30;
+            else if (workload >= 1) prob += 10;
             
             const perf = emp.performanceScore || 3;
             if (perf < 3) prob += 25;
@@ -167,6 +169,10 @@ exports.assignTask = async (req, res) => {
     const employee = await Employee.findById(req.body.employeeId);
     
     if (employee) {
+      // Workload validation: reject if at capacity
+      if ((employee.currentWorkload || 0) >= MAX_WORKLOAD) {
+        return res.status(400).json({ success: false, message: `Employee is at maximum workload capacity (${MAX_WORKLOAD}/${MAX_WORKLOAD}). Cannot assign more tasks.` });
+      }
       const baseDays = task.estimatedDays || 5;
       const complexity = 1 + ((task.requiredSkills?.length || 0) * 0.15);
       const expFactor = Math.max(1, (employee.experience || 1) / 3);

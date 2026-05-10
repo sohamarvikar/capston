@@ -1,5 +1,7 @@
 const Employee = require('../models/Employee');
 
+const MAX_WORKLOAD = 3;
+
 /**
  * AI Recommendation Engine
  *
@@ -81,7 +83,7 @@ function calculateScore(employee, requirements) {
 
   // 4. Availability Score (0–100) — lower workload = higher score
   const workload = employee.currentWorkload || 0;
-  scores.availability = Math.max(0, ((10 - workload) / 10) * 100);
+  scores.availability = Math.max(0, ((MAX_WORKLOAD - workload) / MAX_WORKLOAD) * 100);
   if (!employee.availability) scores.availability = 0;
 
   // 5. Department Match (0 or 100)
@@ -153,6 +155,8 @@ async function recommendEmployees(requirements, topN = 5) {
   const ranked = [];
   
   for (const emp of employees) {
+    // Skip employees at or above max workload
+    if ((emp.currentWorkload || 0) >= MAX_WORKLOAD) continue;
     try {
       const empSkills = normalizeSkills(emp.skills);
       // Optional defensive logging if needed: console.log("[AI Matchmaker] Normalized Skills:", emp.name, empSkills);

@@ -288,7 +288,7 @@ const EmployeeList = () => {
                             }`}
                           ></div>
                         </div>
-                        <p className="text-[10px] text-gray-500 mt-1">Based on workload ({selectedAIEmployee.currentWorkload}/10) and performance patterns.</p>
+                        <p className="text-[10px] text-gray-500 mt-1">Based on workload ({selectedAIEmployee.currentWorkload}/3) and performance patterns.</p>
                       </div>
                       
                       <div>
@@ -362,7 +362,7 @@ const EmployeeList = () => {
                     <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${emp.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
                       {emp.status}
                     </span>
-                    <div className="text-xs text-gray-500 mt-1">Load: {emp.currentWorkload ?? 0}/10</div>
+                    <div className="text-xs text-gray-500 mt-1">Load: {emp.currentWorkload ?? 0}/3</div>
                   </td>
                   <td className="px-6 py-4 text-sm text-gray-500">
                     <div className="flex flex-wrap gap-1 max-w-[200px]">

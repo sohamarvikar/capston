@@ -70,5 +70,6 @@ export const getAssignments = (params) => api.get('/recommendations/assignments'
 export const runAIAgent = (data) => api.post('/ai/analyze', data);
 export const analyzeProjectWithAgent = (projectKey) => api.get(`/ai/project/${projectKey}`);
 export const getAgentDimensions = () => api.get('/ai/dimensions');
+export const generateTasks = (data) => api.post('/ai/generate-tasks', data);
 
 export default api;

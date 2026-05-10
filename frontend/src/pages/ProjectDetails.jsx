@@ -321,7 +321,7 @@ const ProjectDetails = () => {
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="font-bold text-gray-900">{rec.employee.name}</h4>
-                        <p className="text-xs text-gray-500">{rec.employee.department} • Workload: {rec.employee.currentWorkload}/10</p>
+                        <p className="text-xs text-gray-500">{rec.employee.department} • Workload: {rec.employee.currentWorkload}/3</p>
                       </div>
                       <div className="text-center">
                         <div className={`text-lg font-bold ${rec.score >= 80 ? 'text-green-600' : 'text-orange-500'}`}>{rec.score}%</div>

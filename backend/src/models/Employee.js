@@ -32,7 +32,8 @@ const employeeSchema = new mongoose.Schema(
 
     // --- AI Enhancement Fields ---
     skills: [{ type: String, lowercase: true, trim: true }],
-    currentWorkload: { type: Number, default: 0, min: 0, max: 10 },
+    currentWorkload: { type: Number, default: 0, min: 0, max: 3 },
+    maxWorkload: { type: Number, default: 3 },
     availability: { type: Boolean, default: true },
     completedProjects: { type: Number, default: 0 },
     avgTaskCompletionDays: { type: Number, default: null },

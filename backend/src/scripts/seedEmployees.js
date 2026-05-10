@@ -61,7 +61,7 @@ async function seed() {
             session: (row['Session'] || '').trim(),
             // AI fields
             skills: assignSkills(dept, exp),
-            currentWorkload: Math.floor(Math.random() * 6), // 0–5 random initial load
+            currentWorkload: Math.floor(Math.random() * 4), // 0–3 random initial load (MAX_WORKLOAD = 3)
             availability: (row['Status'] || '').trim() === 'Active',
             completedProjects: Math.floor(Math.random() * exp * 2),
           });

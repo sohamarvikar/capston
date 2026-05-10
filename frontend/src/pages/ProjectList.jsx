@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getProjects, createProject, getRecommendationForTask } from '../services/api';
+import { getProjects, createProject, getRecommendationForTask, generateTasks } from '../services/api';
 import { Link } from 'react-router-dom';
 import { Briefcase, ArrowRight, Plus, X, Sparkles, UserCheck } from 'lucide-react';
 
@@ -9,6 +9,8 @@ const ProjectList = () => {
   const [error, setError] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [formError, setFormError] = useState('');
+  const [taskMode, setTaskMode] = useState('manual');
+  const [isGenerating, setIsGenerating] = useState(false);
 
   // AI Recommendation state
   const [recommendingProject, setRecommendingProject] = useState(null);
@@ -45,6 +47,34 @@ const ProjectList = () => {
 
   const handleFormChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleGenerateTasks = async () => {
+    setFormError('');
+    if (!formData.projectName) {
+      setFormError('Please enter a Project Name to generate tasks.');
+      return;
+    }
+    
+    setIsGenerating(true);
+    try {
+      const res = await generateTasks({
+        projectName: formData.projectName,
+        description: formData.description,
+        skills: formData.requiredSkills
+      });
+      
+      if (res.data.success) {
+        setFormData(prev => ({ ...prev, tasks: res.data.tasks.join('\n') }));
+      } else {
+        setFormError('AI generation failed');
+      }
+    } catch (err) {
+      console.error('Task generation error:', err);
+      setFormError(err.response?.data?.error || err.message || 'Failed to generate tasks using AI.');
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const handleCreateProject = async (e) => {
@@ -166,10 +196,28 @@ const ProjectList = () => {
                 <input name="requiredSkills" value={formData.requiredSkills} onChange={handleFormChange} placeholder="e.g. react, node.js, mongodb"
                   className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Tasks (one per line)</label>
+              <div className="pt-2 border-t border-gray-100">
+                <div className="flex items-center justify-between mb-2">
+                  <label className="block text-sm font-medium text-gray-700">Tasks</label>
+                  <div className="flex space-x-2 bg-gray-100 p-1 rounded-lg">
+                    <button type="button" onClick={() => setTaskMode('manual')} className={`px-3 py-1 text-xs font-medium rounded-md transition ${taskMode === 'manual' ? 'bg-white shadow text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}>Manual</button>
+                    <button type="button" onClick={() => setTaskMode('ai')} className={`px-3 py-1 text-xs font-medium rounded-md transition flex items-center ${taskMode === 'ai' ? 'bg-indigo-600 shadow text-white' : 'text-gray-500 hover:text-gray-700'}`}>
+                      <Sparkles className="w-3 h-3 mr-1" /> AI Mode
+                    </button>
+                  </div>
+                </div>
+                
+                {taskMode === 'ai' && (
+                  <div className="mb-3">
+                    <button type="button" onClick={handleGenerateTasks} disabled={isGenerating || !formData.projectName}
+                      className="w-full flex justify-center items-center px-4 py-2 bg-indigo-50 border border-indigo-200 text-indigo-700 text-sm font-medium rounded-md hover:bg-indigo-100 transition disabled:opacity-50">
+                      {isGenerating ? <><div className="animate-spin rounded-full h-4 w-4 border-b-2 border-indigo-700 mr-2" /> Generating...</> : <><Sparkles className="w-4 h-4 mr-2" /> Generate Tasks (AI)</>}
+                    </button>
+                  </div>
+                )}
+                
                 <textarea name="tasks" value={formData.tasks} onChange={handleFormChange} rows="4"
-                  placeholder={"Setup project boilerplate\nDesign REST API\nBuild authentication system"}
+                  placeholder={taskMode === 'ai' ? "AI generated tasks will appear here. You can still edit them." : "Setup project boilerplate\nDesign REST API\nBuild authentication system"}
                   className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
                 <p className="text-xs text-gray-400 mt-1">Each line becomes a separate task with auto-generated issue keys.</p>
               </div>
@@ -209,7 +257,7 @@ const ProjectList = () => {
                     <div className="flex justify-between items-start mb-1">
                       <div>
                         <h4 className="font-bold text-gray-900">{rec.employee.name}</h4>
-                        <p className="text-xs text-gray-500">{rec.employee.department} • {rec.employee.experience} yrs • Load: {rec.employee.currentWorkload}/10</p>
+                        <p className="text-xs text-gray-500">{rec.employee.department} • {rec.employee.experience} yrs • Load: {rec.employee.currentWorkload}/3</p>
                       </div>
                       <div className={`text-lg font-bold ${rec.score >= 70 ? 'text-green-600' : 'text-orange-500'}`}>{rec.score}%</div>
                     </div>

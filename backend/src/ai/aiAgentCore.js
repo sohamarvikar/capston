@@ -1,5 +1,8 @@
 const Employee = require('../models/Employee');
 
+// ─── Global Workload Constant ────────────────────────────────────
+const MAX_WORKLOAD = 3;
+
 /**
  * ╔═══════════════════════════════════════════════════════════════╗
  * ║                      AI AGENT                                 ║
@@ -104,10 +107,11 @@ function calcExperienceMomentum(empExp, reqExp) {
 function calcAvailabilityFuel(workload, isAvailable) {
   if (!isAvailable) return { score: 0, label: 'Unavailable' };
   const load = workload || 0;
-  const capacity = Math.max(0, 10 - load);
-  const score = Math.round((capacity / 10) * 100);
-  const label = capacity >= 7 ? 'High capacity' : capacity >= 4 ? 'Moderate load' : 'Near capacity';
-  return { score, label: `${label} (${load}/10 tasks)` };
+  if (load >= MAX_WORKLOAD) return { score: 0, label: `At capacity (${load}/${MAX_WORKLOAD} tasks)` };
+  const capacity = Math.max(0, MAX_WORKLOAD - load);
+  const score = Math.round((capacity / MAX_WORKLOAD) * 100);
+  const label = capacity >= 2 ? 'High capacity' : capacity >= 1 ? 'Moderate load' : 'Near capacity';
+  return { score, label: `${label} (${load}/${MAX_WORKLOAD} tasks)` };
 }
 
 // ─── Department Alignment ────────────────────────────────────────
@@ -259,8 +263,8 @@ function buildAgentReason(employee, upliftResult, requirements) {
  * @returns {Object} { agentName, requirements, recommendations[] }
  */
 async function runAIAgent(requirements, topN = 5) {
-  // Query only active employees from MongoDB
-  const employees = await Employee.find({ status: 'Active' }).lean();
+  // Query only active employees who are not at max workload
+  const employees = await Employee.find({ status: 'Active', currentWorkload: { $lt: MAX_WORKLOAD } }).lean();
 
   // Score every candidate
   const candidates = employees.map(emp => {
@@ -302,4 +306,4 @@ async function runAIAgent(requirements, topN = 5) {
   };
 }
 
-module.exports = { runAIAgent, calculateUplift, DIMENSIONS };
+module.exports = { runAIAgent, calculateUplift, DIMENSIONS, MAX_WORKLOAD };
